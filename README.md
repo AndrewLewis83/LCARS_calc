@@ -1,7 +1,7 @@
 # LCARS_calc
-Star Trek:TNG themed calculator for iOS 
+Star Trek: TNG themed calculator for iOS 
 
-This is an unauthorized Star Trek themed calculator for iOS. It is purely open source, not meant to be sold. Think of it as fan fiction. 
+This is an unauthorized Star Trek themed calculator for iOS. It is purely open source and not meant to be sold. Think of it as fan fiction. 
 
 To use: 
 - Open the project in Xcode.
