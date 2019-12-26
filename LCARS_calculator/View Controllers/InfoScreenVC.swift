@@ -38,10 +38,10 @@ class InfoScreenVC: UIViewController {
         infoLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         infoLabel.textAlignment = NSTextAlignment.left
         
-        // this formats the text for all except the 9.7" iPad. It still overflows in splitview.
+        // this formats the text for the iPad and prevents it from overflowing splitview.
         if UIDevice.current.model == "iPad"  && splitView == false && UIScreen.main.bounds.size.width > 1024.0 {
             infoLabel.font = UIFont(name: "Okuda",
-            size: 60.0)
+            size: 65.0)
         }else{
             infoLabel.font = UIFont(name: "Okuda",
             size: 40.0)
@@ -51,7 +51,7 @@ class InfoScreenVC: UIViewController {
     func populateInfoLabel(){
         
         infoLabel.animate(newText: """
-        This calculator app should be considered fan art/fiction. It is not meant for sale on the iOS App Store or anywhere else. I loved Star Trek: TNG and Star Trek Voyager growing up, so this just felt like a fun thing to build.
+        This calculator app should be considered fan art. It is not meant for sale on the iOS App Store or anywhere else. I just loved Star Trek: TNG and Star Trek: Voyager growing up, so this felt like a fun thing to build and use.
         
         Paramount, let me know if you want to make a deal ;)
         """, characterDelay: 0.01)
