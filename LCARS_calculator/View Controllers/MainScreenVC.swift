@@ -102,11 +102,34 @@ class MainScreenVC: UIViewController {
         
         tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
         
+        adaptForCurrentSizeClass()
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
             configureIPadView()
         }else{
             warpCoreStackView.isHidden = true
         }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        adaptForCurrentSizeClass()
+    }
+    
+    func adaptForCurrentSizeClass(){
+        
+        if traitCollection.horizontalSizeClass == .compact {
+            // load slim view
+            warpCoreStackView.isHidden = true
+            timer.invalidate()
+        } else if traitCollection.horizontalSizeClass == .regular {
+            // load wide view
+            warpCoreStackView.isHidden = false
+            configureIPadView()
+        } else if traitCollection.horizontalSizeClass == .unspecified {
+            warpCoreStackView.isHidden = true
+            timer.invalidate()
+        }
+
     }
     
     override func viewDidDisappear(_ animated: Bool) {

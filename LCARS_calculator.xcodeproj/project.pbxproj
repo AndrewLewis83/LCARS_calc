@@ -20,6 +20,7 @@
 		A1C7C31F228F6AAC00BD0FC5 /* consolewarning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1C7C317228F6AAB00BD0FC5 /* consolewarning.mp3 */; };
 		A1DC555022984B9A008CD59F /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DC554F22984B9A008CD59F /* SettingsVC.swift */; };
 		A1EBF5032290ADFB005C72A3 /* InfoScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBF5022290ADFB005C72A3 /* InfoScreenVC.swift */; };
+		F432BC1524B910940039D9CC /* SizeClassExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432BC1424B910940039D9CC /* SizeClassExtension.swift */; };
 		F45EABCA23B2CE7B000D692B /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45EABC923B2CE7B000D692B /* LaunchScreenVC.swift */; };
 		F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */; };
 		F4FDED9B24B7EA6C00A0F475 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDED9A24B7EA6C00A0F475 /* Constants.swift */; };
@@ -62,6 +63,7 @@
 		A1C7C317228F6AAB00BD0FC5 /* consolewarning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = consolewarning.mp3; sourceTree = "<group>"; };
 		A1DC554F22984B9A008CD59F /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		A1EBF5022290ADFB005C72A3 /* InfoScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenVC.swift; sourceTree = "<group>"; };
+		F432BC1424B910940039D9CC /* SizeClassExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClassExtension.swift; sourceTree = "<group>"; };
 		F45EABC923B2CE7B000D692B /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "United Federation of Planets Regular.ttf"; sourceTree = "<group>"; };
 		F4FDED9A24B7EA6C00A0F475 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				A1C547902221B1CD007505AA /* Info.plist */,
 				A12F3715229B5DEE009C44B0 /* Settings.swift */,
 				F4FDED9A24B7EA6C00A0F475 /* Constants.swift */,
+				F432BC1424B910940039D9CC /* SizeClassExtension.swift */,
 			);
 			path = LCARS_calculator;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EBF5032290ADFB005C72A3 /* InfoScreenVC.swift in Sources */,
+				F432BC1524B910940039D9CC /* SizeClassExtension.swift in Sources */,
 				A1DC555022984B9A008CD59F /* SettingsVC.swift in Sources */,
 				A1C547872221B1CB007505AA /* MainScreenVC.swift in Sources */,
 				A1C547852221B1CB007505AA /* AppDelegate.swift in Sources */,
