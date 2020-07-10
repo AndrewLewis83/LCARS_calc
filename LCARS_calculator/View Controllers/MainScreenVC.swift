@@ -331,15 +331,25 @@ class MainScreenVC: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
         
         warpSectionOne.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionOne.tintColor = warpColorOne
         warpSectionTwo.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionTwo.tintColor = warpColorOne
         warpSectionThree.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionThree.tintColor = warpColorOne
         warpSectionFour.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionFour.tintColor = warpColorOne
         warpSectionFive.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionFive.tintColor = warpColorOne
         warpSectionSix.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionSix.tintColor = warpColorOne
         warpSectionSeven.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionSeven.tintColor = warpColorOne
         warpSectionEight.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionEight.tintColor = warpColorOne
         warpSectionNine.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionNine.tintColor = warpColorOne
         warpSectionTen.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionTen.tintColor = warpColorOne
         
         warpSectionOne.tintColor = warpColorOne
            
@@ -349,7 +359,7 @@ class MainScreenVC: UIViewController {
         
         sequence += 1
         
-        if sequence > 2 {
+        if sequence > 3 {
             sequence = 0
         }
         
@@ -386,6 +396,17 @@ class MainScreenVC: UIViewController {
             warpSectionEight.tintColor = warpColorTwo
             warpSectionNine.tintColor = warpColorThree
             warpSectionTen.tintColor = warpColorTwo
+        }else if sequence == 3 {
+            warpSectionOne.tintColor = warpColorTwo
+            warpSectionTwo.tintColor = warpColorThree
+            warpSectionThree.tintColor = warpColorTwo
+            warpSectionFour.tintColor = warpColorOne
+            warpSectionFive.tintColor = warpColorTwo
+            warpSectionSix.tintColor = warpColorThree
+            warpSectionSeven.tintColor = warpColorTwo
+            warpSectionEight.tintColor = warpColorOne
+            warpSectionNine.tintColor = warpColorTwo
+            warpSectionTen.tintColor = warpColorThree
         }
         
     }
