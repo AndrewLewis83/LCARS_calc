@@ -102,9 +102,10 @@ class MainScreenVC: UIViewController {
         
         tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
         
-        adaptForCurrentSizeClass()
-        
         if UIDevice.current.userInterfaceIdiom == .pad {
+            
+            bottomCap.transform = bottomCap.transform.rotated(by: .pi)
+            adaptForCurrentSizeClass()
             configureIPadView()
         }else{
             warpCoreStackView.isHidden = true
@@ -115,7 +116,17 @@ class MainScreenVC: UIViewController {
         adaptForCurrentSizeClass()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        adaptForCurrentSizeClass()
+    }
+    
     func adaptForCurrentSizeClass(){
+        
+        if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
+            print("landscape")
+        }else{
+            print("portrait")
+        }
         
         if traitCollection.horizontalSizeClass == .compact {
             // load slim view
@@ -124,7 +135,6 @@ class MainScreenVC: UIViewController {
         } else if traitCollection.horizontalSizeClass == .regular {
             // load wide view
             warpCoreStackView.isHidden = false
-            configureIPadView()
         } else if traitCollection.horizontalSizeClass == .unspecified {
             warpCoreStackView.isHidden = true
             timer.invalidate()
@@ -349,9 +359,7 @@ class MainScreenVC: UIViewController {
     
     func configureIPadView(){
         
-        bottomCap.transform = bottomCap.transform.rotated(by: .pi)
-        
-        timer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
         
         warpSectionOne.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
         warpSectionOne.tintColor = warpColorOne
