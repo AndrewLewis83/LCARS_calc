@@ -135,6 +135,7 @@ class MainScreenVC: UIViewController {
         } else if traitCollection.horizontalSizeClass == .regular {
             // load wide view
             warpCoreStackView.isHidden = false
+            configureIPadView()
         } else if traitCollection.horizontalSizeClass == .unspecified {
             warpCoreStackView.isHidden = true
             timer.invalidate()
@@ -359,7 +360,7 @@ class MainScreenVC: UIViewController {
     
     func configureIPadView(){
         
-        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
         
         warpSectionOne.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
         warpSectionOne.tintColor = warpColorOne
