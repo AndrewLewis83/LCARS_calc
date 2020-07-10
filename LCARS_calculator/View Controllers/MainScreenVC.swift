@@ -40,8 +40,8 @@ class MainScreenVC: UIViewController {
     @IBOutlet weak var mainReadout: UILabel!
     @IBOutlet weak var secondaryReadout: UILabel!
     
+    // Warp core outlets
     @IBOutlet weak var warpCoreStackView: UIStackView!
-    
     @IBOutlet weak var topCap: UIImageView!
     @IBOutlet weak var warpSectionOne: UIImageView!
     @IBOutlet weak var warpSectionTwo: UIImageView!
@@ -55,6 +55,10 @@ class MainScreenVC: UIViewController {
     @IBOutlet weak var warpSectionNine: UIImageView!
     @IBOutlet weak var warpSectionTen: UIImageView!
     @IBOutlet weak var bottomCap: UIImageView!
+    
+    var warpCoreArray:[Int] = [0, 1, 2, 1 , 0, 2, 0, 1, 2, 0]
+    var sequence = 0
+    private var timer = Timer()
     
     //sound effects
     private var soundEffect: AVAudioPlayer?
@@ -92,16 +96,17 @@ class MainScreenVC: UIViewController {
         secondaryReadout.text = "Enter value"
         loadUserDefaults()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
             configureIPadView()
         }else{
             warpCoreStackView.isHidden = true
         }
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -286,6 +291,11 @@ class MainScreenVC: UIViewController {
     
     @IBAction func infoButtonPressed(_ sender: Any) {
         playSound(soundEffectName: "buttonSound")
+        timer.invalidate()
+    }
+    
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        timer.invalidate()
     }
     
     
@@ -315,7 +325,69 @@ class MainScreenVC: UIViewController {
     }
     
     func configureIPadView(){
+        
         bottomCap.transform = bottomCap.transform.rotated(by: .pi)
+        
+        timer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
+        
+        warpSectionOne.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionTwo.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionThree.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionFour.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionFive.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionSix.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionSeven.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionEight.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionNine.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        warpSectionTen.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
+        
+        warpSectionOne.tintColor = warpColorOne
+           
+    }
+    
+    @objc func counter(){
+        
+        sequence += 1
+        
+        if sequence > 2 {
+            sequence = 0
+        }
+        
+        if sequence == 0 {
+            warpSectionOne.tintColor = warpColorOne
+            warpSectionTwo.tintColor = warpColorTwo
+            warpSectionThree.tintColor = warpColorThree
+            warpSectionFour.tintColor = warpColorTwo
+            warpSectionFive.tintColor = warpColorOne
+            warpSectionSix.tintColor = warpColorTwo
+            warpSectionSeven.tintColor = warpColorThree
+            warpSectionEight.tintColor = warpColorTwo
+            warpSectionNine.tintColor = warpColorOne
+            warpSectionTen.tintColor = warpColorTwo
+        }else if sequence == 1 {
+            warpSectionOne.tintColor = warpColorTwo
+            warpSectionTwo.tintColor = warpColorThree
+            warpSectionThree.tintColor = warpColorTwo
+            warpSectionFour.tintColor = warpColorOne
+            warpSectionFive.tintColor = warpColorTwo
+            warpSectionSix.tintColor = warpColorThree
+            warpSectionSeven.tintColor = warpColorTwo
+            warpSectionEight.tintColor = warpColorOne
+            warpSectionNine.tintColor = warpColorTwo
+            warpSectionTen.tintColor = warpColorThree
+        }else if sequence == 2 {
+            warpSectionOne.tintColor = warpColorThree
+            warpSectionTwo.tintColor = warpColorTwo
+            warpSectionThree.tintColor = warpColorOne
+            warpSectionFour.tintColor = warpColorTwo
+            warpSectionFive.tintColor = warpColorThree
+            warpSectionSix.tintColor = warpColorTwo
+            warpSectionSeven.tintColor = warpColorOne
+            warpSectionEight.tintColor = warpColorTwo
+            warpSectionNine.tintColor = warpColorThree
+            warpSectionTen.tintColor = warpColorTwo
+        }
+        
     }
 }
 
