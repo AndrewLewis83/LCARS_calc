@@ -40,6 +40,22 @@ class MainScreenVC: UIViewController {
     @IBOutlet weak var mainReadout: UILabel!
     @IBOutlet weak var secondaryReadout: UILabel!
     
+    @IBOutlet weak var warpCoreStackView: UIStackView!
+    
+    @IBOutlet weak var topCap: UIImageView!
+    @IBOutlet weak var warpSectionOne: UIImageView!
+    @IBOutlet weak var warpSectionTwo: UIImageView!
+    @IBOutlet weak var warpSectionThree: UIImageView!
+    @IBOutlet weak var warpSectionFour: UIImageView!
+    @IBOutlet weak var warpSectionFive: UIImageView!
+    @IBOutlet weak var centerSection: UIImageView!
+    @IBOutlet weak var warpSectionSix: UIImageView!
+    @IBOutlet weak var warpSectionSeven: UIImageView!
+    @IBOutlet weak var warpSectionEight: UIImageView!
+    @IBOutlet weak var warpSectionNine: UIImageView!
+    @IBOutlet weak var warpSectionTen: UIImageView!
+    @IBOutlet weak var bottomCap: UIImageView!
+    
     //sound effects
     private var soundEffect: AVAudioPlayer?
     private let errorSoundPath = Bundle.main.path(forResource: "consolewarning.mp3", ofType:nil)!
@@ -75,6 +91,12 @@ class MainScreenVC: UIViewController {
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
         loadUserDefaults()
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            configureIPadView()
+        }else{
+            warpCoreStackView.isHidden = true
+        }
         
     }
     
@@ -290,6 +312,10 @@ class MainScreenVC: UIViewController {
                 print("Couldn't load sound file in playSound()")
             }
         }
+    }
+    
+    func configureIPadView(){
+        bottomCap.transform = bottomCap.transform.rotated(by: .pi)
     }
 }
 
