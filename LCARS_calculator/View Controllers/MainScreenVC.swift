@@ -56,7 +56,9 @@ class MainScreenVC: UIViewController {
     @IBOutlet weak var warpSectionTen: UIImageView!
     @IBOutlet weak var bottomCap: UIImageView!
     
-    var warpCoreArray:[Int] = [0, 1, 2, 1 , 0, 2, 0, 1, 2, 0]
+    @IBOutlet weak var operationHistoryLabel: UILabel!
+    @IBOutlet weak var historyTextView: UITextView!
+    
     var sequence = 0
     private var timer = Timer()
     
@@ -95,6 +97,8 @@ class MainScreenVC: UIViewController {
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
         loadUserDefaults()
+        historyTextView.textColor = textColorOne
+        historyTextView.text = ""
         
     }
     
@@ -108,6 +112,8 @@ class MainScreenVC: UIViewController {
             adaptForCurrentSizeClass()
             configureIPadView()
         }else{
+            operationHistoryLabel.isHidden = true
+            historyTextView.isHidden = true
             warpCoreStackView.isHidden = true
         }
     }
@@ -122,21 +128,33 @@ class MainScreenVC: UIViewController {
     
     func adaptForCurrentSizeClass(){
         
-        if UIScreen.main.bounds.height < UIScreen.main.bounds.width {
-            print("landscape")
-        }else{
-            print("portrait")
-        }
-        
         if traitCollection.horizontalSizeClass == .compact {
             // load slim view
             warpCoreStackView.isHidden = true
+            operationHistoryLabel.isHidden = true
+            historyTextView.isHidden = true
             timer.invalidate()
         } else if traitCollection.horizontalSizeClass == .regular {
             // load wide view
             warpCoreStackView.isHidden = false
+            operationHistoryLabel.isHidden = false
+            historyTextView.isHidden = false
             configureIPadView()
         } else if traitCollection.horizontalSizeClass == .unspecified {
+            warpCoreStackView.isHidden = true
+            timer.invalidate()
+        }
+        
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+            
+        } else {
+            print("Portrait")
+            warpCoreStackView.isHidden = true
+            timer.invalidate()
+        }
+        
+        if view.frame.width < UIScreen.main.bounds.width {
             warpCoreStackView.isHidden = true
             timer.invalidate()
         }
@@ -226,7 +244,9 @@ class MainScreenVC: UIViewController {
             if _secondaryValue != 0 {
                 let tip = _secondaryValue * (Double(Settings.getPercentTip()) * 0.01)
                 mainReadout.text = " Tip = $" + String(format: "%.2f", tip)
+                historyTextView.text = historyTextView.text + "\(mainReadout.text ?? "")\n"
                 secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
+                historyTextView.text = historyTextView.text + "\(secondaryReadout.text ?? "")\n"
                 _secondaryValue = tip
                 playSound(soundEffectName: "buttonSound")
     
@@ -249,6 +269,7 @@ class MainScreenVC: UIViewController {
             }
             
             secondaryReadout.text = "Value copied to clipboard."
+            historyTextView.text = historyTextView.text + "\(secondaryReadout.text ?? "")\n"
             _hasDecimal = false
             
         case 18: // Clear
@@ -267,6 +288,7 @@ class MainScreenVC: UIViewController {
             }else{
                 _secondaryValue = _secondaryValue * -1
                 mainReadout.text = String(_secondaryValue)
+                historyTextView.text = historyTextView.text + "\(mainReadout.text ?? "")\n"
             }
 
         default:
@@ -316,6 +338,7 @@ class MainScreenVC: UIViewController {
         mainReadout.text = String(finalValue)
         if _mainValue != 0{
             secondaryReadout.text = "(\(_secondaryValue) \(operationSymbol) \(_mainValue))"
+            historyTextView.text = historyTextView.text + "\(_secondaryValue) \(operationSymbol) \(_mainValue) = \(finalValue)\n"
         }
         _secondaryValue = finalValue
         _mainValue = 0

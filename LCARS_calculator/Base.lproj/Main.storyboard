@@ -34,16 +34,16 @@
                                 <rect key="frame" x="0.0" y="178" width="1194" height="670"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="D6h-I9-4mZ" userLabel="readout stack view">
-                                <rect key="frame" x="60" y="11" width="1124" height="166"/>
+                                <rect key="frame" x="60" y="11" width="1124" height="182"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3714.7" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="39" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yh2-fN-xSv">
-                                        <rect key="frame" x="1007" y="0.0" width="117" height="83"/>
+                                        <rect key="frame" x="885" y="0.0" width="239" height="91"/>
                                         <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="78"/>
                                         <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="plus" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2Q-3i-T1k">
-                                        <rect key="frame" x="1086.5" y="83" width="37.5" height="83"/>
+                                        <rect key="frame" x="1049" y="91" width="75" height="91"/>
                                         <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="40"/>
                                         <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -468,6 +468,24 @@
                                 </constraints>
                                 <variation key="heightClass=regular-widthClass=regular" spacing="1"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Operation history:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg2-Vp-Tzy">
+                                <rect key="frame" x="180" y="243" width="399.5" height="53.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53.5" id="Reh-xw-C4p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="50"/>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="65.89 x 23" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0cN-VI-STa">
+                                <rect key="frame" x="180" y="306.5" width="400" height="457.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="998" constant="400" id="zGN-ht-PGY"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -480,24 +498,30 @@
                             <constraint firstItem="Wem-mI-NWu" firstAttribute="top" secondItem="lb1-lF-GbE" secondAttribute="bottom" constant="8" id="CHB-oA-rnI"/>
                             <constraint firstItem="D6h-I9-4mZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="IDt-9b-K5H"/>
                             <constraint firstItem="wwb-5N-fjM" firstAttribute="centerX" secondItem="D6h-I9-4mZ" secondAttribute="centerX" id="IPv-R4-JKe"/>
+                            <constraint firstItem="Bg2-Vp-Tzy" firstAttribute="top" secondItem="D6h-I9-4mZ" secondAttribute="bottom" constant="50" id="KCD-bK-q0v"/>
                             <constraint firstItem="wwb-5N-fjM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="96" id="LOz-nd-eFb"/>
                             <constraint firstItem="lb1-lF-GbE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LRp-lb-F2p"/>
+                            <constraint firstItem="Bg2-Vp-Tzy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="180" id="MbJ-ZK-RuU"/>
                             <constraint firstItem="D6h-I9-4mZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11.000000000000014" id="QnA-54-UlK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0cN-VI-STa" secondAttribute="bottom" constant="50" id="RKh-Uk-dQ0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6ia-t2-OJy" secondAttribute="bottom" constant="50" id="Rg0-r7-KHD"/>
                             <constraint firstItem="Wem-mI-NWu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S9S-i4-O2c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D6h-I9-4mZ" secondAttribute="trailing" constant="10" id="U0I-7R-CbY"/>
                             <constraint firstItem="wwb-5N-fjM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="220" id="V1h-7L-hDl"/>
+                            <constraint firstItem="wwb-5N-fjM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0cN-VI-STa" secondAttribute="trailing" priority="999" constant="80" id="VzC-S1-nQh"/>
                             <constraint firstItem="lb1-lF-GbE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wdy-qD-UGM"/>
                             <constraint firstItem="wwb-5N-fjM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YgA-zx-83V"/>
                             <constraint firstAttribute="trailing" secondItem="Wem-mI-NWu" secondAttribute="trailing" id="Zm5-kP-6h4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wwb-5N-fjM" secondAttribute="trailing" constant="7" id="bqs-p9-PoG"/>
                             <constraint firstItem="lb1-lF-GbE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cha-2i-K2p"/>
                             <constraint firstItem="wwb-5N-fjM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="dXa-ng-x8Q"/>
+                            <constraint firstItem="0cN-VI-STa" firstAttribute="top" secondItem="Bg2-Vp-Tzy" secondAttribute="bottom" constant="10" id="hgj-CH-CLY"/>
                             <constraint firstItem="6ia-t2-OJy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="D6h-I9-4mZ" secondAttribute="bottom" constant="50" id="jds-zA-3hN"/>
                             <constraint firstItem="lb1-lF-GbE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nhB-3Y-5De"/>
                             <constraint firstItem="6ia-t2-OJy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="tSB-Z8-K6T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wem-mI-NWu" secondAttribute="bottom" constant="-34" id="uCg-IP-X8B"/>
                             <constraint firstItem="6ia-t2-OJy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="uSC-um-iYs"/>
+                            <constraint firstItem="0cN-VI-STa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="180" id="vgQ-pg-dpg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wwb-5N-fjM" secondAttribute="trailing" constant="40" id="wm2-bl-pOA"/>
                             <constraint firstItem="wwb-5N-fjM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zWg-HD-tJQ"/>
                             <constraint firstItem="wwb-5N-fjM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lb1-lF-GbE" secondAttribute="bottom" constant="50" id="zuP-5U-3ch"/>
@@ -541,12 +565,14 @@
                         <outlet property="equalsButton" destination="aWs-DZ-E0d" id="aIF-qk-V2I"/>
                         <outlet property="five_button" destination="aXC-UO-QdO" id="35i-Yu-aCw"/>
                         <outlet property="four_button" destination="wx4-Fe-n90" id="fNa-o8-OVG"/>
+                        <outlet property="historyTextView" destination="0cN-VI-STa" id="Vpt-32-geG"/>
                         <outlet property="infoButton" destination="JDF-mr-oyg" id="U5C-2P-Lec"/>
                         <outlet property="mainReadout" destination="Yh2-fN-xSv" id="7ir-yZ-XbL"/>
                         <outlet property="multiplicationButton" destination="6e0-BC-4jm" id="Cc6-k9-cik"/>
                         <outlet property="negativePositiveButton" destination="PI4-3X-Doi" id="ACP-0Z-OK2"/>
                         <outlet property="nine_button" destination="KMR-dZ-Xvg" id="aeO-Dp-J8k"/>
                         <outlet property="one_button" destination="NCY-iN-nzP" id="Uzw-2M-j3J"/>
+                        <outlet property="operationHistoryLabel" destination="Bg2-Vp-Tzy" id="27p-z3-nDU"/>
                         <outlet property="secondaryReadout" destination="P2Q-3i-T1k" id="Wea-ed-6yK"/>
                         <outlet property="settingsButton" destination="73B-De-2Oc" id="Eh1-yF-0LV"/>
                         <outlet property="seven_button" destination="TXj-x7-geE" id="VvE-JC-0YK"/>
@@ -572,7 +598,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59375" y="110.15625"/>
+            <point key="canvasLocation" x="133.16582914572865" y="110.07194244604317"/>
         </scene>
         <!--Info ScreenVC-->
         <scene sceneID="5F9-Hi-RDY">
@@ -845,7 +871,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United Federation of Planets" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDN-HD-ZZR">
-                                <rect key="frame" x="20" y="650" width="1154" height="40"/>
+                                <rect key="frame" x="20" y="650" width="1154" height="47"/>
                                 <fontDescription key="fontDescription" name="FederationStarfleetHull23rd" family="United Federation of Planets." pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
