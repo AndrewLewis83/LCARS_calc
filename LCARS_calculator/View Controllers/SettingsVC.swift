@@ -11,6 +11,7 @@ import AVFoundation
 
 class SettingsVC: UIViewController {
     
+    @IBOutlet weak var sliderBackgroundView: UIView!
     @IBOutlet weak var muteButton: UIButton!
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var tipLabel: UILabel!
@@ -21,6 +22,13 @@ class SettingsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if #available(iOS 13.0, *) {
+            sliderBackgroundView.layer.borderColor = borderColor
+        }
+        
+        sliderBackgroundView.layer.borderWidth = 5
+        sliderBackgroundView.layer.cornerRadius = 20
         
         tipSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
         tipLabel.text = String(Settings.getPercentTip()) + "% tip"
