@@ -111,15 +111,12 @@ class MainScreenVC: UIViewController {
         
         if traitCollection.horizontalSizeClass == .compact {
             // load slim view
-            //warpCoreStackView.isHidden = true
             operationHistoryLabel.isHidden = true
             historyTextView.isHidden = true
         } else if traitCollection.horizontalSizeClass == .regular {
             // load wide view
-            //warpCoreStackView.isHidden = false
             operationHistoryLabel.isHidden = false
             historyTextView.isHidden = false
-            //configureIPadView()
         }
         
     }
