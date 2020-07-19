@@ -52,6 +52,7 @@ class MainScreenVC: UIViewController {
     private var soundEffect: AVAudioPlayer?
     private let errorSoundPath = Bundle.main.path(forResource: "consolewarning.mp3", ofType:nil)!
     private let buttonSoundPath = Bundle.main.path(forResource: "computerbeep_5.mp3", ofType:nil)!
+    private let alertSoundPath = Bundle.main.path(forResource: "computerbeep_13.mp3", ofType:nil)!
 
     //variables
     private var _hasDecimal = false
@@ -343,6 +344,8 @@ class MainScreenVC: UIViewController {
                 url = URL(fileURLWithPath: errorSoundPath)
             case "buttonSound":
                 url = URL(fileURLWithPath: buttonSoundPath)
+            case "alertSound":
+                url = URL(fileURLWithPath: alertSoundPath)
             default:
                 url = URL(fileURLWithPath: errorSoundPath)
             }
@@ -388,6 +391,7 @@ extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
         _mainValue = Double(mainReadout.text!)!
         secondaryReadout.text = "Value copied."
         _secondaryValue = 0
+        playSound(soundEffectName: "alertSound")
         
     }
 }

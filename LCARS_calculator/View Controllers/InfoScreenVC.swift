@@ -51,9 +51,9 @@ class InfoScreenVC: UIViewController {
     func populateInfoLabel(){
         
         infoLabel.animate(newText: """
-        This calculator app should be considered fan art. It is not meant for sale on the iOS App Store or anywhere else. I just loved Star Trek: TNG and Star Trek: Voyager growing up, so this felt like a fun thing to build and use.
-        
-        Paramount, let me know if you want to make a deal ;)
+        This calculator app should be considered fan art. It is not meant for sale on the iOS App Store or anywhere else. I've always been a big Star Trek: TNG and Star Trek: Voyager fan, so this felt like a fun thing to build and use.
+
+        Sound effects are from TrekCore.com
         """, characterDelay: 0.01)
         
     }
