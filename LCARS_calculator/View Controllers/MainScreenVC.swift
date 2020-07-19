@@ -212,7 +212,9 @@ class MainScreenVC: UIViewController {
                 historyText = historyText + "\(mainReadout.text ?? "")"
                 secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
                 historyText = historyText + "\(secondaryReadout.text ?? "")"
-                operationHistory.append(historyText)
+                if historyText != "Value copied to clipboard"{
+                    operationHistory.append(historyText)
+                }
                 tableView.reloadData()
                 _secondaryValue = tip
                 playSound(soundEffectName: "buttonSound")
@@ -236,10 +238,7 @@ class MainScreenVC: UIViewController {
             	UIPasteboard.general.string = String(_secondaryValue)
             }
             
-            secondaryReadout.text = "Value copied to clipboard."
-            historyText = historyText + "\(secondaryReadout.text ?? "")"
-            operationHistory.append(historyText)
-            tableView.reloadData()
+            secondaryReadout.text = "Value copied to clipboard"
             _hasDecimal = false
             
         case 18: // Clear
@@ -314,7 +313,11 @@ class MainScreenVC: UIViewController {
             var historyText: String = ""
             secondaryReadout.text = "(\(_secondaryValue) \(operationSymbol) \(_mainValue))"
             historyText = historyText + "\(_secondaryValue) \(operationSymbol) \(_mainValue) = \(finalValue)"
-            operationHistory.append(historyText)
+            
+            if historyText != "Value copied to clipboard"{
+                operationHistory.append(historyText)
+            }
+            
             tableView.reloadData()
         }
         _secondaryValue = finalValue
