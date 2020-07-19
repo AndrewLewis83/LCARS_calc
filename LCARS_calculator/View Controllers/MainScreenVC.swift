@@ -41,7 +41,12 @@ class MainScreenVC: UIViewController {
     @IBOutlet weak var secondaryReadout: UILabel!
     
     @IBOutlet weak var operationHistoryLabel: UILabel!
-    @IBOutlet weak var historyTextView: UITextView!
+
+    //operation history tablview
+    @IBOutlet weak var tableView: UITableView!
+    var operationHistory: [String] = [String]()
+    
+    
     
     //sound effects
     private var soundEffect: AVAudioPlayer?
@@ -78,9 +83,9 @@ class MainScreenVC: UIViewController {
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
         loadUserDefaults()
-        historyTextView.textColor = textColorOne
-        historyTextView.text = ""
-        
+        tableView.delegate = self
+        tableView.dataSource = self
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -89,13 +94,11 @@ class MainScreenVC: UIViewController {
         
         if UIDevice.current.userInterfaceIdiom == .pad {
             
-            //bottomCap.transform = bottomCap.transform.rotated(by: .pi)
             adaptForCurrentSizeClass()
-            //configureIPadView()
+
         }else{
             operationHistoryLabel.isHidden = true
-            historyTextView.isHidden = true
-            //warpCoreStackView.isHidden = true
+            tableView.isHidden = true
         }
     }
     
@@ -112,11 +115,11 @@ class MainScreenVC: UIViewController {
         if traitCollection.horizontalSizeClass == .compact {
             // load slim view
             operationHistoryLabel.isHidden = true
-            historyTextView.isHidden = true
+            tableView.isHidden = true
         } else if traitCollection.horizontalSizeClass == .regular {
             // load wide view
             operationHistoryLabel.isHidden = false
-            historyTextView.isHidden = false
+            tableView.isHidden = false
         }
         
     }
@@ -202,11 +205,14 @@ class MainScreenVC: UIViewController {
             }
             
             if _secondaryValue != 0 {
+                var historyText = ""
                 let tip = _secondaryValue * (Double(Settings.getPercentTip()) * 0.01)
                 mainReadout.text = " Tip = $" + String(format: "%.2f", tip)
-                historyTextView.text = historyTextView.text + "\(mainReadout.text ?? "")\n"
+                historyText = historyText + "\(mainReadout.text ?? "")"
                 secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
-                historyTextView.text = historyTextView.text + "\(secondaryReadout.text ?? "")\n"
+                historyText = historyText + "\(secondaryReadout.text ?? "")"
+                operationHistory.append(historyText)
+                tableView.reloadData()
                 _secondaryValue = tip
                 playSound(soundEffectName: "buttonSound")
     
@@ -220,6 +226,7 @@ class MainScreenVC: UIViewController {
             
         case 17://copies secondaryValue to clipboard
             
+            var historyText = ""
             playSound(soundEffectName: "buttonSound")
             
             if _secondaryValue == 0 {
@@ -229,7 +236,9 @@ class MainScreenVC: UIViewController {
             }
             
             secondaryReadout.text = "Value copied to clipboard."
-            historyTextView.text = historyTextView.text + "\(secondaryReadout.text ?? "")\n"
+            historyText = historyText + "\(secondaryReadout.text ?? "")"
+            operationHistory.append(historyText)
+            tableView.reloadData()
             _hasDecimal = false
             
         case 18: // Clear
@@ -241,6 +250,8 @@ class MainScreenVC: UIViewController {
             _mainValue = 0
             _secondaryValue = 0
         case 19: // Negative/positive
+            
+            var historyText: String = ""
             playSound(soundEffectName: "buttonSound")
             if _mainValue != 0 {
                 _mainValue = _mainValue * -1
@@ -248,7 +259,9 @@ class MainScreenVC: UIViewController {
             }else{
                 _secondaryValue = _secondaryValue * -1
                 mainReadout.text = String(_secondaryValue)
-                historyTextView.text = historyTextView.text + "\(mainReadout.text ?? "")\n"
+                historyText = historyText + "\(mainReadout.text ?? "")"
+                operationHistory.append(historyText)
+                tableView.reloadData()
             }
 
         default:
@@ -297,8 +310,11 @@ class MainScreenVC: UIViewController {
         
         mainReadout.text = String(finalValue)
         if _mainValue != 0{
+            var historyText: String = ""
             secondaryReadout.text = "(\(_secondaryValue) \(operationSymbol) \(_mainValue))"
-            historyTextView.text = historyTextView.text + "\(_secondaryValue) \(operationSymbol) \(_mainValue) = \(finalValue)\n"
+            historyText = historyText + "\(_secondaryValue) \(operationSymbol) \(_mainValue) = \(finalValue)"
+            operationHistory.append(historyText)
+            tableView.reloadData()
         }
         _secondaryValue = finalValue
         _mainValue = 0
@@ -340,12 +356,31 @@ class MainScreenVC: UIViewController {
             }
         }
     }
-    
+}
 
+extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return operationHistory.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "operationHistoryCell", for: indexPath) as? OperationHistoryCell{
+            
+            cell.setLabel(operationText: operationHistory[indexPath.row])
+            
+            return cell
+            
+        }else{
+            return UITableViewCell()
+        }
+    }
 }
 
 extension UIView {
     func pushTransition(_ duration:CFTimeInterval) {
+        
         let animation:CATransition = CATransition()
         animation.timingFunction = CAMediaTimingFunction(name:
             CAMediaTimingFunctionName.easeInEaseOut)
