@@ -157,7 +157,7 @@ class MainScreenVC: UIViewController {
             }
             
             if mainReadout.text != nil {
-                _mainValue = Double(mainReadout.text!) as! Double
+                _mainValue = Double(mainReadout.text!)!
             }
         }
         
@@ -375,6 +375,20 @@ extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
         }else{
             return UITableViewCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let historyValue = operationHistory[indexPath.row]
+        
+        let index = historyValue.firstIndex(of: "=")
+        let modifiedIndex = historyValue.index(index!, offsetBy: 2)
+        
+        mainReadout.text = String(historyValue[modifiedIndex..<historyValue.endIndex])
+        _mainValue = Double(mainReadout.text!)!
+        secondaryReadout.text = "Value copied."
+        _secondaryValue = 0
+        
     }
 }
 
