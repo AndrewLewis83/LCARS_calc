@@ -444,11 +444,11 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Operation history:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg2-Vp-Tzy">
-                                <rect key="frame" x="195" y="245" width="399.5" height="53.5"/>
+                                <rect key="frame" x="195" y="245" width="519" height="53.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53.5" id="Reh-xw-C4p"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="65"/>
                                 <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>

@@ -108,6 +108,7 @@ class MainScreenVC: UIViewController {
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
         adaptForCurrentSizeClass()
     }
     
@@ -133,6 +134,7 @@ class MainScreenVC: UIViewController {
     }
     
     func loadUserDefaults(){
+        
         Settings.setMuteSetting(newSetting: UserDefaults.standard.bool(forKey: "muteSetting"))
         Settings.setPercentTip(newTip: UserDefaults.standard.integer(forKey: "tipSetting"))
     }
@@ -229,8 +231,7 @@ class MainScreenVC: UIViewController {
             
         case 17://copies secondaryValue to clipboard
             
-            var historyText = ""
-            playSound(soundEffectName: "buttonSound")
+            playSound(soundEffectName: "alertSound")
             
             if _secondaryValue == 0 {
             	UIPasteboard.general.string = String(_mainValue)
