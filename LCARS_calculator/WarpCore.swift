@@ -51,9 +51,11 @@ class WarpCore: UIView {
         
         backgroundView.layer.cornerRadius = 30
         backgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+        
+        configureWarpCore()
     }
     
-    func configureIPadView(){
+    func configureWarpCore(){
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
         
@@ -136,5 +138,9 @@ class WarpCore: UIView {
             warpSectionTen.tintColor = warpColorThree
         }
         
+    }
+    
+    func stopWarpCore(){
+        timer.invalidate()
     }
 }

@@ -30,6 +30,8 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var bottomCenter: UIView!
     @IBOutlet weak var bottomRight: UIView!
     
+    private let warpCore = WarpCore()
+    
     //sound effects
     private var soundEffect: AVAudioPlayer?
     
@@ -95,6 +97,7 @@ class SettingsVC: UIViewController {
     @IBAction func returnButtonPressed(_ sender: Any) {
         
         playSound()
+        warpCore.stopWarpCore()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.dismiss(animated: false, completion: nil)
         }
@@ -155,8 +158,6 @@ class SettingsVC: UIViewController {
     }
     
     func configureWarpCore(){
-        
-        let warpCore = WarpCore()
         
         view.insertSubview(warpCore, at: 2)
         
