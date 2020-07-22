@@ -167,7 +167,21 @@ class SettingsVC: UIViewController {
         warpCore.leftAnchor.constraint(equalTo: warpCoreBackgroundStack.leftAnchor, constant: 120).isActive = true
         warpCore.topAnchor.constraint(equalTo: warpCoreBackgroundStack.topAnchor, constant: 30).isActive = true
         
-        
+        adjustForSizeClass()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        adjustForSizeClass()
+    }
+    
+    func adjustForSizeClass(){
+        if traitCollection.horizontalSizeClass == .compact {
+            warpCoreBackgroundStack.isHidden = true
+            warpCore.isHidden = true
+        } else {
+            warpCoreBackgroundStack.isHidden = false
+            warpCore.isHidden = false
+        }
     }
 
 }
