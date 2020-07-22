@@ -18,3 +18,6 @@ let textColorTwo = UIColor(red: 165.0/255.0, green: 165.0/255.0, blue: 206.0/255
 //let borderColor = UIColor(red: 249.0/255.0, green: 216.0/255.0, blue: 118.0/255.0, alpha: 1.0)
 @available(iOS 13.0, *)
 let borderColor = CGColor(srgbRed: 255.0/255.0, green: 173.0/255.0, blue: 33.0/255.0, alpha: 1.0)
+
+let backgroundColorOne = UIColor(red: 200.0/255.0, green: 160.0/255.0, blue: 105.0/255.0, alpha: 1.0)
+let backgroundColorTwo = UIColor(red: 148.0/255.0, green: 100.0/255.0, blue: 100.0/255.0, alpha: 1.0)

@@ -46,8 +46,6 @@ class MainScreenVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var operationHistory: [String] = [String]()
     
-    
-    
     //sound effects
     private var soundEffect: AVAudioPlayer?
     private let errorSoundPath = Bundle.main.path(forResource: "consolewarning.mp3", ofType:nil)!
@@ -401,6 +399,7 @@ extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension UIView {
+    
     func pushTransition(_ duration:CFTimeInterval) {
         
         let animation:CATransition = CATransition()

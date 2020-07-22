@@ -17,26 +17,21 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipSlider: UISlider!
     
-    // Warp core outlets
-    @IBOutlet weak var warpCoreStackView: UIStackView!
-    @IBOutlet weak var topCap: UIImageView!
-    @IBOutlet weak var warpSectionOne: UIImageView!
-    @IBOutlet weak var warpSectionTwo: UIImageView!
-    @IBOutlet weak var warpSectionThree: UIImageView!
-    @IBOutlet weak var warpSectionFour: UIImageView!
-    @IBOutlet weak var warpSectionFive: UIImageView!
-    @IBOutlet weak var centerSection: UIImageView!
-    @IBOutlet weak var warpSectionSix: UIImageView!
-    @IBOutlet weak var warpSectionSeven: UIImageView!
-    @IBOutlet weak var warpSectionEight: UIImageView!
-    @IBOutlet weak var warpSectionNine: UIImageView!
-    @IBOutlet weak var warpSectionTen: UIImageView!
-    @IBOutlet weak var bottomCap: UIImageView!
+    //Background view stacks
+    @IBOutlet weak var warpCoreBackgroundStack: UIStackView!
+    @IBOutlet weak var leftOne: UIView!
+    @IBOutlet weak var leftTwo: UIView!
+    @IBOutlet weak var leftThree: UIView!
+    @IBOutlet weak var leftFour: UIView!
+    @IBOutlet weak var topCenter: UIView!
+    @IBOutlet weak var topRight: UIView!
+    @IBOutlet weak var rightTwo: UIView!
+    @IBOutlet weak var rightThree: UIView!
+    @IBOutlet weak var bottomCenter: UIView!
+    @IBOutlet weak var bottomRight: UIView!
     
     //sound effects
     private var soundEffect: AVAudioPlayer?
-    var sequence = 0
-    private var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,11 +60,11 @@ class SettingsVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         if UIDevice.current.userInterfaceIdiom == .pad {
+             
+            setUpBackground()
             
-            bottomCap.transform = bottomCap.transform.rotated(by: .pi)
-            configureIPadView()
         }else{
-            warpCoreStackView.isHidden = true
+            warpCoreBackgroundStack.isHidden = true
         }
     }
     
@@ -122,6 +117,31 @@ class SettingsVC: UIViewController {
         }
     }
     
+    func setUpBackground(){
+        
+        leftOne.backgroundColor = backgroundColorOne
+        leftOne.layer.cornerRadius = 30
+        leftOne.layer.maskedCorners = [.layerMinXMinYCorner]
+        leftTwo.backgroundColor = backgroundColorTwo
+        leftThree.backgroundColor = backgroundColorOne
+        leftFour.backgroundColor = backgroundColorOne
+        leftFour.layer.cornerRadius = 30
+        leftFour.layer.maskedCorners = [.layerMinXMaxYCorner]
+        topCenter.backgroundColor = backgroundColorOne
+        topRight.backgroundColor = backgroundColorOne
+        topRight.layer.cornerRadius = 15
+        topRight.layer.maskedCorners = [.layerMaxXMinYCorner]
+        rightTwo.backgroundColor = .black
+        rightThree.backgroundColor = .black
+        bottomCenter.backgroundColor = backgroundColorOne
+        bottomRight.backgroundColor = backgroundColorOne
+        bottomRight.layer.cornerRadius = 15
+        bottomRight.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        
+        configureWarpCore()
+        
+    }
+    
     @IBAction func sliderMoved(_ sender: UISlider) {
         tipLabel.text = String(Int(sender.value)) + "% tip"
         Settings.setPercentTip(newTip: Int(sender.value))
@@ -134,88 +154,19 @@ class SettingsVC: UIViewController {
         UserDefaults.standard.set(Settings.getPercentTip(), forKey: "tipSetting")
     }
     
-    func configureIPadView(){
+    func configureWarpCore(){
         
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counter), userInfo: nil, repeats: true)
+        let warpCore = WarpCore()
         
-        warpSectionOne.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
-        warpSectionOne.tintColor = warpColorOne
-        warpSectionTwo.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
-        warpSectionTwo.tintColor = warpColorOne
-        warpSectionThree.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
-        warpSectionThree.tintColor = warpColorOne
-        warpSectionFour.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
-        warpSectionFour.tintColor = warpColorOne
-        warpSectionFive.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
-        warpSectionFive.tintColor = warpColorOne
-        warpSectionSix.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
-        warpSectionSix.tintColor = warpColorOne
-        warpSectionSeven.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
-        warpSectionSeven.tintColor = warpColorOne
-        warpSectionEight.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
-        warpSectionEight.tintColor = warpColorOne
-        warpSectionNine.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
-        warpSectionNine.tintColor = warpColorOne
-        warpSectionTen.image = UIImage(named: "warp_core_section.png")?.withRenderingMode(.alwaysTemplate)
-        warpSectionTen.tintColor = warpColorOne
+        view.insertSubview(warpCore, at: 2)
         
-        warpSectionOne.tintColor = warpColorOne
-           
-    }
-    
-    @objc func counter(){
+        warpCore.translatesAutoresizingMaskIntoConstraints = false
+        warpCore.rightAnchor.constraint(equalTo: warpCoreBackgroundStack.rightAnchor).isActive = true
+        warpCore.bottomAnchor.constraint(equalTo: warpCoreBackgroundStack.bottomAnchor, constant: -30).isActive = true
+        warpCore.leftAnchor.constraint(equalTo: warpCoreBackgroundStack.leftAnchor, constant: 120).isActive = true
+        warpCore.topAnchor.constraint(equalTo: warpCoreBackgroundStack.topAnchor, constant: 30).isActive = true
         
-        sequence += 1
-        
-        if sequence > 3 {
-            sequence = 0
-        }
-        
-        if sequence == 0 {
-            warpSectionOne.tintColor = warpColorOne
-            warpSectionTwo.tintColor = warpColorTwo
-            warpSectionThree.tintColor = warpColorThree
-            warpSectionFour.tintColor = warpColorTwo
-            warpSectionFive.tintColor = warpColorOne
-            warpSectionSix.tintColor = warpColorTwo
-            warpSectionSeven.tintColor = warpColorThree
-            warpSectionEight.tintColor = warpColorTwo
-            warpSectionNine.tintColor = warpColorOne
-            warpSectionTen.tintColor = warpColorTwo
-        }else if sequence == 1 {
-            warpSectionOne.tintColor = warpColorTwo
-            warpSectionTwo.tintColor = warpColorThree
-            warpSectionThree.tintColor = warpColorTwo
-            warpSectionFour.tintColor = warpColorOne
-            warpSectionFive.tintColor = warpColorTwo
-            warpSectionSix.tintColor = warpColorThree
-            warpSectionSeven.tintColor = warpColorTwo
-            warpSectionEight.tintColor = warpColorOne
-            warpSectionNine.tintColor = warpColorTwo
-            warpSectionTen.tintColor = warpColorThree
-        }else if sequence == 2 {
-            warpSectionOne.tintColor = warpColorThree
-            warpSectionTwo.tintColor = warpColorTwo
-            warpSectionThree.tintColor = warpColorOne
-            warpSectionFour.tintColor = warpColorTwo
-            warpSectionFive.tintColor = warpColorThree
-            warpSectionSix.tintColor = warpColorTwo
-            warpSectionSeven.tintColor = warpColorOne
-            warpSectionEight.tintColor = warpColorTwo
-            warpSectionNine.tintColor = warpColorThree
-            warpSectionTen.tintColor = warpColorTwo
-        }else if sequence == 3 {
-            warpSectionOne.tintColor = warpColorTwo
-            warpSectionTwo.tintColor = warpColorThree
-            warpSectionThree.tintColor = warpColorTwo
-            warpSectionFour.tintColor = warpColorOne
-            warpSectionFive.tintColor = warpColorTwo
-            warpSectionSix.tintColor = warpColorThree
-            warpSectionSeven.tintColor = warpColorTwo
-            warpSectionEight.tintColor = warpColorOne
-            warpSectionNine.tintColor = warpColorTwo
-            warpSectionTen.tintColor = warpColorThree
-        }
         
     }
+
 }
