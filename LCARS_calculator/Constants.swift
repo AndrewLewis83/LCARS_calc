@@ -21,3 +21,4 @@ let borderColor = CGColor(srgbRed: 255.0/255.0, green: 173.0/255.0, blue: 33.0/2
 
 let backgroundColorOne = UIColor(red: 200.0/255.0, green: 160.0/255.0, blue: 105.0/255.0, alpha: 1.0)
 let backgroundColorTwo = UIColor(red: 148.0/255.0, green: 100.0/255.0, blue: 100.0/255.0, alpha: 1.0)
+let backgroundColorThree = UIColor(red: 216.0/255.0, green: 165.0/255.0, blue: 112.0/255.0, alpha: 1.0)

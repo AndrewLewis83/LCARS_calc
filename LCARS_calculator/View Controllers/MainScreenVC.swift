@@ -10,6 +10,12 @@ import UIKit
 import AVFoundation
 
 class MainScreenVC: UIViewController {
+    
+    @IBOutlet weak var readoutBackgroundView: UIView!
+    @IBOutlet weak var readoutBlackBackgroundPanel: UIView!
+    
+    @IBOutlet weak var mainPanelBackground: UIView!
+    @IBOutlet weak var mainPanelBlackBackground: UIView!
   
     // number buttons
     @IBOutlet weak var one_button: UIButton!
@@ -77,6 +83,7 @@ class MainScreenVC: UIViewController {
         
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
+        configureUI()
         loadUserDefaults()
         loadHistoryView()
     
@@ -102,6 +109,23 @@ class MainScreenVC: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
         adaptForCurrentSizeClass()
+    }
+    
+    func configureUI(){
+        
+        readoutBackgroundView.layer.cornerRadius = 30
+        readoutBackgroundView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        readoutBlackBackgroundPanel.layer.cornerRadius = 30
+        readoutBlackBackgroundPanel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        
+        
+        mainPanelBackground.layer.cornerRadius = 30
+        mainPanelBackground.layer.maskedCorners = [.layerMinXMinYCorner]
+        mainPanelBlackBackground.layer.cornerRadius = 30
+        mainPanelBlackBackground.layer.maskedCorners = [.layerMinXMinYCorner]
+        
+        mainPanelBackground.backgroundColor = backgroundColorThree
+        
     }
     
     func adaptForCurrentSizeClass(){

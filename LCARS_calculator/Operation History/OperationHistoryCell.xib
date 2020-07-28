@@ -14,15 +14,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="operationHistoryCell" id="fZe-TJ-R7z" customClass="OperationHistoryCell" customModule="LCARS_calculator" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="594" height="75.5"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="operationHistoryCell" rowHeight="162.5" id="fZe-TJ-R7z" customClass="OperationHistoryCell" customModule="LCARS_calculator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="594" height="138"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fZe-TJ-R7z" id="QF5-MZ-eEb" customClass="OperationHistoryCell" customModule="LCARS_calculator" customModuleProvider="target">
-                <rect key="frame" x="0.0" y="0.0" width="594" height="75.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="594" height="138"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 X 10 = 90" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWy-AT-bOl">
-                        <rect key="frame" x="20" y="11" width="554" height="53.5"/>
+                        <rect key="frame" x="20" y="11" width="554" height="116"/>
                         <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="50"/>
                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
             <connections>
                 <outlet property="operationLabel" destination="nWy-AT-bOl" id="P8E-5J-XTv"/>
             </connections>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="131.58482142857142"/>
         </tableViewCell>
     </objects>
 </document>

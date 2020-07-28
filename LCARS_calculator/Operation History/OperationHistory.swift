@@ -44,15 +44,21 @@ class OperationHistory: UIView {
         addSubview(operationHistoryLabel)
         addSubview(tableView)
         
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 106
+        
         operationHistoryLabel.translatesAutoresizingMaskIntoConstraints = false
         operationHistoryLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         operationHistoryLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        
+
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: operationHistoryLabel.bottomAnchor, constant: 8).isActive = true
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200.0
     }
 
 }
@@ -72,6 +78,7 @@ extension OperationHistory: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell?.setLabel(operationText: operationHistory[indexPath.row])
+        self.frame.size.height = heightToFitContent(label: (cell?.operationLabel)!)
         
         return cell!
         
@@ -87,4 +94,17 @@ extension OperationHistory: UITableViewDelegate, UITableViewDataSource {
         historyDelegate.didTapCell(value: String(historyValue[modifiedIndex..<historyValue.endIndex]))
         
     }
+
+}
+
+func heightToFitContent(label: UILabel) -> CGFloat {
+    
+    label.numberOfLines = 0
+    label.lineBreakMode = NSLineBreakMode.byWordWrapping
+    let maximumLabelSize : CGSize = CGSize(width: label.frame.size.width, height: CGFloat.greatestFiniteMagnitude)
+    let expectedLabelSize : CGSize = label.sizeThatFits(maximumLabelSize);
+    
+    label.sizeToFit()
+    
+    return expectedLabelSize.height
 }
