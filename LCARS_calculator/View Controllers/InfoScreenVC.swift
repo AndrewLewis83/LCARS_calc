@@ -11,7 +11,10 @@ import AVFoundation
 
 class InfoScreenVC: UIViewController {
     
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var upperBackgroundView: UIView!
+    @IBOutlet weak var lowerBackgroundView: UIView!
+    @IBOutlet weak var labelBackgroundView: UIView!
+    @IBOutlet weak var infoTextView: UITextView!
     @IBOutlet weak var returnButton: UIButton!
     
     //sound effects
@@ -22,7 +25,8 @@ class InfoScreenVC: UIViewController {
         super.viewDidLoad()
         
         populateInfoLabel()
-        setLabelValues()
+        setupUI()
+        adaptForCurrentSizeClass()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -32,25 +36,60 @@ class InfoScreenVC: UIViewController {
         navigationController?.viewControllers.remove(at: index)
     }
     
-    func setLabelValues(){
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        adaptForCurrentSizeClass()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
-        infoLabel.numberOfLines = 0
-        infoLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-        infoLabel.textAlignment = NSTextAlignment.left
+        adaptForCurrentSizeClass()
+    }
+    
+    
+    func setupUI(){
+        
+        labelBackgroundView.layer.cornerRadius = 30
+        labelBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+
+        
+        upperBackgroundView.layer.cornerRadius = 30
+        upperBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner]
+        upperBackgroundView.backgroundColor = backgroundColorFour
+        
+        lowerBackgroundView.layer.cornerRadius = 30
+        lowerBackgroundView.layer.maskedCorners = [.layerMinXMaxYCorner]
+
+        lowerBackgroundView.backgroundColor = backgroundColorThree
+        
+    }
+    
+    func adaptForCurrentSizeClass(){
+        
+        infoTextView.textAlignment = NSTextAlignment.left
         
         // this formats the text for the iPad and prevents it from overflowing splitview.
-        if UIDevice.current.model == "iPad"  && splitView == false && UIScreen.main.bounds.size.width > 1024.0 {
-            infoLabel.font = UIFont(name: "Okuda",
-            size: 65.0)
+
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            
+            if traitCollection.horizontalSizeClass == .compact {
+                // load slim view
+                infoTextView.font = UIFont(name: "Okuda",
+                size: 40.0)
+            }else{
+                infoTextView.font = UIFont(name: "Okuda",
+                size: 80.0)
+            }
+
         }else{
-            infoLabel.font = UIFont(name: "Okuda",
+            
+            infoTextView.font = UIFont(name: "Okuda",
             size: 40.0)
         }
     }
     
     func populateInfoLabel(){
         
-        infoLabel.animate(newText: """
+        infoTextView.animate(newText: """
         This calculator app should be considered fan art. It is not meant for sale on the iOS App Store or anywhere else. I've always been a big Star Trek: TNG and Star Trek: Voyager fan, so this felt like a fun thing to build and use.
 
         Sound effects are from TrekCore.com
@@ -80,7 +119,7 @@ class InfoScreenVC: UIViewController {
     }
 }
 
-extension UILabel {
+extension UITextView {
     
     func animate(newText: String, characterDelay: TimeInterval) {
         
@@ -96,19 +135,4 @@ extension UILabel {
             }
         }
     }
-}
-
-extension InfoScreenVC {
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if traitCollection.horizontalSizeClass != .regular {
-            splitView = true
-            
-        } else {
-            splitView = false
-        }
-        
-        setLabelValues()
-    }
-
 }

@@ -330,11 +330,11 @@ class MainScreenVC: UIViewController {
             operationSymbol = "+"
         }
         
-        mainReadout.text = String(finalValue)
+        mainReadout.text = String(format: "%.3f", finalValue)
         if _mainValue != 0{
             var historyText: String = ""
-            secondaryReadout.text = "(\(_secondaryValue) \(operationSymbol) \(_mainValue))"
-            historyText = historyText + "\(_secondaryValue) \(operationSymbol) \(_mainValue) = \(finalValue)"
+            secondaryReadout.text = "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue)))"
+            historyText = historyText + "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue)) = \(String(format: "%.3f", finalValue))"
             
             if historyText != "Value copied to clipboard"{
                 _historyView?.operationHistory.append(historyText)
