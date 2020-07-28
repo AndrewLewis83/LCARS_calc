@@ -40,11 +40,7 @@ class MainScreenVC: UIViewController {
     @IBOutlet weak var mainReadout: UILabel!
     @IBOutlet weak var secondaryReadout: UILabel!
     
-    @IBOutlet weak var operationHistoryLabel: UILabel!
-
-    //operation history tablview
-    @IBOutlet weak var tableView: UITableView!
-    var operationHistory: [String] = [String]()
+    @IBOutlet weak var _historyView: OperationHistory!
     
     //sound effects
     private var soundEffect: AVAudioPlayer?
@@ -82,8 +78,7 @@ class MainScreenVC: UIViewController {
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
         loadUserDefaults()
-        tableView.delegate = self
-        tableView.dataSource = self
+        loadHistoryView()
     
     }
     
@@ -96,8 +91,7 @@ class MainScreenVC: UIViewController {
             adaptForCurrentSizeClass()
 
         }else{
-            operationHistoryLabel.isHidden = true
-            tableView.isHidden = true
+            _historyView?.isHidden = true
         }
     }
     
@@ -114,17 +108,16 @@ class MainScreenVC: UIViewController {
         
         if traitCollection.horizontalSizeClass == .compact {
             // load slim view
-            operationHistoryLabel.isHidden = true
-            tableView.isHidden = true
+            _historyView?.isHidden = true
         } else if traitCollection.horizontalSizeClass == .regular {
             // load wide view
-            operationHistoryLabel.isHidden = false
-            tableView.isHidden = false
+            _historyView?.isHidden = false
         }
         
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        
         super.viewDidDisappear(animated)
         guard let viewControllers = navigationController?.viewControllers,
             let index = viewControllers.index(of: self) else { return }
@@ -135,6 +128,12 @@ class MainScreenVC: UIViewController {
         
         Settings.setMuteSetting(newSetting: UserDefaults.standard.bool(forKey: "muteSetting"))
         Settings.setPercentTip(newTip: UserDefaults.standard.integer(forKey: "tipSetting"))
+    }
+    
+    func loadHistoryView(){
+        
+        _historyView?.historyDelegate = self
+        
     }
     
     @IBAction func numberButtonPressed(_ sender: Any) {
@@ -213,9 +212,9 @@ class MainScreenVC: UIViewController {
                 secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
                 historyText = historyText + "\(secondaryReadout.text ?? "")"
                 if historyText != "Value copied to clipboard"{
-                    operationHistory.append(historyText)
+                    _historyView?.operationHistory.append(historyText)
                 }
-                tableView.reloadData()
+                _historyView?.tableView.reloadData()
                 _secondaryValue = tip
                 playSound(soundEffectName: "buttonSound")
     
@@ -259,8 +258,8 @@ class MainScreenVC: UIViewController {
                 _secondaryValue = _secondaryValue * -1
                 mainReadout.text = String(_secondaryValue)
                 historyText = historyText + "\(mainReadout.text ?? "")"
-                operationHistory.append(historyText)
-                tableView.reloadData()
+                _historyView?.operationHistory.append(historyText)
+                _historyView?.tableView.reloadData()
             }
 
         default:
@@ -314,10 +313,10 @@ class MainScreenVC: UIViewController {
             historyText = historyText + "\(_secondaryValue) \(operationSymbol) \(_mainValue) = \(finalValue)"
             
             if historyText != "Value copied to clipboard"{
-                operationHistory.append(historyText)
+                _historyView?.operationHistory.append(historyText)
             }
             
-            tableView.reloadData()
+            _historyView?.tableView.reloadData()
         }
         _secondaryValue = finalValue
         _mainValue = 0
@@ -361,41 +360,21 @@ class MainScreenVC: UIViewController {
             }
         }
     }
+
 }
 
-extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
+extension MainScreenVC: HistoryDelegate {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return operationHistory.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func didTapCell(value: String) {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "operationHistoryCell", for: indexPath) as? OperationHistoryCell{
-            
-            cell.setLabel(operationText: operationHistory[indexPath.row])
-            
-            return cell
-            
-        }else{
-            return UITableViewCell()
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let historyValue = operationHistory[indexPath.row]
-        
-        let index = historyValue.firstIndex(of: "=")
-        let modifiedIndex = historyValue.index(index!, offsetBy: 2)
-        
-        mainReadout.text = String(historyValue[modifiedIndex..<historyValue.endIndex])
+        mainReadout.text = value
         _mainValue = Double(mainReadout.text!)!
         secondaryReadout.text = "Value copied."
         _secondaryValue = 0
         playSound(soundEffectName: "alertSound")
-        
     }
+    
+    
 }
 
 extension UIView {
@@ -411,4 +390,6 @@ extension UIView {
         layer.add(animation, forKey: CATransitionType.push.rawValue)
     }
 }
+
+
 

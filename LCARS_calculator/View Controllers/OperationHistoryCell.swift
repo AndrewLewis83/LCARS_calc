@@ -12,6 +12,13 @@ class OperationHistoryCell: UITableViewCell {
     
     @IBOutlet weak var operationLabel: UILabel!
     
+    class func createCell() -> OperationHistoryCell {
+        let nib = UINib(nibName: "OperationHistoryCell", bundle: nil)
+        let cell = (nib.instantiate(withOwner: self, options: nil).last as? OperationHistoryCell)!
+        cell.backgroundColor = .black
+        return cell
+    }
+    
     func setLabel(operationText: String){
         
         operationLabel.textColor = textColorTwo

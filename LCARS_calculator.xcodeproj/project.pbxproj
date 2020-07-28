@@ -23,7 +23,10 @@
 		F432BC1524B910940039D9CC /* SizeClassExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432BC1424B910940039D9CC /* SizeClassExtension.swift */; };
 		F45568F724C66F700026317E /* WarpCore.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45568F624C66F700026317E /* WarpCore.xib */; };
 		F45568FB24C670B90026317E /* WarpCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45568FA24C670B80026317E /* WarpCore.swift */; };
+		F45A608824CA1FB500CF5E56 /* OperationHistory.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45A608724CA1FB500CF5E56 /* OperationHistory.xib */; };
+		F45A608E24CA239B00CF5E56 /* OperationHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A608D24CA239B00CF5E56 /* OperationHistory.swift */; };
 		F45EABCA23B2CE7B000D692B /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45EABC923B2CE7B000D692B /* LaunchScreenVC.swift */; };
+		F4A8E08324CBA5F4007CAED1 /* OperationHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */; };
 		F4B2CF9624C4EA1500BAD628 /* OperationHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */; };
 		F4CE29FA24C5116A0004D1D0 /* alert16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29F924C5116A0004D1D0 /* alert16.mp3 */; };
 		F4CE29FC24C512870004D1D0 /* computerbeep_13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */; };
@@ -71,7 +74,10 @@
 		F432BC1424B910940039D9CC /* SizeClassExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClassExtension.swift; sourceTree = "<group>"; };
 		F45568F624C66F700026317E /* WarpCore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarpCore.xib; sourceTree = "<group>"; };
 		F45568FA24C670B80026317E /* WarpCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarpCore.swift; sourceTree = "<group>"; };
+		F45A608724CA1FB500CF5E56 /* OperationHistory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationHistory.xib; sourceTree = "<group>"; };
+		F45A608D24CA239B00CF5E56 /* OperationHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationHistory.swift; sourceTree = "<group>"; };
 		F45EABC923B2CE7B000D692B /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
+		F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationHistoryCell.xib; sourceTree = "<group>"; };
 		F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationHistoryCell.swift; sourceTree = "<group>"; };
 		F4CE29F924C5116A0004D1D0 /* alert16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert16.mp3; sourceTree = "<group>"; };
 		F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = computerbeep_13.mp3; sourceTree = "<group>"; };
@@ -130,7 +136,8 @@
 				F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */,
 				A1C547842221B1CB007505AA /* AppDelegate.swift */,
 				A1C547882221B1CB007505AA /* Main.storyboard */,
-				F45568F624C66F700026317E /* WarpCore.xib */,
+				F45A608924CA214700CF5E56 /* Warp Core */,
+				F45A608C24CA218900CF5E56 /* Operation History */,
 				F4F7277323B2C7AB006624CB /* View Controllers */,
 				A1C7C311228F694F00BD0FC5 /* Okuda.otf */,
 				A1C5478B2221B1CD007505AA /* Assets.xcassets */,
@@ -139,7 +146,6 @@
 				A12F3715229B5DEE009C44B0 /* Settings.swift */,
 				F4FDED9A24B7EA6C00A0F475 /* Constants.swift */,
 				F432BC1424B910940039D9CC /* SizeClassExtension.swift */,
-				F45568FA24C670B80026317E /* WarpCore.swift */,
 			);
 			path = LCARS_calculator;
 			sourceTree = "<group>";
@@ -172,6 +178,25 @@
 				A1C7C313228F6AAA00BD0FC5 /* unabletocomply1_ep.mp3 */,
 			);
 			path = sound_effects;
+			sourceTree = "<group>";
+		};
+		F45A608924CA214700CF5E56 /* Warp Core */ = {
+			isa = PBXGroup;
+			children = (
+				F45568F624C66F700026317E /* WarpCore.xib */,
+				F45568FA24C670B80026317E /* WarpCore.swift */,
+			);
+			path = "Warp Core";
+			sourceTree = "<group>";
+		};
+		F45A608C24CA218900CF5E56 /* Operation History */ = {
+			isa = PBXGroup;
+			children = (
+				F45A608724CA1FB500CF5E56 /* OperationHistory.xib */,
+				F45A608D24CA239B00CF5E56 /* OperationHistory.swift */,
+				F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */,
+			);
+			path = "Operation History";
 			sourceTree = "<group>";
 		};
 		F4F7277323B2C7AB006624CB /* View Controllers */ = {
@@ -298,8 +323,10 @@
 				A1C5478A2221B1CB007505AA /* Main.storyboard in Resources */,
 				A1C7C31B228F6AAC00BD0FC5 /* unabletocomply1_ep.mp3 in Resources */,
 				A1C7C31F228F6AAC00BD0FC5 /* consolewarning.mp3 in Resources */,
+				F4A8E08324CBA5F4007CAED1 /* OperationHistoryCell.xib in Resources */,
 				A1C7C31E228F6AAC00BD0FC5 /* computerbeep_5.mp3 in Resources */,
 				F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */,
+				F45A608824CA1FB500CF5E56 /* OperationHistory.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +355,7 @@
 				A1EBF5032290ADFB005C72A3 /* InfoScreenVC.swift in Sources */,
 				F432BC1524B910940039D9CC /* SizeClassExtension.swift in Sources */,
 				A1DC555022984B9A008CD59F /* SettingsVC.swift in Sources */,
+				F45A608E24CA239B00CF5E56 /* OperationHistory.swift in Sources */,
 				A1C547872221B1CB007505AA /* MainScreenVC.swift in Sources */,
 				A1C547852221B1CB007505AA /* AppDelegate.swift in Sources */,
 				F4B2CF9624C4EA1500BAD628 /* OperationHistoryCell.swift in Sources */,

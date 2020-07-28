@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Okuda.otf">
+            <string>Okuda</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OperationHistory" customModule="LCARS_calculator" customModuleProvider="target">
+            <connections>
+                <outlet property="operationHistoryLabel" destination="OHM-2Y-Meg" id="vee-1p-6vU"/>
+                <outlet property="tableView" destination="nSX-Hb-7JM" id="j6e-87-eZO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="558" height="857"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nSX-Hb-7JM">
+                    <rect key="frame" x="0.0" y="62" width="558" height="795"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Operation history:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHM-2Y-Meg">
+                    <rect key="frame" x="20" y="0.0" width="270.5" height="53.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53.5" id="7GX-8x-0WH"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53.5" id="iyZ-AG-keB"/>
+                        <constraint firstAttribute="width" constant="270.5" id="v3D-YP-drH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="65"/>
+                    <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="nSX-Hb-7JM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="8dX-EP-ylt"/>
+                <constraint firstItem="nSX-Hb-7JM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bWf-ve-vfy"/>
+                <constraint firstItem="nSX-Hb-7JM" firstAttribute="top" secondItem="OHM-2Y-Meg" secondAttribute="bottom" constant="8.5" id="fjI-4d-UPM"/>
+                <constraint firstItem="OHM-2Y-Meg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gFi-5g-CtX"/>
+                <constraint firstAttribute="bottom" secondItem="nSX-Hb-7JM" secondAttribute="bottom" id="qOa-OW-GYI"/>
+                <constraint firstItem="OHM-2Y-Meg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="tSj-2i-PcN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-21.105527638190956" y="160.07194244604318"/>
+        </view>
+    </objects>
+</document>
