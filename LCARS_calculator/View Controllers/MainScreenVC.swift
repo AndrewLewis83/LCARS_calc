@@ -232,9 +232,8 @@ class MainScreenVC: UIViewController {
                 var historyText = ""
                 let tip = _secondaryValue * (Double(Settings.getPercentTip()) * 0.01)
                 mainReadout.text = " Tip = $" + String(format: "%.2f", tip)
-                historyText = historyText + "\(mainReadout.text ?? "")"
                 secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
-                historyText = historyText + "\(secondaryReadout.text ?? "")"
+                historyText = "\(secondaryReadout.text ?? "")"
                 if historyText != "Value copied to clipboard"{
                     _historyView?.operationHistory.append(historyText)
                 }
@@ -392,10 +391,17 @@ extension MainScreenVC: HistoryDelegate {
     func didTapCell(value: String) {
         
         mainReadout.text = value
-        _mainValue = Double(mainReadout.text!)!
-        secondaryReadout.text = "Value copied."
-        _secondaryValue = 0
-        playSound(soundEffectName: "alertSound")
+        if let copiedValue = Double(mainReadout.text ?? ""){
+            _mainValue = copiedValue
+            secondaryReadout.text = "Value copied."
+            _secondaryValue = 0
+            playSound(soundEffectName: "alertSound")
+        }else{
+            secondaryReadout.text = "Could not copy value."
+            playSound(soundEffectName: "errorSound")
+        }
+        
+        
     }
     
     
