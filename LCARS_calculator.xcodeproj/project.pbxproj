@@ -10,7 +10,7 @@
 		A12F3716229B5DEE009C44B0 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F3715229B5DEE009C44B0 /* Settings.swift */; };
 		A1C547852221B1CB007505AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C547842221B1CB007505AA /* AppDelegate.swift */; };
 		A1C547872221B1CB007505AA /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C547862221B1CB007505AA /* MainScreenVC.swift */; };
-		A1C5478A2221B1CB007505AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C547882221B1CB007505AA /* Main.storyboard */; };
+		A1C5478A2221B1CB007505AA /* MainiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C547882221B1CB007505AA /* MainiPad.storyboard */; };
 		A1C5478C2221B1CD007505AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C5478B2221B1CD007505AA /* Assets.xcassets */; };
 		A1C5479A2221B1CD007505AA /* LCARS_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C547992221B1CD007505AA /* LCARS_calculatorTests.swift */; };
 		A1C547A52221B1CD007505AA /* LCARS_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C547A42221B1CD007505AA /* LCARS_calculatorUITests.swift */; };
@@ -28,6 +28,8 @@
 		F45EABCA23B2CE7B000D692B /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45EABC923B2CE7B000D692B /* LaunchScreenVC.swift */; };
 		F4A8E08324CBA5F4007CAED1 /* OperationHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */; };
 		F4B2CF9624C4EA1500BAD628 /* OperationHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */; };
+		F4BEBE5B258A8E4C0025D085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BEBE5A258A8E4C0025D085 /* Main.storyboard */; };
+		F4BEBE63258A905F0025D085 /* MainiPadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE62258A905F0025D085 /* MainiPadVC.swift */; };
 		F4CE29FA24C5116A0004D1D0 /* alert16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29F924C5116A0004D1D0 /* alert16.mp3 */; };
 		F4CE29FC24C512870004D1D0 /* computerbeep_13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */; };
 		F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */; };
@@ -56,7 +58,7 @@
 		A1C547812221B1CB007505AA /* LCARS_calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCARS_calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C547842221B1CB007505AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1C547862221B1CB007505AA /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
-		A1C547892221B1CB007505AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1C547892221B1CB007505AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainiPad.storyboard; sourceTree = "<group>"; };
 		A1C5478B2221B1CD007505AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1C547902221B1CD007505AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C547952221B1CD007505AA /* LCARS_calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCARS_calculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,8 @@
 		F45EABC923B2CE7B000D692B /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationHistoryCell.xib; sourceTree = "<group>"; };
 		F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationHistoryCell.swift; sourceTree = "<group>"; };
+		F4BEBE5A258A8E4C0025D085 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F4BEBE62258A905F0025D085 /* MainiPadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainiPadVC.swift; sourceTree = "<group>"; };
 		F4CE29F924C5116A0004D1D0 /* alert16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert16.mp3; sourceTree = "<group>"; };
 		F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = computerbeep_13.mp3; sourceTree = "<group>"; };
 		F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "United Federation of Planets Regular.ttf"; sourceTree = "<group>"; };
@@ -135,7 +139,8 @@
 			children = (
 				F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */,
 				A1C547842221B1CB007505AA /* AppDelegate.swift */,
-				A1C547882221B1CB007505AA /* Main.storyboard */,
+				A1C547882221B1CB007505AA /* MainiPad.storyboard */,
+				F4BEBE5A258A8E4C0025D085 /* Main.storyboard */,
 				F45A608924CA214700CF5E56 /* Warp Core */,
 				F45A608C24CA218900CF5E56 /* Operation History */,
 				F4F7277323B2C7AB006624CB /* View Controllers */,
@@ -204,6 +209,7 @@
 			children = (
 				F45EABC923B2CE7B000D692B /* LaunchScreenVC.swift */,
 				A1C547862221B1CB007505AA /* MainScreenVC.swift */,
+				F4BEBE62258A905F0025D085 /* MainiPadVC.swift */,
 				A1EBF5022290ADFB005C72A3 /* InfoScreenVC.swift */,
 				A1DC554F22984B9A008CD59F /* SettingsVC.swift */,
 				F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */,
@@ -320,10 +326,11 @@
 				F45568F724C66F700026317E /* WarpCore.xib in Resources */,
 				F4CE29FC24C512870004D1D0 /* computerbeep_13.mp3 in Resources */,
 				A1C5478C2221B1CD007505AA /* Assets.xcassets in Resources */,
-				A1C5478A2221B1CB007505AA /* Main.storyboard in Resources */,
+				A1C5478A2221B1CB007505AA /* MainiPad.storyboard in Resources */,
 				A1C7C31B228F6AAC00BD0FC5 /* unabletocomply1_ep.mp3 in Resources */,
 				A1C7C31F228F6AAC00BD0FC5 /* consolewarning.mp3 in Resources */,
 				F4A8E08324CBA5F4007CAED1 /* OperationHistoryCell.xib in Resources */,
+				F4BEBE5B258A8E4C0025D085 /* Main.storyboard in Resources */,
 				A1C7C31E228F6AAC00BD0FC5 /* computerbeep_5.mp3 in Resources */,
 				F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */,
 				F45A608824CA1FB500CF5E56 /* OperationHistory.xib in Resources */,
@@ -362,6 +369,7 @@
 				F4FDED9B24B7EA6C00A0F475 /* Constants.swift in Sources */,
 				A12F3716229B5DEE009C44B0 /* Settings.swift in Sources */,
 				F45EABCA23B2CE7B000D692B /* LaunchScreenVC.swift in Sources */,
+				F4BEBE63258A905F0025D085 /* MainiPadVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,12 +405,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A1C547882221B1CB007505AA /* Main.storyboard */ = {
+		A1C547882221B1CB007505AA /* MainiPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A1C547892221B1CB007505AA /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainiPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
