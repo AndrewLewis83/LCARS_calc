@@ -272,16 +272,18 @@ class iPhoneMainVC: UIViewController {
             
             var mainReadoutString: String = mainReadout.text ?? ""
             _mainValue = Double(mainReadoutString) ?? 0.0
-            _secondaryValue = 0
             
             if mainReadoutString.contains("Tip") == true {
                 
-                _mainValue = 0.0
+                _mainValue = _secondaryValue
                 _secondaryValue = 0.0
-                mainReadout.text = "0.0"
+                mainReadout.text = String(_mainValue)
+                mainReadoutString = mainReadout.text ?? ""
                 secondaryReadout.text = ""
                 
-            }else if _mainValue != 0 {
+            }
+            
+            if _mainValue != 0 {
                 
                 mainReadoutString.removeLast()
                 _mainValue = Double(mainReadoutString) ?? 0.0
