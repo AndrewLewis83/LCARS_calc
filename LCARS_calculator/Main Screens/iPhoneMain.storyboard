@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ER3-My-NSo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Okuda.otf">
+            <string>Okuda</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--iPhone MainVC-->
+        <scene sceneID="vjw-JW-Jrl">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="ER3-My-NSo" customClass="iPhoneMainVC" customModule="LCARS_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ebr-TA-eJA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUB-qw-2wf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="180"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEN-PW-XtJ">
+                                        <rect key="frame" x="0.0" y="114" width="420" height="5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="u0t-cE-5o9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7i-6R-XJ5">
+                                        <rect key="frame" x="60" y="10" width="354" height="160"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="p6f-hd-r3S" userLabel="readout stack view">
+                                                <rect key="frame" x="10" y="10" width="334" height="120"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3714.7" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="39" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAh-xf-IZX">
+                                                        <rect key="frame" x="217" y="0.0" width="117" height="60"/>
+                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="78"/>
+                                                        <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="plus" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9LE-yd-dHG">
+                                                        <rect key="frame" x="296.5" y="60" width="37.5" height="60"/>
+                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="40"/>
+                                                        <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="B8V-V4-oZC"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="B8V-V4-oZC"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="B8V-V4-oZC"/>
+                                                    </mask>
+                                                </variation>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="p6f-hd-r3S" firstAttribute="top" secondItem="v7i-6R-XJ5" secondAttribute="top" constant="15" id="42W-Db-9oA"/>
+                                            <constraint firstAttribute="trailing" secondItem="p6f-hd-r3S" secondAttribute="trailing" constant="10" id="7km-ZA-Lw0"/>
+                                            <constraint firstItem="p6f-hd-r3S" firstAttribute="leading" secondItem="v7i-6R-XJ5" secondAttribute="leading" constant="10" id="PZ2-hM-x0k"/>
+                                            <constraint firstAttribute="bottom" secondItem="p6f-hd-r3S" secondAttribute="bottom" constant="15" id="dbu-MJ-vYe"/>
+                                            <constraint firstItem="p6f-hd-r3S" firstAttribute="top" secondItem="v7i-6R-XJ5" secondAttribute="top" constant="10" id="onV-Hj-Hbi"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="dbu-MJ-vYe"/>
+                                                <exclude reference="onV-Hj-Hbi"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="dbu-MJ-vYe"/>
+                                                <exclude reference="42W-Db-9oA"/>
+                                                <include reference="onV-Hj-Hbi"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99686211349999998" green="0.6842651367" blue="0.12907642129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="24n-ur-bef"/>
+                                    <constraint firstItem="qEN-PW-XtJ" firstAttribute="leading" secondItem="dUB-qw-2wf" secondAttribute="leading" id="Sbw-Cr-tVJ"/>
+                                    <constraint firstItem="qEN-PW-XtJ" firstAttribute="top" secondItem="dUB-qw-2wf" secondAttribute="top" priority="999" constant="150" id="YTx-bJ-V8U"/>
+                                    <constraint firstAttribute="bottom" secondItem="qEN-PW-XtJ" secondAttribute="bottom" constant="61" id="amg-Nn-7qZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="qEN-PW-XtJ" secondAttribute="trailing" constant="-6" id="n2N-Gl-8yP"/>
+                                    <constraint firstAttribute="bottom" secondItem="v7i-6R-XJ5" secondAttribute="bottom" constant="10" id="nZN-W9-ivU"/>
+                                    <constraint firstAttribute="trailing" secondItem="v7i-6R-XJ5" secondAttribute="trailing" id="qeN-kn-5I7"/>
+                                    <constraint firstItem="v7i-6R-XJ5" firstAttribute="leading" secondItem="dUB-qw-2wf" secondAttribute="leading" constant="60" id="sAp-ti-h1M"/>
+                                    <constraint firstItem="v7i-6R-XJ5" firstAttribute="top" secondItem="dUB-qw-2wf" secondAttribute="top" constant="10" id="wlI-HL-f6o"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tc9-Dn-bRX">
+                                <rect key="frame" x="0.0" y="234" width="414" height="641.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJx-sM-TTj">
+                                        <rect key="frame" x="60" y="10" width="354" height="631.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lhn-zG-0ic">
+                                                <rect key="frame" x="8" y="8" width="338" height="603.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dW4-Df-zc2" userLabel="buttons stack view">
+                                                        <rect key="frame" x="0.0" y="0.0" width="338" height="424.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="PlB-DV-76k">
+                                                                <rect key="frame" x="0.0" y="0.0" width="338" height="78.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHd-eM-Pzi">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="zHd-eM-Pzi" secondAttribute="height" multiplier="1:1" id="9yv-6w-0Oj"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="1">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="cvR-xg-GUj"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH8-Yj-uh3">
+                                                                        <rect key="frame" x="87" y="0.0" width="77.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="bH8-Yj-uh3" secondAttribute="height" multiplier="1:1" id="TFw-oA-ThX"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="2">
+                                                                            <color key="titleColor" systemColor="darkTextColor"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="5JP-xz-ept"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sB1-U2-guE">
+                                                                        <rect key="frame" x="173.5" y="0.0" width="78" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="sB1-U2-guE" secondAttribute="height" multiplier="1:1" id="IJ4-NT-4lB"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="3">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="hpt-Hk-u28"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="11" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfz-iW-tdm">
+                                                                        <rect key="frame" x="260.5" y="0.0" width="77.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="jfz-iW-tdm" secondAttribute="height" multiplier="1:1" id="8zl-IW-kR6"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="/">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="functionButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="sD2-ra-KOA"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1W6-l3-mg3">
+                                                                <rect key="frame" x="0.0" y="86.5" width="338" height="78.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mop-lA-2c0">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="mop-lA-2c0" secondAttribute="height" multiplier="1:1" id="qnp-gi-Iyw"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="4">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="UoN-iS-dgd"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7D-WF-NyL">
+                                                                        <rect key="frame" x="86.5" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="b7D-WF-NyL" secondAttribute="height" multiplier="1:1" id="dAe-kL-UMT"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="5">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="ZQR-Sv-MoL"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIZ-MB-MbE">
+                                                                        <rect key="frame" x="173" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="iIZ-MB-MbE" secondAttribute="height" multiplier="1:1" id="Ssx-Wt-Ccw"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="6">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="2Xj-k4-zM7"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7i-1E-TR1">
+                                                                        <rect key="frame" x="259.5" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="o7i-1E-TR1" secondAttribute="height" multiplier="1:1" id="cIv-Uc-Dyt"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="x">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="functionButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="gpt-UR-U8o"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Der-mq-zLx">
+                                                                <rect key="frame" x="0.0" y="173" width="338" height="78.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOh-Kd-o5C">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="dOh-Kd-o5C" secondAttribute="height" multiplier="1:1" id="KBi-Jv-Gnh"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="7">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="d9W-16-uDM"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4x-hF-Fsi">
+                                                                        <rect key="frame" x="86.5" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="E4x-hF-Fsi" secondAttribute="height" multiplier="1:1" id="6LW-4k-Vu2"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="8">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="ZIr-v2-0FX"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jx-Ds-ecZ">
+                                                                        <rect key="frame" x="173" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="3jx-Ds-ecZ" secondAttribute="height" multiplier="1:1" id="wGZ-uD-sSB"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="9">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="xYv-Vh-i2o"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="13" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUm-U1-IHp">
+                                                                        <rect key="frame" x="259.5" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="KUm-U1-IHp" secondAttribute="height" multiplier="1:1" id="RM8-bP-MC1"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="-" backgroundImage=" ">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="functionButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="Ods-jS-x51"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9sw-qa-DMk">
+                                                                <rect key="frame" x="0.0" y="259.5" width="338" height="78.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69h-br-Cpk">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="69h-br-Cpk" secondAttribute="height" multiplier="1:1" id="a1W-uT-Ak1"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" title="Clr">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="functionButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="PGM-mj-17T"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MO-F2-j12">
+                                                                        <rect key="frame" x="86.5" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="0MO-F2-j12" secondAttribute="height" multiplier="1:1" id="WzA-Bc-fDP"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="0">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="96f-mc-ljN"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSa-CL-jWJ">
+                                                                        <rect key="frame" x="173" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="ZSa-CL-jWJ" secondAttribute="height" multiplier="1:1" id="yy4-Z9-sEk"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title=".">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="ok3-CO-9FZ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="14" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfP-Px-bwO">
+                                                                        <rect key="frame" x="259.5" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="AfP-Px-bwO" secondAttribute="height" multiplier="1:1" id="map-s5-ltc"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="+">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="functionButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="BHj-Op-FJ4"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wxB-2P-81A" userLabel="bottom buttons stack view">
+                                                                <rect key="frame" x="0.0" y="346" width="338" height="78.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJC-vK-W4C">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="BJC-vK-W4C" secondAttribute="height" multiplier="1:1" id="LYb-Sc-fDg"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" image="delete.left.fill" catalog="system">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="functionButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="lyX-rz-NBs"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJU-IY-VAd">
+                                                                        <rect key="frame" x="86.5" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="KJU-IY-VAd" secondAttribute="height" multiplier="1:1" id="NHo-aR-mlc"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="=">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="functionButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="q2S-Zu-9Cb"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huR-2a-Yle">
+                                                                        <rect key="frame" x="173" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="huR-2a-Yle" secondAttribute="height" multiplier="1:1" id="X5W-Z5-gg7"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="+/-">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="functionButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="eDU-9R-cFy"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmY-mV-yXe">
+                                                                        <rect key="frame" x="259.5" y="0.0" width="78.5" height="78.5"/>
+                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="fmY-mV-yXe" secondAttribute="height" multiplier="1:1" id="hIP-K1-tlD"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                        <state key="normal" title="20%">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="functionButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="wsN-7h-n0A"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-WK-HcM" userLabel="extra buttons stack view">
+                                                        <rect key="frame" x="15" y="432.5" width="308" height="171"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ku6-bO-8Bi">
+                                                                <rect key="frame" x="0.0" y="0.0" width="308" height="51.5"/>
+                                                                <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                <state key="normal" backgroundImage="LCARS_copy_button">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="functionButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="mcd-ir-XBG"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jm-Kl-soR" userLabel="info button">
+                                                                <rect key="frame" x="0.0" y="59.5" width="308" height="52"/>
+                                                                <state key="normal" backgroundImage="LCARS_info_button"/>
+                                                                <connections>
+                                                                    <action selector="infoButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="Q82-A6-eGy"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgQ-hQ-kK3" userLabel="info button">
+                                                                <rect key="frame" x="0.0" y="119.5" width="308" height="51.5"/>
+                                                                <state key="normal" backgroundImage="LCARS_settings_button"/>
+                                                                <connections>
+                                                                    <action selector="settingsButtonPressed:" destination="ER3-My-NSo" eventType="touchUpInside" id="JaJ-uy-qgB"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="aCv-WK-HcM" secondAttribute="height" multiplier="308:171" id="WG2-cD-PhN"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="aCv-WK-HcM" firstAttribute="leading" secondItem="lhn-zG-0ic" secondAttribute="leading" constant="15" id="0r1-Ep-FFQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aCv-WK-HcM" secondAttribute="trailing" constant="15" id="3Sg-eU-LT0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dW4-Df-zc2" secondAttribute="trailing" id="GcK-aT-GzQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="aCv-WK-HcM" secondAttribute="bottom" id="TbP-yr-Ibb"/>
+                                                    <constraint firstItem="dW4-Df-zc2" firstAttribute="leading" secondItem="lhn-zG-0ic" secondAttribute="leading" id="cLw-eU-JRO"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="lhn-zG-0ic" firstAttribute="top" secondItem="TJx-sM-TTj" secondAttribute="top" constant="8" id="EB0-Fy-FxV"/>
+                                            <constraint firstItem="lhn-zG-0ic" firstAttribute="leading" secondItem="TJx-sM-TTj" secondAttribute="leading" constant="8" id="EyZ-43-0bH"/>
+                                            <constraint firstAttribute="trailing" secondItem="lhn-zG-0ic" secondAttribute="trailing" constant="8" id="W5g-zB-JGv"/>
+                                            <constraint firstAttribute="trailing" secondItem="lhn-zG-0ic" secondAttribute="trailing" constant="8" id="dk0-Yc-PIy"/>
+                                            <constraint firstItem="lhn-zG-0ic" firstAttribute="leading" secondItem="TJx-sM-TTj" secondAttribute="leading" constant="8" id="vrJ-ps-FE3"/>
+                                            <constraint firstAttribute="bottom" secondItem="lhn-zG-0ic" secondAttribute="bottom" constant="20" id="wSP-D6-VIy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="TJx-sM-TTj" firstAttribute="top" secondItem="tc9-Dn-bRX" secondAttribute="top" constant="10" id="4bp-Uw-Dy6"/>
+                                    <constraint firstAttribute="trailing" secondItem="TJx-sM-TTj" secondAttribute="trailing" id="S28-aA-nvl"/>
+                                    <constraint firstAttribute="bottom" secondItem="TJx-sM-TTj" secondAttribute="bottom" id="rdY-aW-5vW"/>
+                                    <constraint firstItem="TJx-sM-TTj" firstAttribute="leading" secondItem="tc9-Dn-bRX" secondAttribute="leading" constant="60" id="sL1-Qs-MXU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QyU-au-LPO"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dUB-qw-2wf" secondAttribute="trailing" id="PYM-Yz-iGq"/>
+                            <constraint firstItem="tc9-Dn-bRX" firstAttribute="leading" secondItem="QyU-au-LPO" secondAttribute="leading" id="YPF-VE-WL5"/>
+                            <constraint firstItem="tc9-Dn-bRX" firstAttribute="trailing" secondItem="QyU-au-LPO" secondAttribute="trailing" id="nhK-Mr-ZXI"/>
+                            <constraint firstAttribute="bottom" secondItem="tc9-Dn-bRX" secondAttribute="bottom" id="ona-ND-e12"/>
+                            <constraint firstItem="tc9-Dn-bRX" firstAttribute="top" secondItem="dUB-qw-2wf" secondAttribute="bottom" constant="10" id="swc-hZ-9Cg"/>
+                            <constraint firstItem="dUB-qw-2wf" firstAttribute="leading" secondItem="QyU-au-LPO" secondAttribute="leading" id="vMc-69-dTv"/>
+                            <constraint firstItem="dUB-qw-2wf" firstAttribute="top" secondItem="QyU-au-LPO" secondAttribute="top" id="wEs-w6-eyf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="additionButton" destination="AfP-Px-bwO" id="vKA-ol-FwO"/>
+                        <outlet property="backspaceButton" destination="BJC-vK-W4C" id="OLG-Xq-8QV"/>
+                        <outlet property="clear_button" destination="69h-br-Cpk" id="PNZ-vK-hjb"/>
+                        <outlet property="copyButton" destination="ku6-bO-8Bi" id="I5s-EI-4r9"/>
+                        <outlet property="decimal_point_button" destination="ZSa-CL-jWJ" id="gl1-T4-JYh"/>
+                        <outlet property="division_button" destination="jfz-iW-tdm" id="bkN-6z-mqz"/>
+                        <outlet property="eight_button" destination="E4x-hF-Fsi" id="ZHe-PJ-Dvi"/>
+                        <outlet property="equalsButton" destination="KJU-IY-VAd" id="lbH-Ae-bzN"/>
+                        <outlet property="five_button" destination="b7D-WF-NyL" id="tIJ-08-dU1"/>
+                        <outlet property="four_button" destination="mop-lA-2c0" id="dku-wi-LNi"/>
+                        <outlet property="infoButton" destination="0Jm-Kl-soR" id="64D-by-BEt"/>
+                        <outlet property="mainPanelBackground" destination="tc9-Dn-bRX" id="eZr-MV-b7R"/>
+                        <outlet property="mainPanelBlackBackground" destination="TJx-sM-TTj" id="YIa-Kt-KYj"/>
+                        <outlet property="mainReadout" destination="bAh-xf-IZX" id="QQi-gN-9lS"/>
+                        <outlet property="multiplicationButton" destination="o7i-1E-TR1" id="iui-3L-oXc"/>
+                        <outlet property="negativePositiveButton" destination="BJC-vK-W4C" id="fce-vG-I73"/>
+                        <outlet property="nine_button" destination="3jx-Ds-ecZ" id="rxz-gz-ggZ"/>
+                        <outlet property="one_button" destination="zHd-eM-Pzi" id="oh9-bs-kJ7"/>
+                        <outlet property="readoutBackgroundView" destination="dUB-qw-2wf" id="Hh0-Ko-XkK"/>
+                        <outlet property="readoutBlackBackgroundPanel" destination="v7i-6R-XJ5" id="WHm-CF-ZQb"/>
+                        <outlet property="secondaryReadout" destination="9LE-yd-dHG" id="283-m4-8Bs"/>
+                        <outlet property="settingsButton" destination="hgQ-hQ-kK3" id="nhp-tr-KrV"/>
+                        <outlet property="seven_button" destination="dOh-Kd-o5C" id="22h-MF-SZQ"/>
+                        <outlet property="six_button" destination="iIZ-MB-MbE" id="o8i-Ij-jXg"/>
+                        <outlet property="subtractionButton" destination="KUm-U1-IHp" id="HFK-Lv-uwR"/>
+                        <outlet property="three_button" destination="sB1-U2-guE" id="cWW-F3-iWT"/>
+                        <outlet property="tipButton" destination="fmY-mV-yXe" id="y35-dn-q5Z"/>
+                        <outlet property="two_button" destination="bH8-Yj-uh3" id="FHY-NF-5Su"/>
+                        <outlet property="zero_button" destination="0MO-F2-j12" id="Csr-TQ-vGn"/>
+                        <segue destination="WlC-NE-w2d" kind="show" identifier="showSettings" animates="NO" id="bMZ-36-FYE"/>
+                        <segue destination="cPx-9l-3du" kind="show" identifier="showInfoScreen" animates="NO" id="lSL-ln-vt0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mt3-GU-vhf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="108.48214285714285"/>
+        </scene>
+        <!--InfoScreen-->
+        <scene sceneID="RK6-pR-Crw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InfoScreen" id="cPx-9l-3du" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6Py-bD-9d7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fix-og-QFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="607"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="N4V-dZ-NSE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="WlC-NE-w2d" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dh4-4b-SRx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inM-El-L9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075" y="108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name=" " width="128" height="128"/>
+        <image name="LCARS_copy_button" width="780" height="150"/>
+        <image name="LCARS_info_button" width="780" height="150"/>
+        <image name="LCARS_settings_button" width="780" height="150"/>
+        <image name="delete.left.fill" catalog="system" width="128" height="104"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

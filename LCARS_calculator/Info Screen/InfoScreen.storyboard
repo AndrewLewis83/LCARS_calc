@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zci-rx-jH8">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Okuda.otf">
+            <string>Okuda</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Info ScreenVC-->
+        <scene sceneID="xBe-18-FLG">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Zci-rx-jH8" customClass="InfoScreenVC" customModule="LCARS_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q5m-y3-cnv">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vb-Js-hSB">
+                                <rect key="frame" x="0.0" y="0.0" width="820" height="665"/>
+                                <color key="backgroundColor" red="0.93816369769999997" green="0.45544338229999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xzH-aX-bCF">
+                                <rect key="frame" x="0.0" y="676" width="820" height="344"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acy-eM-T2B">
+                                <rect key="frame" x="40" y="10" width="780" height="1000"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4y-L2-New">
+                                        <rect key="frame" x="20" y="20" width="740" height="960"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="0.99682420490000001" green="0.99257618189999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="n4y-L2-New" secondAttribute="trailing" constant="20" id="B5T-O5-Jgh"/>
+                                    <constraint firstItem="n4y-L2-New" firstAttribute="leading" secondItem="acy-eM-T2B" secondAttribute="leading" constant="20" id="jv7-nM-Nid"/>
+                                    <constraint firstAttribute="bottom" secondItem="n4y-L2-New" secondAttribute="bottom" constant="20" id="uhK-vY-U5J"/>
+                                    <constraint firstItem="n4y-L2-New" firstAttribute="top" secondItem="acy-eM-T2B" secondAttribute="top" constant="20" id="vIR-KL-hoc"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecd-nm-1W4" userLabel="return_button">
+                                <rect key="frame" x="290.5" y="1070" width="239" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="AOt-7u-IFr"/>
+                                    <constraint firstAttribute="height" constant="40" id="VKx-4x-QJk"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="LCARS_return_button"/>
+                                <connections>
+                                    <action selector="returnButtonPressed:" destination="Zci-rx-jH8" eventType="touchUpInside" id="JIb-Q6-NVJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bKY-uf-HOc"/>
+                        <color key="backgroundColor" systemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="8vb-Js-hSB" firstAttribute="centerX" secondItem="Q5m-y3-cnv" secondAttribute="centerX" id="0wQ-WP-fFt"/>
+                            <constraint firstItem="bKY-uf-HOc" firstAttribute="trailing" secondItem="acy-eM-T2B" secondAttribute="trailing" id="4ys-c8-vpD"/>
+                            <constraint firstItem="8vb-Js-hSB" firstAttribute="trailing" secondItem="xzH-aX-bCF" secondAttribute="trailing" id="6bz-el-Nc6"/>
+                            <constraint firstItem="Ecd-nm-1W4" firstAttribute="centerX" secondItem="Q5m-y3-cnv" secondAttribute="centerX" id="Hr9-tT-Jht"/>
+                            <constraint firstItem="Ecd-nm-1W4" firstAttribute="top" secondItem="xzH-aX-bCF" secondAttribute="bottom" constant="50" id="Kny-I4-TWU"/>
+                            <constraint firstItem="bKY-uf-HOc" firstAttribute="bottom" secondItem="Ecd-nm-1W4" secondAttribute="bottom" constant="50" id="P7Z-1P-8RI"/>
+                            <constraint firstItem="acy-eM-T2B" firstAttribute="top" secondItem="bKY-uf-HOc" secondAttribute="top" constant="10" id="VlW-Wc-t8a"/>
+                            <constraint firstAttribute="bottom" secondItem="8vb-Js-hSB" secondAttribute="bottom" constant="515" id="dDS-aq-3In"/>
+                            <constraint firstItem="acy-eM-T2B" firstAttribute="leading" secondItem="bKY-uf-HOc" secondAttribute="leading" constant="40" id="jzl-Ch-gH1"/>
+                            <constraint firstItem="Ecd-nm-1W4" firstAttribute="top" secondItem="acy-eM-T2B" secondAttribute="bottom" constant="60" id="kmc-PB-Zts"/>
+                            <constraint firstItem="8vb-Js-hSB" firstAttribute="leading" secondItem="bKY-uf-HOc" secondAttribute="leading" id="pk3-rP-tM4"/>
+                            <constraint firstItem="8vb-Js-hSB" firstAttribute="top" secondItem="bKY-uf-HOc" secondAttribute="top" id="pqj-QX-MoC"/>
+                            <constraint firstItem="xzH-aX-bCF" firstAttribute="top" secondItem="8vb-Js-hSB" secondAttribute="bottom" constant="11" id="ukM-Pp-FVa"/>
+                            <constraint firstItem="8vb-Js-hSB" firstAttribute="leading" secondItem="xzH-aX-bCF" secondAttribute="leading" id="xHb-7Z-nTF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="n4y-L2-New" id="d4F-bS-tuU"/>
+                        <outlet property="labelBackgroundView" destination="acy-eM-T2B" id="yjh-XO-yiS"/>
+                        <outlet property="lowerBackgroundView" destination="xzH-aX-bCF" id="7nK-Sc-jve"/>
+                        <outlet property="returnButton" destination="Ecd-nm-1W4" id="NQe-Ev-6cV"/>
+                        <outlet property="upperBackgroundView" destination="8vb-Js-hSB" id="Vzy-aq-QgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAa-YM-eht" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070.5035971223022" y="110.55276381909547"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LCARS_return_button" width="780" height="150"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

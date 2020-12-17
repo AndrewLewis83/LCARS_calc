@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class MainScreenVC: UIViewController {
+class iPadMainVC: UIViewController {
     
     @IBOutlet weak var readoutBackgroundView: UIView!
     @IBOutlet weak var readoutBlackBackgroundPanel: UIView!
@@ -30,7 +30,6 @@ class MainScreenVC: UIViewController {
     @IBOutlet weak var zero_button: UIButton!
     @IBOutlet weak var decimal_point_button: UIButton!
     @IBOutlet weak var clear_button: UIButton!
-    @IBOutlet weak var backspaceButton: UIButton!
     
     // function buttons
     @IBOutlet weak var division_button: UIButton!
@@ -46,6 +45,8 @@ class MainScreenVC: UIViewController {
     
     @IBOutlet weak var mainReadout: UILabel!
     @IBOutlet weak var secondaryReadout: UILabel!
+    
+    @IBOutlet weak var _historyView: OperationHistory!
     
     //sound effects
     private var soundEffect: AVAudioPlayer?
@@ -84,6 +85,7 @@ class MainScreenVC: UIViewController {
         secondaryReadout.text = "Enter value"
         configureUI()
         loadUserDefaults()
+        loadHistoryView()
     
     }
     
@@ -91,38 +93,25 @@ class MainScreenVC: UIViewController {
         
         tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
         
-        //TODO: transfer to ipad screen
         if UIDevice.current.userInterfaceIdiom == .pad {
             
-            //adaptForCurrentSizeClass()
+            adaptForCurrentSizeClass()
 
+        }else{
+            _historyView?.isHidden = true
         }
     }
     
-    func configureUI(){
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        adaptForCurrentSizeClass()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
-        one_button.layer.cornerRadius = one_button.frame.height/2
-        one_button.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-        one_button.backgroundColor = buttonColorOne
-        two_button.backgroundColor = buttonColorTwo
-        three_button.backgroundColor = buttonColorThree
-        four_button.layer.cornerRadius = one_button.frame.height/2
-        four_button.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-        four_button.backgroundColor = buttonColorFour
-        five_button.backgroundColor = buttonColorOne
-        six_button.backgroundColor = buttonColorTwo
-        seven_button.layer.cornerRadius = one_button.frame.height/2
-        seven_button.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-        seven_button.backgroundColor = buttonColorThree
-        eight_button.backgroundColor = buttonColorFour
-        nine_button.backgroundColor = buttonColorOne
-        clear_button.layer.cornerRadius = one_button.frame.height/2
-        clear_button.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-        zero_button.backgroundColor = buttonColorTwo
-        backspaceButton.layer.cornerRadius = one_button.frame.height/2
-        backspaceButton.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-        tipButton.layer.cornerRadius = one_button.frame.height/2
-        tipButton.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        adaptForCurrentSizeClass()
+    }
+    
+    func configureUI(){
         
         readoutBackgroundView.layer.cornerRadius = 30
         readoutBackgroundView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
@@ -139,6 +128,18 @@ class MainScreenVC: UIViewController {
         
     }
     
+    func adaptForCurrentSizeClass(){
+        
+        if traitCollection.horizontalSizeClass == .compact {
+            // load slim view
+            _historyView?.isHidden = true
+        } else if traitCollection.horizontalSizeClass == .regular {
+            // load wide view
+            _historyView?.isHidden = false
+        }
+        
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         
         super.viewDidDisappear(animated)
@@ -151,6 +152,12 @@ class MainScreenVC: UIViewController {
         
         Settings.setMuteSetting(newSetting: UserDefaults.standard.bool(forKey: "muteSetting"))
         Settings.setPercentTip(newTip: UserDefaults.standard.integer(forKey: "tipSetting"))
+    }
+    
+    func loadHistoryView(){
+        
+        _historyView?.historyDelegate = self
+        
     }
     
     @IBAction func numberButtonPressed(_ sender: Any) {
@@ -222,11 +229,15 @@ class MainScreenVC: UIViewController {
             }
             
             if _secondaryValue != 0 {
-        
+                var historyText = ""
                 let tip = _secondaryValue * (Double(Settings.getPercentTip()) * 0.01)
                 mainReadout.text = " Tip = $" + String(format: "%.2f", tip)
                 secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
-               
+                historyText = "\(secondaryReadout.text ?? "")"
+                if historyText != "Value copied to clipboard"{
+                    _historyView?.operationHistory.append(historyText)
+                }
+                _historyView?.tableView.reloadData()
                 _secondaryValue = tip
                 playSound(soundEffectName: "buttonSound")
     
@@ -243,9 +254,9 @@ class MainScreenVC: UIViewController {
             playSound(soundEffectName: "alertSound")
             
             if _secondaryValue == 0 {
-            	UIPasteboard.general.string = String(_mainValue)
+                UIPasteboard.general.string = String(_mainValue)
             } else {
-            	UIPasteboard.general.string = String(_secondaryValue)
+                UIPasteboard.general.string = String(_secondaryValue)
             }
             
             secondaryReadout.text = "Value copied to clipboard"
@@ -261,6 +272,7 @@ class MainScreenVC: UIViewController {
             _secondaryValue = 0
         case 19: // Negative/positive
             
+            var historyText: String = ""
             playSound(soundEffectName: "buttonSound")
             if _mainValue != 0 {
                 _mainValue = _mainValue * -1
@@ -268,14 +280,10 @@ class MainScreenVC: UIViewController {
             }else{
                 _secondaryValue = _secondaryValue * -1
                 mainReadout.text = String(_secondaryValue)
-
+                historyText = historyText + "\(mainReadout.text ?? "")"
+                _historyView?.operationHistory.append(historyText)
+                _historyView?.tableView.reloadData()
             }
-            
-        //TODO: get this working
-        case 20: //backspace
-            playSound(soundEffectName: "buttonSound")
-            print("backspace button pressed")
-        fallthrough
 
         default:
             break
@@ -323,9 +331,15 @@ class MainScreenVC: UIViewController {
         
         mainReadout.text = String(format: "%.3f", finalValue)
         if _mainValue != 0{
-
+            var historyText: String = ""
             secondaryReadout.text = "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue)))"
-  
+            historyText = historyText + "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue)) = \(String(format: "%.3f", finalValue))"
+            
+            if historyText != "Value copied to clipboard"{
+                _historyView?.operationHistory.append(historyText)
+            }
+            
+            _historyView?.tableView.reloadData()
         }
         _secondaryValue = finalValue
         _mainValue = 0
@@ -370,6 +384,41 @@ class MainScreenVC: UIViewController {
         }
     }
 
+}
+
+extension iPadMainVC: HistoryDelegate {
+    
+    func didTapCell(value: String) {
+        
+        mainReadout.text = value
+        if let copiedValue = Double(mainReadout.text ?? ""){
+            _mainValue = copiedValue
+            secondaryReadout.text = "Value copied."
+            _secondaryValue = 0
+            playSound(soundEffectName: "alertSound")
+        }else{
+            secondaryReadout.text = "Could not copy value."
+            playSound(soundEffectName: "errorSound")
+        }
+        
+        
+    }
+    
+    
+}
+
+extension UIView {
+    
+    func pushTransition(_ duration:CFTimeInterval) {
+        
+        let animation:CATransition = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+            CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.push
+        animation.subtype = CATransitionSubtype.fromRight
+        animation.duration = duration
+        layer.add(animation, forKey: CATransitionType.push.rawValue)
+    }
 }
 
 

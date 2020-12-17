@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jff-62-L9T">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="United Federation of Planets Regular.ttf">
+            <string>FederationStarfleetHull23rd</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Launch ScreenVC-->
+        <scene sceneID="il8-ON-xid">
+            <objects>
+                <viewController id="jff-62-L9T" customClass="LaunchScreenVC" customModule="LCARS_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cum-vx-U1K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="federation_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lan-24-dB7" userLabel="federation logo">
+                                <rect key="frame" x="0.0" y="107" width="414" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="800" id="84E-Qt-Qq1"/>
+                                    <constraint firstAttribute="width" secondItem="Lan-24-dB7" secondAttribute="height" multiplier="207:145" id="qUh-q1-7SP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United Federation of Planets" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK1-PK-ZzY">
+                                <rect key="frame" x="20" y="427" width="374" height="80"/>
+                                <fontDescription key="fontDescription" name="FederationStarfleetHull23rd" family="United Federation of Planets." pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fit-DJ-b1p"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bK1-PK-ZzY" firstAttribute="leading" secondItem="fit-DJ-b1p" secondAttribute="leading" constant="20" id="6Wr-KV-NeQ"/>
+                            <constraint firstItem="Lan-24-dB7" firstAttribute="trailing" secondItem="fit-DJ-b1p" secondAttribute="trailing" id="Cfm-aE-jxY"/>
+                            <constraint firstItem="Lan-24-dB7" firstAttribute="leading" secondItem="fit-DJ-b1p" secondAttribute="leading" id="Umn-Vv-FfW"/>
+                            <constraint firstItem="Lan-24-dB7" firstAttribute="centerY" secondItem="cum-vx-U1K" secondAttribute="centerY" constant="-77" id="iU4-BW-jZX"/>
+                            <constraint firstItem="fit-DJ-b1p" firstAttribute="trailing" secondItem="bK1-PK-ZzY" secondAttribute="trailing" constant="20" id="kXF-aM-QIw"/>
+                            <constraint firstItem="bK1-PK-ZzY" firstAttribute="top" secondItem="Lan-24-dB7" secondAttribute="bottom" constant="30" id="mQ0-UU-ISb"/>
+                            <constraint firstItem="Lan-24-dB7" firstAttribute="top" secondItem="fit-DJ-b1p" secondAttribute="top" constant="63" id="nPD-ly-6Fh"/>
+                            <constraint firstItem="Lan-24-dB7" firstAttribute="centerX" secondItem="cum-vx-U1K" secondAttribute="centerX" id="nxf-sH-CZz"/>
+                        </constraints>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="Cfm-aE-jxY"/>
+                                <exclude reference="Umn-Vv-FfW"/>
+                                <exclude reference="nPD-ly-6Fh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="federationLogo" destination="Lan-24-dB7" id="Hu3-cC-uhI"/>
+                        <outlet property="federationNameLabel" destination="bK1-PK-ZzY" id="Lhk-Xr-I9X"/>
+                        <segue destination="sMx-Xm-brs" kind="show" identifier="showiPhoneMain" animates="NO" id="mr5-87-lod"/>
+                        <segue destination="7dZ-gd-PFy" kind="show" identifier="showiPadMain" id="u8W-qB-aHx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e85-L9-0vM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-855" y="110"/>
+        </scene>
+        <!--iPhoneMain-->
+        <scene sceneID="rxR-wa-amn">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="iPhoneMain" storyboardName="iPhoneMain" id="sMx-Xm-brs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Aua-Ih-5pJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDH-Pe-XdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="-32"/>
+        </scene>
+        <!--iPadMain-->
+        <scene sceneID="4Z4-F2-mtf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="iPadMain" id="7dZ-gd-PFy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vHI-SZ-sxP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nh1-xm-SMT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="227"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="federation_logo.png" width="1242" height="1242"/>
+    </resources>
+</document>

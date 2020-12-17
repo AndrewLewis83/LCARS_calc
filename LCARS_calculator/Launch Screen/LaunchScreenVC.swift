@@ -29,7 +29,16 @@ class LaunchScreenVC: UIViewController {
         })
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.performSegue(withIdentifier: "openMainVC", sender: nil)
+
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                
+                self.performSegue(withIdentifier: "showiPadMain", sender: nil)
+
+            }else{
+                
+                self.performSegue(withIdentifier: "showiPhoneMain", sender: nil)
+            }
+            
         }
     }
 }
