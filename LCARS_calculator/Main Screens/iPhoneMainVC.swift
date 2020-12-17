@@ -275,7 +275,9 @@ class iPhoneMainVC: UIViewController {
             
             if mainReadoutString.contains("Tip") == true {
                 
-                _mainValue = _secondaryValue
+                mainReadoutString = String(format: "%.2f", _secondaryValue)
+                mainReadout.text = mainReadoutString
+                _mainValue = Double(mainReadoutString) ?? 0.0
                 _secondaryValue = 0.0
                 mainReadout.text = String(_mainValue)
                 mainReadoutString = mainReadout.text ?? ""
@@ -345,7 +347,7 @@ class iPhoneMainVC: UIViewController {
         mainReadout.text = String(format: "%.3f", finalValue)
         if _mainValue != 0{
 
-            secondaryReadout.text = "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue)))"
+            secondaryReadout.text = "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue))"
   
         }
         _secondaryValue = finalValue
@@ -393,6 +395,14 @@ class iPhoneMainVC: UIViewController {
         }
     }
 
+}
+
+extension Double
+{
+    func truncate(places : Int)-> Double
+    {
+        return Double(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
+    }
 }
 
 
