@@ -269,6 +269,31 @@ class iPhoneMainVC: UIViewController {
         case 20: //backspace
             playSound(soundEffectName: "buttonSound")
             print("backspace button pressed")
+            
+            var mainReadoutString: String = mainReadout.text ?? ""
+            _mainValue = Double(mainReadoutString) ?? 0.0
+            _secondaryValue = 0
+            
+            if mainReadoutString.contains("Tip") == true {
+                
+                _mainValue = 0.0
+                _secondaryValue = 0.0
+                mainReadout.text = "0.0"
+                secondaryReadout.text = ""
+                
+            }else if _mainValue != 0 {
+                
+                mainReadoutString.removeLast()
+                _mainValue = Double(mainReadoutString) ?? 0.0
+                mainReadout.text = mainReadoutString
+                if mainReadout.text == ""{
+                    _mainValue = 0.0
+                    mainReadout.text = "0.0"
+                }
+            }
+            
+            secondaryReadout.text = ""
+
         fallthrough
 
         default:
