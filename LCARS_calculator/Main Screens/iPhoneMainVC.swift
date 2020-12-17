@@ -84,7 +84,7 @@ class iPhoneMainVC: UIViewController {
         secondaryReadout.text = "Enter value"
         configureUI()
         loadUserDefaults()
-    
+        tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -290,16 +290,18 @@ class iPhoneMainVC: UIViewController {
                 mainReadoutString.removeLast()
                 _mainValue = Double(mainReadoutString) ?? 0.0
                 mainReadout.text = mainReadoutString
-                if mainReadout.text == ""{
+                if mainReadout.text == "" || mainReadout.text == "-" {
                     _mainValue = 0.0
                     mainReadout.text = "0.0"
                 }
+                
+                secondaryReadout.text = ""
+            }else{
+                
+                playSound(soundEffectName: "errorSound")
+                secondaryReadout.text = "Invalid operation"
             }
             
-            secondaryReadout.text = ""
-
-        fallthrough
-
         default:
             break
         }
@@ -393,15 +395,6 @@ class iPhoneMainVC: UIViewController {
                 print("Couldn't load sound file in playSound()")
             }
         }
-    }
-
-}
-
-extension Double
-{
-    func truncate(places : Int)-> Double
-    {
-        return Double(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
     }
 }
 
