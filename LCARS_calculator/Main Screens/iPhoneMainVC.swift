@@ -265,7 +265,6 @@ class iPhoneMainVC: UIViewController {
 
             }
             
-        //TODO: get this working
         case 20: //backspace
             playSound(soundEffectName: "buttonSound")
             print("backspace button pressed")

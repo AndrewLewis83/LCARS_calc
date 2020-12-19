@@ -59,7 +59,7 @@
                         <outlet property="federationLogo" destination="Lan-24-dB7" id="Hu3-cC-uhI"/>
                         <outlet property="federationNameLabel" destination="bK1-PK-ZzY" id="Lhk-Xr-I9X"/>
                         <segue destination="sMx-Xm-brs" kind="show" identifier="showiPhoneMain" animates="NO" id="mr5-87-lod"/>
-                        <segue destination="7dZ-gd-PFy" kind="show" identifier="showiPadMain" id="u8W-qB-aHx"/>
+                        <segue destination="7dZ-gd-PFy" kind="show" identifier="showiPadMain" animates="NO" id="u8W-qB-aHx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e85-L9-0vM" userLabel="First Responder" sceneMemberID="firstResponder"/>

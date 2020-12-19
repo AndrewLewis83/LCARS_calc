@@ -30,6 +30,7 @@ class iPadMainVC: UIViewController {
     @IBOutlet weak var zero_button: UIButton!
     @IBOutlet weak var decimal_point_button: UIButton!
     @IBOutlet weak var clear_button: UIButton!
+    @IBOutlet weak var backspaceButton: UIButton!
     
     // function buttons
     @IBOutlet weak var division_button: UIButton!
@@ -113,6 +114,37 @@ class iPadMainVC: UIViewController {
     
     func configureUI(){
         
+        one_button.layer.cornerRadius = one_button.frame.height/2
+        one_button.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        one_button.backgroundColor = buttonColorOne
+        two_button.backgroundColor = buttonColorTwo
+        three_button.backgroundColor = buttonColorThree
+        four_button.layer.cornerRadius = one_button.frame.height/2
+        four_button.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        four_button.backgroundColor = buttonColorFour
+        five_button.backgroundColor = buttonColorOne
+        six_button.backgroundColor = buttonColorTwo
+        seven_button.layer.cornerRadius = one_button.frame.height/2
+        seven_button.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        seven_button.backgroundColor = buttonColorThree
+        eight_button.backgroundColor = buttonColorFour
+        nine_button.backgroundColor = buttonColorOne
+        clear_button.layer.cornerRadius = one_button.frame.height/2
+        clear_button.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        zero_button.backgroundColor = buttonColorTwo
+        backspaceButton.layer.cornerRadius = one_button.frame.height/2
+        backspaceButton.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        multiplicationButton.layer.cornerRadius = one_button.frame.height/2
+        multiplicationButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        division_button.layer.cornerRadius = one_button.frame.height/2
+        division_button.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        subtractionButton.layer.cornerRadius = one_button.frame.height/2
+        subtractionButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        additionButton.layer.cornerRadius = one_button.frame.height/2
+        additionButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        tipButton.layer.cornerRadius = one_button.frame.height/2
+        tipButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        
         readoutBackgroundView.layer.cornerRadius = 30
         readoutBackgroundView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
         readoutBlackBackgroundPanel.layer.cornerRadius = 30
@@ -125,6 +157,7 @@ class iPadMainVC: UIViewController {
         mainPanelBlackBackground.layer.maskedCorners = [.layerMinXMinYCorner]
         
         mainPanelBackground.backgroundColor = backgroundColorThree
+
         
     }
     
@@ -284,6 +317,42 @@ class iPadMainVC: UIViewController {
                 _historyView?.operationHistory.append(historyText)
                 _historyView?.tableView.reloadData()
             }
+            
+        case 20: //backspace
+            playSound(soundEffectName: "buttonSound")
+            print("backspace button pressed")
+            
+            var mainReadoutString: String = mainReadout.text ?? ""
+            _mainValue = Double(mainReadoutString) ?? 0.0
+            
+            if mainReadoutString.contains("Tip") == true {
+                
+                mainReadoutString = String(format: "%.2f", _secondaryValue)
+                mainReadout.text = mainReadoutString
+                _mainValue = Double(mainReadoutString) ?? 0.0
+                _secondaryValue = 0.0
+                mainReadout.text = String(_mainValue)
+                mainReadoutString = mainReadout.text ?? ""
+                secondaryReadout.text = ""
+                
+            }
+            
+            if _mainValue != 0 {
+                
+                mainReadoutString.removeLast()
+                _mainValue = Double(mainReadoutString) ?? 0.0
+                mainReadout.text = mainReadoutString
+                if mainReadout.text == "" || mainReadout.text == "-" {
+                    _mainValue = 0.0
+                    mainReadout.text = "0.0"
+                }
+                
+                secondaryReadout.text = ""
+            }else{
+                
+                playSound(soundEffectName: "errorSound")
+                secondaryReadout.text = "Invalid operation"
+            }
 
         default:
             break
@@ -332,7 +401,7 @@ class iPadMainVC: UIViewController {
         mainReadout.text = String(format: "%.3f", finalValue)
         if _mainValue != 0{
             var historyText: String = ""
-            secondaryReadout.text = "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue)))"
+            secondaryReadout.text = "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue))"
             historyText = historyText + "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue)) = \(String(format: "%.3f", finalValue))"
             
             if historyText != "Value copied to clipboard"{
@@ -349,11 +418,14 @@ class iPadMainVC: UIViewController {
     
     @IBAction func infoButtonPressed(_ sender: Any) {
         playSound(soundEffectName: "buttonSound")
+        performSegue(withIdentifier: "showInfoScreen", sender: nil)
 
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
         //placeholder for possible future functionality
+        playSound(soundEffectName: "buttonSound")
+        performSegue(withIdentifier: "showSettings", sender: nil)
     }
     
     
