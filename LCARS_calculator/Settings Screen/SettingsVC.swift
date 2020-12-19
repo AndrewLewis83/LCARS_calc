@@ -52,10 +52,9 @@ class SettingsVC: UIViewController {
         muteButton.layer.cornerRadius = muteButton.frame.height/2
         
         if (Settings.getMuteSetting() == false){
-            muteButton.backgroundColor = backgroundColorThree
+            muteButton.backgroundColor = buttonColorFive
             muteButton.setTitle(NSLocalizedString("mute audio", comment: ""), for: UIControl.State.normal)
         }else{
-            
             muteButton.backgroundColor = UIColor.red
             muteButton.setTitle(NSLocalizedString("unmute audio", comment: ""), for: UIControl.State.normal)
         }
@@ -86,11 +85,11 @@ class SettingsVC: UIViewController {
         
         if (Settings.getMuteSetting() == false){
             Settings.setMuteSetting(newSetting: true)
-            muteButton.setBackgroundImage(UIImage(named: "LCARS_mute_button_2.png"), for: .normal)
+            muteButton.backgroundColor = UIColor.red
             muteButton.setTitle(NSLocalizedString("unmute audio", comment: ""), for: UIControl.State.normal)
         }else{
             Settings.setMuteSetting(newSetting: false)
-            muteButton.setBackgroundImage(UIImage(named: "LCARS_mute_button.png"), for: .normal)
+            muteButton.backgroundColor = buttonColorFive
             muteButton.setTitle(NSLocalizedString("mute audio", comment: ""), for: UIControl.State.normal)
         }
         

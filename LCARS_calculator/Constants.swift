@@ -19,6 +19,7 @@ let buttonColorOne = UIColor(red: 222.0/255.0, green: 189.0/255.0, blue: 99.0/25
 let buttonColorTwo = UIColor(red: 198.0/255.0, green: 181.0/255.0, blue: 239.0/255.0, alpha: 1.0)
 let buttonColorThree = UIColor(red: 255.0/255.0, green: 173.0/255.0, blue: 33.0/255.0, alpha: 1.0)
 let buttonColorFour = UIColor(red: 147.0/255.0, green: 111.0/255.0, blue: 138.0/255.0, alpha: 1.0)
+let buttonColorFive = UIColor(red: 255.0/255.0, green: 173.0/255.0, blue: 33.0/255.0, alpha: 1.0)
 
 @available(iOS 13.0, *)
 let borderColor = CGColor(srgbRed: 255.0/255.0, green: 173.0/255.0, blue: 33.0/255.0, alpha: 1.0)
