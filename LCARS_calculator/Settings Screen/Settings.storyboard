@@ -31,12 +31,13 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8f-93-8bg">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="60"/>
+                                                <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="7ed-1l-u4J"/>
                                                     <constraint firstAttribute="width" constant="250" id="hp9-l9-U85"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="30"/>
-                                                <state key="normal" title="mute audio" backgroundImage="LCARS_mute_button">
+                                                <state key="normal" title="mute audio">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -209,16 +210,16 @@
                             <mask key="constraints">
                                 <exclude reference="3K7-ax-Ei5"/>
                                 <exclude reference="KRR-T0-nNv"/>
-                                <exclude reference="QC9-ii-YAz"/>
-                                <exclude reference="5HI-F5-Qhq"/>
                                 <exclude reference="4LL-yp-vhh"/>
+                                <exclude reference="5HI-F5-Qhq"/>
+                                <exclude reference="QC9-ii-YAz"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="KRR-T0-nNv"/>
-                                <include reference="5HI-F5-Qhq"/>
                                 <include reference="4LL-yp-vhh"/>
+                                <include reference="5HI-F5-Qhq"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -253,7 +254,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LCARS_mute_button" width="600" height="150"/>
         <image name="LCARS_return_button" width="780" height="150"/>
         <image name="transporter_control_panel" width="100" height="300"/>
         <systemColor name="darkTextColor">

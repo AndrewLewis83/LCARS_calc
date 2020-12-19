@@ -49,11 +49,14 @@ class SettingsVC: UIViewController {
         tipLabel.text = String(Settings.getPercentTip()) + "% tip"
         tipSlider.setValue(Float(Settings.getPercentTip()), animated: false)
         
+        muteButton.layer.cornerRadius = muteButton.frame.height/2
+        
         if (Settings.getMuteSetting() == false){
-            muteButton.setBackgroundImage(UIImage(named: "LCARS_mute_button.png"), for: .normal)
+            muteButton.backgroundColor = backgroundColorThree
             muteButton.setTitle(NSLocalizedString("mute audio", comment: ""), for: UIControl.State.normal)
         }else{
-            muteButton.setBackgroundImage(UIImage(named: "LCARS_mute_button_2.png"), for: .normal)
+            
+            muteButton.backgroundColor = UIColor.red
             muteButton.setTitle(NSLocalizedString("unmute audio", comment: ""), for: UIControl.State.normal)
         }
 
