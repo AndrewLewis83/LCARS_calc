@@ -92,6 +92,21 @@ class iPadMainVC: UIViewController {
         configureUI()
         loadUserDefaults()
         loadHistoryView()
+        
+        if UIDevice.current.orientation.isLandscape {
+            
+            print("Landscape")
+            starfleetEmblem.isHidden = true
+            starfleetLabel.isHidden = true
+            unitedFederationOfPlanetsLabel.isHidden = true
+            spacerView.isHidden = true
+        } else {
+            print("Portrait")
+            starfleetEmblem.isHidden = false
+            starfleetLabel.isHidden = false
+            unitedFederationOfPlanetsLabel.isHidden = false
+            spacerView.isHidden = false
+        }
     
     }
     
