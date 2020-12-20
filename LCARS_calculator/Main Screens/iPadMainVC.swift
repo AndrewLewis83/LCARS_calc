@@ -17,6 +17,11 @@ class iPadMainVC: UIViewController {
     @IBOutlet weak var mainPanelBackground: UIView!
     @IBOutlet weak var mainPanelBlackBackground: UIView!
   
+    @IBOutlet weak var starfleetEmblem: UIImageView!
+    @IBOutlet weak var starfleetLabel: UILabel!
+    @IBOutlet weak var unitedFederationOfPlanetsLabel: UILabel!
+    @IBOutlet weak var spacerView: UIView!
+    
     // number buttons
     @IBOutlet weak var one_button: UIButton!
     @IBOutlet weak var two_button: UIButton!
@@ -94,20 +99,30 @@ class iPadMainVC: UIViewController {
         
         tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
         
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            
-            adaptForCurrentSizeClass()
-
-        }else{
-            _historyView?.isHidden = true
-        }
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        
+        
         adaptForCurrentSizeClass()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        if UIDevice.current.orientation.isLandscape {
+            
+            print("Landscape")
+            starfleetEmblem.isHidden = true
+            starfleetLabel.isHidden = true
+            unitedFederationOfPlanetsLabel.isHidden = true
+            spacerView.isHidden = true
+        } else {
+            print("Portrait")
+            starfleetEmblem.isHidden = false
+            starfleetLabel.isHidden = false
+            unitedFederationOfPlanetsLabel.isHidden = false
+            spacerView.isHidden = false
+        }
         
         adaptForCurrentSizeClass()
     }
