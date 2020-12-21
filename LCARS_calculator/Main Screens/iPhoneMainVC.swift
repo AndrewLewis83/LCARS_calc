@@ -112,8 +112,13 @@ class iPhoneMainVC: UIViewController {
     func setModelConstraints(modelName: String){
         print(modelName)
         
-        if modelName == "iPhone 12 mini" {
+        if modelName == "iPhone 12 Pro Max" {
+        
+            cornerRadius = 40
+            spacing = 8
             
+        } else if modelName == "iPhone 12 mini" {
+
             cornerRadius = 35
             spacing = 4
             
