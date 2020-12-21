@@ -33,6 +33,8 @@
 		F4B2CF9624C4EA1500BAD628 /* OperationHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */; };
 		F4BEBE5B258A8E4C0025D085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BEBE5A258A8E4C0025D085 /* Main.storyboard */; };
 		F4BEBE63258A905F0025D085 /* iPadMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE62258A905F0025D085 /* iPadMainVC.swift */; };
+		F4C1DE252590F7C9003DC05E /* iPodTouchSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C1DE242590F7C9003DC05E /* iPodTouchSettings.storyboard */; };
+		F4C1DE2A2590F7E6003DC05E /* iPodTouchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1DE292590F7E6003DC05E /* iPodTouchSettings.swift */; };
 		F4CE29FA24C5116A0004D1D0 /* alert16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29F924C5116A0004D1D0 /* alert16.mp3 */; };
 		F4CE29FC24C512870004D1D0 /* computerbeep_13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */; };
 		F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */; };
@@ -89,6 +91,8 @@
 		F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationHistoryCell.swift; sourceTree = "<group>"; };
 		F4BEBE5A258A8E4C0025D085 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F4BEBE62258A905F0025D085 /* iPadMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadMainVC.swift; sourceTree = "<group>"; };
+		F4C1DE242590F7C9003DC05E /* iPodTouchSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPodTouchSettings.storyboard; sourceTree = "<group>"; };
+		F4C1DE292590F7E6003DC05E /* iPodTouchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodTouchSettings.swift; sourceTree = "<group>"; };
 		F4CE29F924C5116A0004D1D0 /* alert16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert16.mp3; sourceTree = "<group>"; };
 		F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = computerbeep_13.mp3; sourceTree = "<group>"; };
 		F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "United Federation of Planets Regular.ttf"; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 			children = (
 				F45A8322258BF2DD00430CBC /* Settings.storyboard */,
 				A1DC554F22984B9A008CD59F /* SettingsVC.swift */,
+				F4C1DE242590F7C9003DC05E /* iPodTouchSettings.storyboard */,
+				F4C1DE292590F7E6003DC05E /* iPodTouchSettings.swift */,
 			);
 			path = "Settings Screen";
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 				F4A8E08324CBA5F4007CAED1 /* OperationHistoryCell.xib in Resources */,
 				F4BEBE5B258A8E4C0025D085 /* Main.storyboard in Resources */,
 				F45A8323258BF2DD00430CBC /* Settings.storyboard in Resources */,
+				F4C1DE252590F7C9003DC05E /* iPodTouchSettings.storyboard in Resources */,
 				A1C7C31E228F6AAC00BD0FC5 /* computerbeep_5.mp3 in Resources */,
 				F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */,
 				F45A831D258BF27800430CBC /* InfoScreen.storyboard in Resources */,
@@ -399,6 +406,7 @@
 				F432BC1524B910940039D9CC /* SizeClassExtension.swift in Sources */,
 				A1DC555022984B9A008CD59F /* SettingsVC.swift in Sources */,
 				F45A608E24CA239B00CF5E56 /* OperationHistory.swift in Sources */,
+				F4C1DE2A2590F7E6003DC05E /* iPodTouchSettings.swift in Sources */,
 				A1C547872221B1CB007505AA /* iPhoneMainVC.swift in Sources */,
 				A1C547852221B1CB007505AA /* AppDelegate.swift in Sources */,
 				F4B2CF9624C4EA1500BAD628 /* OperationHistoryCell.swift in Sources */,

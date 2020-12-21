@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WOB-gH-x22">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Okuda.otf">
+            <string>Okuda</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--iPod Touch Settings-->
+        <scene sceneID="rz5-9p-Cp3">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="WOB-gH-x22" customClass="iPodTouchSettings" customModule="LCARS_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c0H-mS-agO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATT-q8-7rJ" userLabel="return_button">
+                                <rect key="frame" x="50" y="385" width="220" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="XhL-Yd-eMz"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="LCARS_return_button"/>
+                                <connections>
+                                    <action selector="returnButtonPressed:" destination="WOB-gH-x22" eventType="touchUpInside" id="e8Q-a7-Mht"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzj-QB-LbI">
+                                <rect key="frame" x="60" y="50" width="200" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CGE-Pu-gWK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="30"/>
+                                <state key="normal" title="mute audio" backgroundImage="LCARS_mute_button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="muteButtonPressed:" destination="WOB-gH-x22" eventType="touchUpInside" id="Lgg-rj-8OZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKO-Pa-T23">
+                                <rect key="frame" x="60" y="135" width="200" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fCR-5D-gcv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="30"/>
+                                <state key="normal" title="info" backgroundImage="LCARS_mute_button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="infoButtonPressed:" destination="WOB-gH-x22" eventType="touchUpInside" id="QE8-EC-Tc5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fVW-os-nim"/>
+                        <color key="backgroundColor" systemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="fVW-os-nim" firstAttribute="bottom" secondItem="ATT-q8-7rJ" secondAttribute="bottom" constant="50" id="1VX-K1-AuN"/>
+                            <constraint firstItem="eKO-Pa-T23" firstAttribute="top" secondItem="vzj-QB-LbI" secondAttribute="bottom" constant="25" id="3az-2L-fUV"/>
+                            <constraint firstItem="ATT-q8-7rJ" firstAttribute="leading" secondItem="fVW-os-nim" secondAttribute="leading" constant="50" id="9Bf-hk-2Cb"/>
+                            <constraint firstItem="eKO-Pa-T23" firstAttribute="leading" secondItem="fVW-os-nim" secondAttribute="leading" constant="60" id="B7z-Ja-z8s"/>
+                            <constraint firstItem="fVW-os-nim" firstAttribute="trailing" secondItem="ATT-q8-7rJ" secondAttribute="trailing" constant="50" id="Eji-uh-waW"/>
+                            <constraint firstItem="fVW-os-nim" firstAttribute="trailing" secondItem="vzj-QB-LbI" secondAttribute="trailing" constant="60" id="QSH-wi-P4H"/>
+                            <constraint firstItem="vzj-QB-LbI" firstAttribute="leading" secondItem="fVW-os-nim" secondAttribute="leading" constant="60" id="TDe-gE-fre"/>
+                            <constraint firstItem="fVW-os-nim" firstAttribute="trailing" secondItem="eKO-Pa-T23" secondAttribute="trailing" constant="60" id="UjO-NC-KrY"/>
+                            <constraint firstItem="vzj-QB-LbI" firstAttribute="top" secondItem="fVW-os-nim" secondAttribute="top" constant="50" id="xsD-rc-4tc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoButton" destination="eKO-Pa-T23" id="BT5-vg-drq"/>
+                        <outlet property="muteButton" destination="vzj-QB-LbI" id="m2C-xd-yvr"/>
+                        <outlet property="returnButton" destination="ATT-q8-7rJ" id="HQY-kR-oq6"/>
+                        <segue destination="U1v-O3-8cf" kind="show" identifier="showInfoScreen" animates="NO" id="kpI-kf-sFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSV-2W-Zmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318.75" y="210"/>
+        </scene>
+        <!--InfoScreen-->
+        <scene sceneID="Miu-Ao-5qE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InfoScreen" id="U1v-O3-8cf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DhE-lF-oLs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zB-b1-ebp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="210"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LCARS_mute_button" width="600" height="150"/>
+        <image name="LCARS_return_button" width="780" height="150"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

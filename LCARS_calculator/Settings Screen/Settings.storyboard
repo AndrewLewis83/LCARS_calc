@@ -67,7 +67,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20% tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQP-xF-Lmm" userLabel="tip label">
-                                                        <rect key="frame" x="71.5" y="8" width="107" height="137"/>
+                                                        <rect key="frame" x="19.5" y="8" width="211.5" height="137"/>
                                                         <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="60"/>
                                                         <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>

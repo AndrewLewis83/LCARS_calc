@@ -79,6 +79,13 @@ class SettingsVC: UIViewController {
         navigationController?.viewControllers.remove(at: index)
     }
     
+    func configureForDevice(){
+        
+        if UIDevice.modelName == "iPod touch (5th generation)" || UIDevice.modelName == "iPod touch (6th generation)" || UIDevice.modelName == "iPod touch (7th generation)" {
+            sliderBackgroundView.isHidden = true
+        }
+    }
+    
     @IBAction func muteButtonPressed(_ sender: Any) {
         
         playSound()

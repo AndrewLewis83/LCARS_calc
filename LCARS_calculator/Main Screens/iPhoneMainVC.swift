@@ -49,6 +49,7 @@ class iPhoneMainVC: UIViewController {
     
     private var cornerRadius: CGFloat = 0
     private var spacing: CGFloat = 0
+    @IBOutlet weak var mainStackViewBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var buttonsStackView: UIStackView!
@@ -102,17 +103,44 @@ class iPhoneMainVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
-        
+        if UIDevice.modelName != "iPod touch (5th generation)" && UIDevice.modelName != "iPod touch (6th generation)" && UIDevice.modelName != "iPod touch (7th generation)" {
+            tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
+        }
+
     }
     
     func setModelConstraints(modelName: String){
         print(modelName)
         
-        if modelName == "iPhone 12 mini"{
+        if modelName == "iPhone 12 mini" {
+            
             cornerRadius = 35
             spacing = 4
-        }else{
+            
+        } else if modelName == "iPhone SE (2nd generation)" || modelName == "iPhone 7" || modelName == "iPhone 8" {
+            
+            cornerRadius = 35
+            spacing = 4
+            infoButton.isHidden = true
+            copyButton.frame.size.height = 45
+            settingsButton.frame.size.height = 45
+            mainStackViewBottomConstraint.constant = spacing
+            
+        } else if modelName == "iPod touch (5th generation)" || modelName == "iPod touch (6th generation)" || modelName == "iPod touch (7th generation)" {
+            
+            cornerRadius = 30
+            spacing = 4
+            infoButton.isHidden = true
+            copyButton.isHidden = true
+            settingsButton.isHidden = true
+            if #available(iOS 13.0, *) {
+                tipButton.setImage(UIImage(systemName: "gearshape.fill"), for: .normal)
+            }
+            tipButton.setTitle("", for: .normal)
+            mainStackViewBottomConstraint.constant = spacing
+            
+        } else {
+            
             cornerRadius = one_button.frame.height/2
             spacing = 8
         }
@@ -242,26 +270,35 @@ class iPhoneMainVC: UIViewController {
             playSound(soundEffectName: "buttonSound")
             _currentOperation = CurrentOperation.addition
             checkProgress()
-        case 15: //%20
-            if _mainValue == 0.0 && _secondaryValue == 0{
-                // play error sound and display error message.
-                secondaryReadout.text = "Invalid operation"
-                playSound(soundEffectName: "errorSound")
-            } else if _secondaryValue == 0.0 {
-                _secondaryValue = _mainValue
+        case 15: //%20 or settings on iPod touch
+            
+            if UIDevice.modelName != "iPod touch (5th generation)" && UIDevice.modelName != "iPod touch (6th generation)" && UIDevice.modelName != "iPod touch (7th generation)" {
+                
+                if _mainValue == 0.0 && _secondaryValue == 0{
+                    // play error sound and display error message.
+                    secondaryReadout.text = "Invalid operation"
+                    playSound(soundEffectName: "errorSound")
+                } else if _secondaryValue == 0.0 {
+                    _secondaryValue = _mainValue
+                }
+                
+                if _secondaryValue != 0 {
+            
+                    let tip = _secondaryValue * (Double(Settings.getPercentTip()) * 0.01)
+                    mainReadout.text = " Tip = $" + String(format: "%.2f", tip)
+                    secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
+                   
+                    _secondaryValue = tip
+                    playSound(soundEffectName: "buttonSound")
+        
+                }
+                _hasDecimal = false
+                
+            }else{
+                
+                performSegue(withIdentifier: "showiPodSettings", sender: nil)
             }
             
-            if _secondaryValue != 0 {
-        
-                let tip = _secondaryValue * (Double(Settings.getPercentTip()) * 0.01)
-                mainReadout.text = " Tip = $" + String(format: "%.2f", tip)
-                secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
-               
-                _secondaryValue = tip
-                playSound(soundEffectName: "buttonSound")
-    
-            }
-            _hasDecimal = false
         case 16: //equals
             
             performOperation()
@@ -303,7 +340,6 @@ class iPhoneMainVC: UIViewController {
             
         case 20: //backspace
             playSound(soundEffectName: "buttonSound")
-            print("backspace button pressed")
             
             var mainReadoutString: String = mainReadout.text ?? ""
             _mainValue = Double(mainReadoutString) ?? 0.0
