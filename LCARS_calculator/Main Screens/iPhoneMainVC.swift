@@ -124,7 +124,7 @@ class iPhoneMainVC: UIViewController {
             
         } else if modelName == "iPhone SE (2nd generation)" || modelName == "iPhone 7" || modelName == "iPhone 8" {
             
-            cornerRadius = 35
+            cornerRadius = 30
             spacing = 4
             infoButton.isHidden = true
             copyButton.frame.size.height = 45
