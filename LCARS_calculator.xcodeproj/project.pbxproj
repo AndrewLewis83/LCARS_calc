@@ -29,6 +29,25 @@
 		F45A831D258BF27800430CBC /* InfoScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45A831C258BF27800430CBC /* InfoScreen.storyboard */; };
 		F45A8323258BF2DD00430CBC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45A8322258BF2DD00430CBC /* Settings.storyboard */; };
 		F45EABCA23B2CE7B000D692B /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45EABC923B2CE7B000D692B /* LaunchScreenVC.swift */; };
+		F46B033F2769787F0058FFDC /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B033E2769787F0058FFDC /* UIDevice.swift */; };
+		F46B034627697B5D0058FFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46B034527697B5D0058FFDC /* Assets.xcassets */; };
+		F46B034C27697B5D0058FFDC /* LCARS_watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F46B034B27697B5D0058FFDC /* LCARS_watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F46B035127697B5D0058FFDC /* LCARS_calculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B035027697B5D0058FFDC /* LCARS_calculatorApp.swift */; };
+		F46B035327697B5D0058FFDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B035227697B5D0058FFDC /* ContentView.swift */; };
+		F46B035527697B5D0058FFDC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B035427697B5D0058FFDC /* NotificationController.swift */; };
+		F46B035727697B5D0058FFDC /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B035627697B5D0058FFDC /* NotificationView.swift */; };
+		F46B035927697B5D0058FFDC /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B035827697B5D0058FFDC /* ComplicationController.swift */; };
+		F46B035B27697B5E0058FFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46B035A27697B5E0058FFDC /* Assets.xcassets */; };
+		F46B035E27697B5E0058FFDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46B035D27697B5E0058FFDC /* Preview Assets.xcassets */; };
+		F46B036A27697B5E0058FFDC /* LCARS_watchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B036927697B5E0058FFDC /* LCARS_watchTests.swift */; };
+		F46B037427697B5E0058FFDC /* LCARS_watchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B037327697B5E0058FFDC /* LCARS_watchUITests.swift */; };
+		F46B037627697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B037527697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift */; };
+		F46B037927697B5E0058FFDC /* LCARS_watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F46B034327697B5B0058FFDC /* LCARS_watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F46B038D2769AC700058FFDC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDED9A24B7EA6C00A0F475 /* Constants.swift */; };
+		F46B038E2769ACC40058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1C7C311228F694F00BD0FC5 /* Okuda.otf */; };
+		F46B03902769ADAA0058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46B038F2769ADAA0058FFDC /* Okuda.otf */; };
+		F46B03912769ADAA0058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46B038F2769ADAA0058FFDC /* Okuda.otf */; };
+		F46B03932769AFF50058FFDC /* PriceEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B03922769AFF50058FFDC /* PriceEntryView.swift */; };
 		F4A8E08324CBA5F4007CAED1 /* OperationHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */; };
 		F4B2CF9624C4EA1500BAD628 /* OperationHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */; };
 		F4BEBE5B258A8E4C0025D085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BEBE5A258A8E4C0025D085 /* Main.storyboard */; };
@@ -56,7 +75,60 @@
 			remoteGlobalIDString = A1C547802221B1CB007505AA;
 			remoteInfo = LCARS_calculator;
 		};
+		F46B034D27697B5D0058FFDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1C547792221B1CB007505AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F46B034A27697B5D0058FFDC;
+			remoteInfo = "LCARS_watch WatchKit Extension";
+		};
+		F46B036627697B5E0058FFDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1C547792221B1CB007505AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F46B034A27697B5D0058FFDC;
+			remoteInfo = "LCARS_watch WatchKit Extension";
+		};
+		F46B037027697B5E0058FFDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1C547792221B1CB007505AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F46B034227697B5B0058FFDC;
+			remoteInfo = LCARS_watch;
+		};
+		F46B037727697B5E0058FFDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1C547792221B1CB007505AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F46B034227697B5B0058FFDC;
+			remoteInfo = LCARS_watch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F46B037D27697B5E0058FFDC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F46B034C27697B5D0058FFDC /* LCARS_watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46B038127697B5E0058FFDC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F46B037927697B5E0058FFDC /* LCARS_watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A12F3715229B5DEE009C44B0 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -87,6 +159,26 @@
 		F45A831C258BF27800430CBC /* InfoScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoScreen.storyboard; sourceTree = "<group>"; };
 		F45A8322258BF2DD00430CBC /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F45EABC923B2CE7B000D692B /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
+		F46B033E2769787F0058FFDC /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		F46B034327697B5B0058FFDC /* LCARS_watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCARS_watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46B034527697B5D0058FFDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F46B034B27697B5D0058FFDC /* LCARS_watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LCARS_watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46B035027697B5D0058FFDC /* LCARS_calculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_calculatorApp.swift; sourceTree = "<group>"; };
+		F46B035227697B5D0058FFDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F46B035427697B5D0058FFDC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F46B035627697B5D0058FFDC /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		F46B035827697B5D0058FFDC /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F46B035A27697B5E0058FFDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F46B035D27697B5E0058FFDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F46B035F27697B5E0058FFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F46B036027697B5E0058FFDC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F46B036527697B5E0058FFDC /* LCARS_watchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCARS_watchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46B036927697B5E0058FFDC /* LCARS_watchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_watchTests.swift; sourceTree = "<group>"; };
+		F46B036F27697B5E0058FFDC /* LCARS_watchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCARS_watchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46B037327697B5E0058FFDC /* LCARS_watchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_watchUITests.swift; sourceTree = "<group>"; };
+		F46B037527697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_watchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F46B038F2769ADAA0058FFDC /* Okuda.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Okuda.otf; path = LCARS_calculator/okuda/Okuda.otf; sourceTree = SOURCE_ROOT; };
+		F46B03922769AFF50058FFDC /* PriceEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceEntryView.swift; sourceTree = "<group>"; };
 		F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationHistoryCell.xib; sourceTree = "<group>"; };
 		F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationHistoryCell.swift; sourceTree = "<group>"; };
 		F4BEBE5A258A8E4C0025D085 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +213,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F46B034827697B5D0058FFDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46B036227697B5E0058FFDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46B036C27697B5E0058FFDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -130,6 +243,10 @@
 				A1C547832221B1CB007505AA /* LCARS_calculator */,
 				A1C547982221B1CD007505AA /* LCARS_calculatorTests */,
 				A1C547A32221B1CD007505AA /* LCARS_calculatorUITests */,
+				F46B034427697B5B0058FFDC /* LCARS_watch */,
+				F46B034F27697B5D0058FFDC /* LCARS_watch WatchKit Extension */,
+				F46B036827697B5E0058FFDC /* LCARS_watchTests */,
+				F46B037227697B5E0058FFDC /* LCARS_watchUITests */,
 				A1C547822221B1CB007505AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,6 +257,10 @@
 				A1C547812221B1CB007505AA /* LCARS_calculator.app */,
 				A1C547952221B1CD007505AA /* LCARS_calculatorTests.xctest */,
 				A1C547A02221B1CD007505AA /* LCARS_calculatorUITests.xctest */,
+				F46B034327697B5B0058FFDC /* LCARS_watch.app */,
+				F46B034B27697B5D0058FFDC /* LCARS_watch WatchKit Extension.appex */,
+				F46B036527697B5E0058FFDC /* LCARS_watchTests.xctest */,
+				F46B036F27697B5E0058FFDC /* LCARS_watchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,7 +282,7 @@
 				A1C547902221B1CD007505AA /* Info.plist */,
 				A12F3715229B5DEE009C44B0 /* Settings.swift */,
 				F4FDED9A24B7EA6C00A0F475 /* Constants.swift */,
-				F432BC1424B910940039D9CC /* SizeClassExtension.swift */,
+				F46B0340276978A00058FFDC /* Extensions */,
 			);
 			path = LCARS_calculator;
 			sourceTree = "<group>";
@@ -247,6 +368,66 @@
 			path = "Settings Screen";
 			sourceTree = "<group>";
 		};
+		F46B0340276978A00058FFDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F432BC1424B910940039D9CC /* SizeClassExtension.swift */,
+				F46B033E2769787F0058FFDC /* UIDevice.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F46B034427697B5B0058FFDC /* LCARS_watch */ = {
+			isa = PBXGroup;
+			children = (
+				F46B034527697B5D0058FFDC /* Assets.xcassets */,
+				F46B038F2769ADAA0058FFDC /* Okuda.otf */,
+			);
+			path = LCARS_watch;
+			sourceTree = "<group>";
+		};
+		F46B034F27697B5D0058FFDC /* LCARS_watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F46B035027697B5D0058FFDC /* LCARS_calculatorApp.swift */,
+				F46B035227697B5D0058FFDC /* ContentView.swift */,
+				F46B03922769AFF50058FFDC /* PriceEntryView.swift */,
+				F46B035427697B5D0058FFDC /* NotificationController.swift */,
+				F46B035627697B5D0058FFDC /* NotificationView.swift */,
+				F46B035827697B5D0058FFDC /* ComplicationController.swift */,
+				F46B035A27697B5E0058FFDC /* Assets.xcassets */,
+				F46B035F27697B5E0058FFDC /* Info.plist */,
+				F46B036027697B5E0058FFDC /* PushNotificationPayload.apns */,
+				F46B035C27697B5E0058FFDC /* Preview Content */,
+			);
+			path = "LCARS_watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F46B035C27697B5E0058FFDC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F46B035D27697B5E0058FFDC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F46B036827697B5E0058FFDC /* LCARS_watchTests */ = {
+			isa = PBXGroup;
+			children = (
+				F46B036927697B5E0058FFDC /* LCARS_watchTests.swift */,
+			);
+			path = LCARS_watchTests;
+			sourceTree = "<group>";
+		};
+		F46B037227697B5E0058FFDC /* LCARS_watchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F46B037327697B5E0058FFDC /* LCARS_watchUITests.swift */,
+				F46B037527697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift */,
+			);
+			path = LCARS_watchUITests;
+			sourceTree = "<group>";
+		};
 		F4F7277323B2C7AB006624CB /* Info Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,10 +447,12 @@
 				A1C5477D2221B1CB007505AA /* Sources */,
 				A1C5477E2221B1CB007505AA /* Frameworks */,
 				A1C5477F2221B1CB007505AA /* Resources */,
+				F46B038127697B5E0058FFDC /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F46B037827697B5E0058FFDC /* PBXTargetDependency */,
 			);
 			name = LCARS_calculator;
 			productName = LCARS_calculator;
@@ -312,13 +495,83 @@
 			productReference = A1C547A02221B1CD007505AA /* LCARS_calculatorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F46B034227697B5B0058FFDC /* LCARS_watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F46B037E27697B5E0058FFDC /* Build configuration list for PBXNativeTarget "LCARS_watch" */;
+			buildPhases = (
+				F46B034127697B5B0058FFDC /* Resources */,
+				F46B037D27697B5E0058FFDC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F46B034E27697B5D0058FFDC /* PBXTargetDependency */,
+			);
+			name = LCARS_watch;
+			productName = LCARS_watch;
+			productReference = F46B034327697B5B0058FFDC /* LCARS_watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F46B034A27697B5D0058FFDC /* LCARS_watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F46B037A27697B5E0058FFDC /* Build configuration list for PBXNativeTarget "LCARS_watch WatchKit Extension" */;
+			buildPhases = (
+				F46B034727697B5D0058FFDC /* Sources */,
+				F46B034827697B5D0058FFDC /* Frameworks */,
+				F46B034927697B5D0058FFDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LCARS_watch WatchKit Extension";
+			productName = "LCARS_watch WatchKit Extension";
+			productReference = F46B034B27697B5D0058FFDC /* LCARS_watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		F46B036427697B5E0058FFDC /* LCARS_watchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F46B038227697B5E0058FFDC /* Build configuration list for PBXNativeTarget "LCARS_watchTests" */;
+			buildPhases = (
+				F46B036127697B5E0058FFDC /* Sources */,
+				F46B036227697B5E0058FFDC /* Frameworks */,
+				F46B036327697B5E0058FFDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F46B036727697B5E0058FFDC /* PBXTargetDependency */,
+			);
+			name = LCARS_watchTests;
+			productName = LCARS_watchTests;
+			productReference = F46B036527697B5E0058FFDC /* LCARS_watchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F46B036E27697B5E0058FFDC /* LCARS_watchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F46B038527697B5E0058FFDC /* Build configuration list for PBXNativeTarget "LCARS_watchUITests" */;
+			buildPhases = (
+				F46B036B27697B5E0058FFDC /* Sources */,
+				F46B036C27697B5E0058FFDC /* Frameworks */,
+				F46B036D27697B5E0058FFDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F46B037127697B5E0058FFDC /* PBXTargetDependency */,
+			);
+			name = LCARS_watchUITests;
+			productName = LCARS_watchUITests;
+			productReference = F46B036F27697B5E0058FFDC /* LCARS_watchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		A1C547792221B1CB007505AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Andrew Lewis";
 				TargetAttributes = {
@@ -332,6 +585,20 @@
 					A1C5479F2221B1CD007505AA = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = A1C547802221B1CB007505AA;
+					};
+					F46B034227697B5B0058FFDC = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					F46B034A27697B5D0058FFDC = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					F46B036427697B5E0058FFDC = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = F46B034A27697B5D0058FFDC;
+					};
+					F46B036E27697B5E0058FFDC = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = F46B034227697B5B0058FFDC;
 					};
 				};
 			};
@@ -351,6 +618,10 @@
 				A1C547802221B1CB007505AA /* LCARS_calculator */,
 				A1C547942221B1CD007505AA /* LCARS_calculatorTests */,
 				A1C5479F2221B1CD007505AA /* LCARS_calculatorUITests */,
+				F46B034227697B5B0058FFDC /* LCARS_watch */,
+				F46B034A27697B5D0058FFDC /* LCARS_watch WatchKit Extension */,
+				F46B036427697B5E0058FFDC /* LCARS_watchTests */,
+				F46B036E27697B5E0058FFDC /* LCARS_watchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -394,6 +665,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F46B034127697B5B0058FFDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F46B03902769ADAA0058FFDC /* Okuda.otf in Resources */,
+				F46B034627697B5D0058FFDC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46B034927697B5D0058FFDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F46B03912769ADAA0058FFDC /* Okuda.otf in Resources */,
+				F46B035E27697B5E0058FFDC /* Preview Assets.xcassets in Resources */,
+				F46B035B27697B5E0058FFDC /* Assets.xcassets in Resources */,
+				F46B038E2769ACC40058FFDC /* Okuda.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46B036327697B5E0058FFDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46B036D27697B5E0058FFDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -414,6 +719,7 @@
 				A12F3716229B5DEE009C44B0 /* Settings.swift in Sources */,
 				F45EABCA23B2CE7B000D692B /* LaunchScreenVC.swift in Sources */,
 				F4BEBE63258A905F0025D085 /* iPadMainVC.swift in Sources */,
+				F46B033F2769787F0058FFDC /* UIDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +739,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F46B034727697B5D0058FFDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F46B035527697B5D0058FFDC /* NotificationController.swift in Sources */,
+				F46B035327697B5D0058FFDC /* ContentView.swift in Sources */,
+				F46B035927697B5D0058FFDC /* ComplicationController.swift in Sources */,
+				F46B035127697B5D0058FFDC /* LCARS_calculatorApp.swift in Sources */,
+				F46B035727697B5D0058FFDC /* NotificationView.swift in Sources */,
+				F46B038D2769AC700058FFDC /* Constants.swift in Sources */,
+				F46B03932769AFF50058FFDC /* PriceEntryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46B036127697B5E0058FFDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F46B036A27697B5E0058FFDC /* LCARS_watchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46B036B27697B5E0058FFDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F46B037627697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift in Sources */,
+				F46B037427697B5E0058FFDC /* LCARS_watchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -445,6 +782,26 @@
 			isa = PBXTargetDependency;
 			target = A1C547802221B1CB007505AA /* LCARS_calculator */;
 			targetProxy = A1C547A12221B1CD007505AA /* PBXContainerItemProxy */;
+		};
+		F46B034E27697B5D0058FFDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F46B034A27697B5D0058FFDC /* LCARS_watch WatchKit Extension */;
+			targetProxy = F46B034D27697B5D0058FFDC /* PBXContainerItemProxy */;
+		};
+		F46B036727697B5E0058FFDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F46B034A27697B5D0058FFDC /* LCARS_watch WatchKit Extension */;
+			targetProxy = F46B036627697B5E0058FFDC /* PBXContainerItemProxy */;
+		};
+		F46B037127697B5E0058FFDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F46B034227697B5B0058FFDC /* LCARS_watch */;
+			targetProxy = F46B037027697B5E0058FFDC /* PBXContainerItemProxy */;
+		};
+		F46B037827697B5E0058FFDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F46B034227697B5B0058FFDC /* LCARS_watch */;
+			targetProxy = F46B037727697B5E0058FFDC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -696,6 +1053,214 @@
 			};
 			name = Release;
 		};
+		F46B037B27697B5E0058FFDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LCARS_watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LCARS_watch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LCARS_watch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Andrew Lewis. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F46B037C27697B5E0058FFDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LCARS_watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LCARS_watch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LCARS_watch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Andrew Lewis. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		F46B037F27697B5E0058FFDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = LCARS_watch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = LCARS_watch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.ajlapps.timer.LCARS-calculator";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F46B038027697B5E0058FFDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = LCARS_watch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = LCARS_watch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.ajlapps.timer.LCARS-calculator";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		F46B038327697B5E0058FFDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator.LCARS-watchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LCARS_watch WatchKit Extension.appex/LCARS_watch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F46B038427697B5E0058FFDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator.LCARS-watchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LCARS_watch WatchKit Extension.appex/LCARS_watch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		F46B038627697B5E0058FFDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator.LCARS-watchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = LCARS_watch;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F46B038727697B5E0058FFDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator.LCARS-watchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = LCARS_watch;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -731,6 +1296,42 @@
 			buildConfigurations = (
 				A1C547B02221B1CD007505AA /* Debug */,
 				A1C547B12221B1CD007505AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F46B037A27697B5E0058FFDC /* Build configuration list for PBXNativeTarget "LCARS_watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F46B037B27697B5E0058FFDC /* Debug */,
+				F46B037C27697B5E0058FFDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F46B037E27697B5E0058FFDC /* Build configuration list for PBXNativeTarget "LCARS_watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F46B037F27697B5E0058FFDC /* Debug */,
+				F46B038027697B5E0058FFDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F46B038227697B5E0058FFDC /* Build configuration list for PBXNativeTarget "LCARS_watchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F46B038327697B5E0058FFDC /* Debug */,
+				F46B038427697B5E0058FFDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F46B038527697B5E0058FFDC /* Build configuration list for PBXNativeTarget "LCARS_watchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F46B038627697B5E0058FFDC /* Debug */,
+				F46B038727697B5E0058FFDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
