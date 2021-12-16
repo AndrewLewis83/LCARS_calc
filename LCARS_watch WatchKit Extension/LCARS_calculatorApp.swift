@@ -13,7 +13,7 @@ struct LCARS_calculatorApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                ContentView(tipPercentage: CGFloat(10))
             }
         }
 

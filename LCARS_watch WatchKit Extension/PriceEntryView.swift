@@ -16,7 +16,7 @@ struct PriceEntryView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var price: String = "$0.00"
     @State var showResult: Bool = false
-    @State var percentage = 0.2
+    @Binding var tipPercentage: CGFloat
     var resultFontSize: CGFloat = 40
     
     var body: some View {
@@ -246,13 +246,14 @@ struct PriceEntryView: View {
             if let convertedPrice = Double(String(price.dropFirst())){
                 VStack {
                     
-                    Text(String(format: "$%.2f +", convertedPrice) + String(format: "$%.2f = " + String(format: "$%.2f", convertedPrice + (convertedPrice*percentage)), convertedPrice*percentage))
+                    Text(String(format: "$%.2f +", convertedPrice) + String(format: "$%.2f = " + String(format: "$%.2f", convertedPrice + (convertedPrice*(tipPercentage*0.01))), convertedPrice*(tipPercentage*0.01)))
                         .font(.custom("Okuda", size: resultFontSize))
                         .foregroundColor(Color(warpColorOne))
                         .lineLimit(2)
                         .minimumScaleFactor(0.5)
                     
                     HStack {
+                        
                         Button(action: {
                             price = "$0.00"
                             showResult.toggle()
@@ -274,18 +275,9 @@ struct PriceEntryView: View {
                             .background(Color(UIColor.red))
                         .cornerRadius(customRadius, corners: [.bottomRight, .topRight])
                     }
-                    
                 }
-                
             }
         }
-        
-    }
-}
-
-struct PriceEntryView_Previews: PreviewProvider {
-    static var previews: some View {
-        PriceEntryView()
     }
 }
 

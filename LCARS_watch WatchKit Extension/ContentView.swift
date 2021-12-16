@@ -11,10 +11,13 @@ import SwiftUI
 struct ContentView: View {
     
     @State var showTipCalculator: Bool = false
+    @State var showTipSettings: Bool = false
+    @State var tipPercentage: CGFloat
     
     var body: some View {
         VStack {
             Button(action: {
+                setTipPercentage()
                 showTipCalculator.toggle()
             }){
                 Text("calculate tip")
@@ -23,21 +26,29 @@ struct ContentView: View {
             .background(Color(buttonColorOne))
             .cornerRadius(25)
             
-            Button(action: {}){
+            Button(action: {
+                setTipPercentage()
+                showTipSettings.toggle()
+            }){
                 Text("set tip amount")
                     .font(.custom("Okuda", size: 30))
             }.foregroundColor(.black)
             .background(Color(buttonColorFive))
             .cornerRadius(25)
         }.sheet(isPresented:$showTipCalculator, content: {
-            PriceEntryView()
+            PriceEntryView(tipPercentage: $tipPercentage)
+        })
+        .sheet(isPresented:$showTipSettings, content: {
+            TipSettingsView(tipPercentage: $tipPercentage)
         })
         
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    func setTipPercentage() {
+        if let tip = UserDefaults.standard.object(forKey: "tipPercentage") as? CGFloat {
+            tipPercentage = tip
+        }else{
+            tipPercentage = CGFloat(0.0)
+        }
     }
 }

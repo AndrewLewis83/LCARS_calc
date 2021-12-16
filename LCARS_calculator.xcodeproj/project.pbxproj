@@ -42,7 +42,7 @@
 		F46B036A27697B5E0058FFDC /* LCARS_watchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B036927697B5E0058FFDC /* LCARS_watchTests.swift */; };
 		F46B037427697B5E0058FFDC /* LCARS_watchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B037327697B5E0058FFDC /* LCARS_watchUITests.swift */; };
 		F46B037627697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B037527697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift */; };
-		F46B037927697B5E0058FFDC /* LCARS_watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F46B034327697B5B0058FFDC /* LCARS_watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F46B037927697B5E0058FFDC /* LCARS watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F46B034327697B5B0058FFDC /* LCARS watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F46B038D2769AC700058FFDC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDED9A24B7EA6C00A0F475 /* Constants.swift */; };
 		F46B038E2769ACC40058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1C7C311228F694F00BD0FC5 /* Okuda.otf */; };
 		F46B03902769ADAA0058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46B038F2769ADAA0058FFDC /* Okuda.otf */; };
@@ -57,6 +57,7 @@
 		F4CE29FA24C5116A0004D1D0 /* alert16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29F924C5116A0004D1D0 /* alert16.mp3 */; };
 		F4CE29FC24C512870004D1D0 /* computerbeep_13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */; };
 		F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */; };
+		F4FAAD75276B92D5005A88AB /* TipSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FAAD74276B92D5005A88AB /* TipSettingsView.swift */; };
 		F4FDED9B24B7EA6C00A0F475 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDED9A24B7EA6C00A0F475 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,7 +124,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				F46B037927697B5E0058FFDC /* LCARS_watch.app in Embed Watch Content */,
+				F46B037927697B5E0058FFDC /* LCARS watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,7 +161,7 @@
 		F45A8322258BF2DD00430CBC /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F45EABC923B2CE7B000D692B /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		F46B033E2769787F0058FFDC /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
-		F46B034327697B5B0058FFDC /* LCARS_watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCARS_watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46B034327697B5B0058FFDC /* LCARS watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LCARS watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46B034527697B5D0058FFDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F46B034B27697B5D0058FFDC /* LCARS_watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LCARS_watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46B035027697B5D0058FFDC /* LCARS_calculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_calculatorApp.swift; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 		F4CE29F924C5116A0004D1D0 /* alert16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert16.mp3; sourceTree = "<group>"; };
 		F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = computerbeep_13.mp3; sourceTree = "<group>"; };
 		F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "United Federation of Planets Regular.ttf"; sourceTree = "<group>"; };
+		F4FAAD74276B92D5005A88AB /* TipSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipSettingsView.swift; sourceTree = "<group>"; };
 		F4FDED9A24B7EA6C00A0F475 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,7 +259,7 @@
 				A1C547812221B1CB007505AA /* LCARS_calculator.app */,
 				A1C547952221B1CD007505AA /* LCARS_calculatorTests.xctest */,
 				A1C547A02221B1CD007505AA /* LCARS_calculatorUITests.xctest */,
-				F46B034327697B5B0058FFDC /* LCARS_watch.app */,
+				F46B034327697B5B0058FFDC /* LCARS watch.app */,
 				F46B034B27697B5D0058FFDC /* LCARS_watch WatchKit Extension.appex */,
 				F46B036527697B5E0058FFDC /* LCARS_watchTests.xctest */,
 				F46B036F27697B5E0058FFDC /* LCARS_watchUITests.xctest */,
@@ -392,6 +394,7 @@
 				F46B035027697B5D0058FFDC /* LCARS_calculatorApp.swift */,
 				F46B035227697B5D0058FFDC /* ContentView.swift */,
 				F46B03922769AFF50058FFDC /* PriceEntryView.swift */,
+				F4FAAD74276B92D5005A88AB /* TipSettingsView.swift */,
 				F46B035427697B5D0058FFDC /* NotificationController.swift */,
 				F46B035627697B5D0058FFDC /* NotificationView.swift */,
 				F46B035827697B5D0058FFDC /* ComplicationController.swift */,
@@ -509,7 +512,7 @@
 			);
 			name = LCARS_watch;
 			productName = LCARS_watch;
-			productReference = F46B034327697B5B0058FFDC /* LCARS_watch.app */;
+			productReference = F46B034327697B5B0058FFDC /* LCARS watch.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		F46B034A27697B5D0058FFDC /* LCARS_watch WatchKit Extension */ = {
@@ -744,6 +747,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F46B035527697B5D0058FFDC /* NotificationController.swift in Sources */,
+				F4FAAD75276B92D5005A88AB /* TipSettingsView.swift in Sources */,
 				F46B035327697B5D0058FFDC /* ContentView.swift in Sources */,
 				F46B035927697B5D0058FFDC /* ComplicationController.swift in Sources */,
 				F46B035127697B5D0058FFDC /* LCARS_calculatorApp.swift in Sources */,
@@ -1132,12 +1136,11 @@
 				DEVELOPMENT_TEAM = 9PHXE6VS94;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = LCARS_watch_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = LCARS_watch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.ajlapps.timer.LCARS-calculator";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "LCARS watch";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1160,12 +1163,11 @@
 				DEVELOPMENT_TEAM = 9PHXE6VS94;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = LCARS_watch_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = LCARS_watch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.ajlapps.timer.LCARS-calculator";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "LCARS watch";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
