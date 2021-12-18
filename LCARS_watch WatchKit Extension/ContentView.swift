@@ -16,6 +16,27 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            
+            if let image = UIImage(named: "starfleet_logo") {
+            
+                ZStack {
+                
+                    Circle()
+                        .frame(width: 48, height: 48)
+                        .foregroundColor(Color(textColorOne))
+                    Circle()
+                        .frame(width: 45, height: 45)
+                        .foregroundColor(Color.black)
+                    
+                    Image(uiImage: image)
+                        .resizable()
+                        .frame(width: 36.0, height: 36.0)
+                        .colorMultiply(Color(textColorOne))
+                        .padding()
+                }
+            }
+            
+            
             Button(action: {
                 setTipPercentage()
                 showTipCalculator.toggle()

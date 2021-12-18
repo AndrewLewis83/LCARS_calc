@@ -157,8 +157,6 @@ class iPhoneMainVC: UIViewController {
         one_button.layer.cornerRadius = cornerRadius
         one_button.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
         one_button.backgroundColor = buttonColorOne
-//        one_button.layer.borderWidth = 2
-//        one_button.layer.borderColor = UIColor.black.cgColor
         two_button.backgroundColor = buttonColorTwo
         three_button.backgroundColor = buttonColorThree
         four_button.layer.cornerRadius = cornerRadius

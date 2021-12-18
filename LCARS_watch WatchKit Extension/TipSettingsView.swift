@@ -12,6 +12,7 @@ struct TipSettingsView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @Binding var tipPercentage: CGFloat
+    let circleDiameter = WKInterfaceDevice.current().screenBounds.size.width*0.4
     
     var body: some View {
         
@@ -21,15 +22,16 @@ struct TipSettingsView: View {
                 Circle()
                     .stroke(lineWidth: 7.0)
                     .opacity(0.3)
-                    .foregroundColor(Color(buttonColorTwo))
+                    .foregroundColor(Color(UIColor.red))
                 
                 Circle()
                     .trim(from: 0.0, to: tipPercentage/20)
                     .stroke(style: StrokeStyle(lineWidth: 7.0, lineCap: .round, lineJoin: .round))
-                    .foregroundColor(Color(buttonColorOne))
-                    .frame(width: 77, height: 77)
+                    .foregroundColor(Color(UIColor.red))
+                    .frame(width: circleDiameter, height: circleDiameter)
                 
                 Text("\(Int(tipPercentage))%")
+                    .foregroundColor(Color(textColorOne))
                     .font(.custom("Okuda", size: 30))
                     .focusable(true)
                     .digitalCrownRotation($tipPercentage, from: 1, through: 20, by: 1.0, sensitivity: .low, isContinuous: false, isHapticFeedbackEnabled: true)
@@ -43,16 +45,10 @@ struct TipSettingsView: View {
                 Text("back")
                     .font(.custom("Okuda", size: 30))
             }.foregroundColor(.black)
-                .background(Color(UIColor.red))
+                .background(Color(buttonColorOne))
             .cornerRadius(25)
             .padding()
         }
         
     }
 }
-
-//struct TipSettingsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TipSettingsView()
-//    }
-//}

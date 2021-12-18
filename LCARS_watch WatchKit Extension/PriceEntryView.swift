@@ -11,7 +11,7 @@ import SwiftUI
 struct PriceEntryView: View {
     
     let buttonFontSize: CGFloat = 20
-    let buttonHeight: CGFloat = 32
+    let buttonHeight: CGFloat = WKInterfaceDevice.current().screenBounds.size.height/8
     let customRadius: CGFloat = 20
     @Environment(\.presentationMode) var presentationMode
     @State var price: String = "$0.00"
@@ -27,7 +27,7 @@ struct PriceEntryView: View {
                 Spacer(minLength: 10)
                 Text(price)
                     .font(.custom("Okuda", size: 25))
-                    .foregroundColor(Color(warpColorOne))
+                    .foregroundColor(Color(textColorOne))
                 
                 HStack(spacing: 1) {
                     Button(action: {
@@ -248,7 +248,7 @@ struct PriceEntryView: View {
                     
                     Text(String(format: "$%.2f +", convertedPrice) + String(format: "$%.2f = " + String(format: "$%.2f", convertedPrice + (convertedPrice*(tipPercentage*0.01))), convertedPrice*(tipPercentage*0.01)))
                         .font(.custom("Okuda", size: resultFontSize))
-                        .foregroundColor(Color(warpColorOne))
+                        .foregroundColor(Color(textColorOne))
                         .lineLimit(2)
                         .minimumScaleFactor(0.5)
                     
