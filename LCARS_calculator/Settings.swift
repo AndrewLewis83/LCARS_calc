@@ -11,7 +11,7 @@ import Foundation
 class Settings {
     
     private static var muted = false
-    private static var percentTip = 20
+    private static var percentTip: Double = 20
     
     static func getMuteSetting() -> Bool {
         return muted
@@ -21,12 +21,12 @@ class Settings {
         muted = newSetting
     }
     
-    static func getPercentTip() -> Int {
-        return percentTip
+    static func getPercentTip() -> Double {
+        return percentTip/100
     }
     
     static func setPercentTip(newTip: Int) {
-        percentTip = newTip
+        percentTip = Double(newTip)
     }
     
 }

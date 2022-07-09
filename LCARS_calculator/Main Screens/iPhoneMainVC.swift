@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SimpleCalcFramework
 
 class iPhoneMainVC: UIViewController {
     
@@ -62,37 +63,17 @@ class iPhoneMainVC: UIViewController {
     
     //sound effects
     private var soundEffect: AVAudioPlayer?
-    private let errorSoundPath = Bundle.main.path(forResource: "consolewarning.mp3", ofType:nil)!
-    private let buttonSoundPath = Bundle.main.path(forResource: "computerbeep_5.mp3", ofType:nil)!
-    private let alertSoundPath = Bundle.main.path(forResource: "computerbeep_13.mp3", ofType:nil)!
 
     //variables
-    private var _hasDecimal = false
-    private var _mainValue: Double = 0
-    private var _secondaryValue: Double = 0
-    private var _currentOperation = CurrentOperation.addition
-    private var _typingInProgress = false
-    private enum CurrentOperation {
-        
-        case addition, subtraction, multiplication, division
-        
-        func simpleDescription() -> String {
-            switch self {
-            case .addition:
-                return "addition"
-            case .subtraction:
-                return "discrete"
-            case .multiplication:
-                return "multiplication"
-            case .division:
-                return "division"
-            }
-        }
+    private var calculator: SimpleCalc!
+    private var iPodTouch: Bool {
+        return UIDevice.modelName == "iPod touch (5th generation)" || UIDevice.modelName == "iPod touch (6th generation)" || UIDevice.modelName == "iPod touch (7th generation)"
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        calculator = SimpleCalc()
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
         loadUserDefaults()
@@ -103,15 +84,13 @@ class iPhoneMainVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        if UIDevice.modelName != "iPod touch (5th generation)" && UIDevice.modelName != "iPod touch (6th generation)" && UIDevice.modelName != "iPod touch (7th generation)" {
+        if iPodTouch == false {
             tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
         }
-
     }
     
     func setModelConstraints(modelName: String){
-        print(modelName)
-        
+
         if modelName == "iPhone 12 Pro Max" {
         
             cornerRadius = 40
@@ -214,43 +193,24 @@ class iPhoneMainVC: UIViewController {
         Settings.setPercentTip(newTip: UserDefaults.standard.integer(forKey: "tipSetting"))
     }
     
-    @IBAction func numberButtonPressed(_ sender: Any) {
+    @IBAction func numberButtonPressed(_ sender: UIButton) {
         
-        if _typingInProgress == false {
-            mainReadout.text = ""
-            secondaryReadout.text = ""
-            _typingInProgress = true
+        if calculator.addNewDigit(digit: sender.tag) {
+            playSound(soundEffectName: "buttonSound")
+            mainReadout.text = calculator.primaryReadoutValue
+        } else {
+            signalError()
         }
+    }
+    
+    
+    @IBAction func decimalButtonPressed(_ sender: Any) {
         
-        if (sender as AnyObject).tag >= 0 && (sender as AnyObject).tag < 10 {
-            if mainReadout.text! == "0" && (sender as AnyObject).tag == 0 {
-                mainReadout.text! = "0"
-            }else{
-                if mainReadout.text! == "0"{
-                    mainReadout.text = String((sender as AnyObject).tag)
-                }else{
-                    mainReadout.text = mainReadout.text! + String((sender as AnyObject).tag)
-
-                }
-            }
-            
-            if mainReadout.text != nil {
-                _mainValue = Double(mainReadout.text!)!
-            }
+        if calculator.addDecimal() {
+            playSound(soundEffectName: "buttonSound")
+        } else {
+            signalError()
         }
-        
-        if (sender as AnyObject).tag == 10 {
-            
-            if _hasDecimal == false {
-                mainReadout.text = mainReadout.text! + "."
-                _hasDecimal = true
-            }else{
-                secondaryReadout.text = "Invalid operation"
-                playSound(soundEffectName: "errorSound")
-            }
-        }
-        
-        playSound(soundEffectName: "buttonSound")
     }
     
     @IBAction func functionButtonPressed(_ sender: Any) {
@@ -258,178 +218,106 @@ class iPhoneMainVC: UIViewController {
         switch ((sender as AnyObject).tag) {
             
         case 11: //division
-            playSound(soundEffectName: "buttonSound")
-            _currentOperation = CurrentOperation.division
-            checkProgress()
+            if calculator.divide() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
+            }
+
         case 12://multiplication
-            playSound(soundEffectName: "buttonSound")
-            _currentOperation = CurrentOperation.multiplication
-            checkProgress()
+            if calculator.times() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
+            }
+
         case 13://subtraction
-            playSound(soundEffectName: "buttonSound")
-            _currentOperation = CurrentOperation.subtraction
-            checkProgress()
+            if calculator.minus() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
+            }
+       
         case 14://addition
-            playSound(soundEffectName: "buttonSound")
-            _currentOperation = CurrentOperation.addition
-            checkProgress()
+            if calculator.plus() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
+            }
+    
         case 15: //%20 or settings on iPod touch
             
-            if UIDevice.modelName != "iPod touch (5th generation)" && UIDevice.modelName != "iPod touch (6th generation)" && UIDevice.modelName != "iPod touch (7th generation)" {
-                
-                if _mainValue == 0.0 && _secondaryValue == 0{
-                    // play error sound and display error message.
-                    secondaryReadout.text = "Invalid operation"
-                    playSound(soundEffectName: "errorSound")
-                } else if _secondaryValue == 0.0 {
-                    _secondaryValue = _mainValue
-                }
-                
-                if _secondaryValue != 0 {
-            
-                    let tip = _secondaryValue * (Double(Settings.getPercentTip()) * 0.01)
-                    mainReadout.text = " Tip = $" + String(format: "%.2f", tip)
-                    secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
-                   
-                    _secondaryValue = tip
-                    playSound(soundEffectName: "buttonSound")
-        
-                }
-                _hasDecimal = false
-                
-            }else{
+            if iPodTouch {
                 
                 performSegue(withIdentifier: "showiPodSettings", sender: nil)
+                
+            } else {
+                
+                if calculator.calculateTip(Settings.getPercentTip()) {
+                    // play error sound and display error message.
+                    mainReadout.text = calculator.primaryReadoutValue
+                    secondaryReadout.text = calculator.secondaryReadoutValue
+                    playSound(soundEffectName: "buttonSound")
+                    
+                } else {
+                    signalError()
+                }
             }
             
         case 16: //equals
             
-            performOperation()
-            playSound(soundEffectName: "buttonSound")
-            _hasDecimal = false
+            if calculator.equals() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
+            }
+            
+            mainReadout.text = calculator.primaryReadoutValue
+            secondaryReadout.text = calculator.secondaryReadoutValue
             
         case 17://copies secondaryValue to clipboard
             
             playSound(soundEffectName: "alertSound")
-            
-            if _secondaryValue == 0 {
-            	UIPasteboard.general.string = String(_mainValue)
-            } else {
-            	UIPasteboard.general.string = String(_secondaryValue)
-            }
-            
+            UIPasteboard.general.string = calculator.primaryReadoutValue
             secondaryReadout.text = "Value copied to clipboard"
-            _hasDecimal = false
-            
+
         case 18: // Clear
             
-            playSound(soundEffectName: "buttonSound")
-            mainReadout.text = "0.0"
-            secondaryReadout.text = "Enter value"
-            _hasDecimal = false
-            _mainValue = 0
-            _secondaryValue = 0
+            if calculator.clear() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
+            }
+
+            mainReadout.text = calculator.primaryReadoutValue
+            secondaryReadout.text = calculator.secondaryReadoutValue
+
         case 19: // Negative/positive
             
-            playSound(soundEffectName: "buttonSound")
-            if _mainValue != 0 {
-                _mainValue = _mainValue * -1
-                 mainReadout.text = String(_mainValue)
-            }else{
-                _secondaryValue = _secondaryValue * -1
-                mainReadout.text = String(_secondaryValue)
-
+            if calculator.negative() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
             }
+
+            mainReadout.text = calculator.primaryReadoutValue
+            secondaryReadout.text = calculator.secondaryReadoutValue
             
         case 20: //backspace
-            playSound(soundEffectName: "buttonSound")
             
-            var mainReadoutString: String = mainReadout.text ?? ""
-            _mainValue = Double(mainReadoutString) ?? 0.0
-            
-            if mainReadoutString.contains("Tip") == true {
-                
-                mainReadoutString = String(format: "%.2f", _secondaryValue)
-                mainReadout.text = mainReadoutString
-                _mainValue = Double(mainReadoutString) ?? 0.0
-                _secondaryValue = 0.0
-                mainReadout.text = String(_mainValue)
-                mainReadoutString = mainReadout.text ?? ""
-                secondaryReadout.text = ""
-                
+            if calculator.backSpace() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
             }
             
-            if _mainValue != 0 {
-                
-                mainReadoutString.removeLast()
-                _mainValue = Double(mainReadoutString) ?? 0.0
-                mainReadout.text = mainReadoutString
-                if mainReadout.text == "" || mainReadout.text == "-" {
-                    _mainValue = 0.0
-                    mainReadout.text = "0.0"
-                }
-                
-                secondaryReadout.text = ""
-            }else{
-                
-                playSound(soundEffectName: "errorSound")
-                secondaryReadout.text = "Invalid operation"
-            }
+            mainReadout.text = calculator.primaryReadoutValue
+            secondaryReadout.text = calculator.secondaryReadoutValue
             
         default:
             break
         }
         
-        _typingInProgress = false
-    }
-    
-    func checkProgress(){
-        
-        _hasDecimal = false
-        if _secondaryValue == 0 {
-            _secondaryValue = _mainValue
-        } else if _mainValue != 0 {
-            performOperation()
-        }
-    }
-    
-    func performOperation(){
-        
-        var finalValue:Double = 0
-        var operationSymbol = ""
-        
-        switch(_currentOperation){
-            
-        case CurrentOperation.division:
-            if _mainValue == 0 {
-                playSound(soundEffectName: "errorSound")
-                secondaryReadout.text = "Invalid operation: cannot divide by zero."
-            }else{
-                finalValue = _secondaryValue/_mainValue
-                operationSymbol = "/"
-            }
-            
-        case CurrentOperation.multiplication:
-            finalValue = _mainValue*_secondaryValue
-            operationSymbol = "X"
-        case CurrentOperation.subtraction:
-            finalValue = _secondaryValue-_mainValue
-            operationSymbol = "-"
-        case CurrentOperation.addition:
-            finalValue = _mainValue+_secondaryValue
-            operationSymbol = "+"
-        }
-        
-        mainReadout.text = String(format: "%.3f", finalValue)
-        if _mainValue != 0{
-
-            secondaryReadout.text = "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue))"
-  
-        }
-        _secondaryValue = finalValue
-        _mainValue = 0
-        _typingInProgress = false
-
     }
     
     @IBAction func infoButtonPressed(_ sender: Any) {
@@ -443,6 +331,10 @@ class iPhoneMainVC: UIViewController {
         performSegue(withIdentifier: "showSettings", sender: nil)
     }
     
+    func signalError(){
+        secondaryReadout.text = "Invalid operation"
+        playSound(soundEffectName: "errorSound")
+    }
     
     func playSound(soundEffectName: String){
         

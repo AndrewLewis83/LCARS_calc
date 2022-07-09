@@ -56,6 +56,8 @@
 		F4C1DE2A2590F7E6003DC05E /* iPodTouchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1DE292590F7E6003DC05E /* iPodTouchSettings.swift */; };
 		F4CE29FA24C5116A0004D1D0 /* alert16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29F924C5116A0004D1D0 /* alert16.mp3 */; };
 		F4CE29FC24C512870004D1D0 /* computerbeep_13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */; };
+		F4DE10E42879000C007D5FCF /* SimpleCalcFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DE10E32879000C007D5FCF /* SimpleCalcFramework.framework */; };
+		F4DE10E52879000C007D5FCF /* SimpleCalcFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4DE10E32879000C007D5FCF /* SimpleCalcFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */; };
 		F4FAAD75276B92D5005A88AB /* TipSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FAAD74276B92D5005A88AB /* TipSettingsView.swift */; };
 		F4FDED9B24B7EA6C00A0F475 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDED9A24B7EA6C00A0F475 /* Constants.swift */; };
@@ -129,6 +131,17 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4DE10D02878F287007D5FCF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F4DE10E52879000C007D5FCF /* SimpleCalcFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -188,6 +201,7 @@
 		F4C1DE292590F7E6003DC05E /* iPodTouchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodTouchSettings.swift; sourceTree = "<group>"; };
 		F4CE29F924C5116A0004D1D0 /* alert16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert16.mp3; sourceTree = "<group>"; };
 		F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = computerbeep_13.mp3; sourceTree = "<group>"; };
+		F4DE10E32879000C007D5FCF /* SimpleCalcFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleCalcFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "United Federation of Planets Regular.ttf"; sourceTree = "<group>"; };
 		F4FAAD74276B92D5005A88AB /* TipSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipSettingsView.swift; sourceTree = "<group>"; };
 		F4FDED9A24B7EA6C00A0F475 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -198,6 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4DE10E42879000C007D5FCF /* SimpleCalcFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +265,7 @@
 				F46B036827697B5E0058FFDC /* LCARS_watchTests */,
 				F46B037227697B5E0058FFDC /* LCARS_watchUITests */,
 				A1C547822221B1CB007505AA /* Products */,
+				F4DE10CD2878F286007D5FCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -431,6 +447,14 @@
 			path = LCARS_watchUITests;
 			sourceTree = "<group>";
 		};
+		F4DE10CD2878F286007D5FCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4DE10E32879000C007D5FCF /* SimpleCalcFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4F7277323B2C7AB006624CB /* Info Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +475,7 @@
 				A1C5477E2221B1CB007505AA /* Frameworks */,
 				A1C5477F2221B1CB007505AA /* Resources */,
 				F46B038127697B5E0058FFDC /* Embed Watch Content */,
+				F4DE10D02878F287007D5FCF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -945,6 +970,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PHXE6VS94;
 				INFOPLIST_FILE = LCARS_calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -964,6 +990,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PHXE6VS94;
 				INFOPLIST_FILE = LCARS_calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
