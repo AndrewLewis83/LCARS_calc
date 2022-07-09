@@ -84,7 +84,7 @@ class iPhoneMainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        calculator = SimpleCalc()
+        calculator = SimpleCalc(recordHistory: false)
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
         tipButton.setTitle(String(Settings.tipSetting) + "%", for: .normal)
@@ -210,8 +210,10 @@ class iPhoneMainVC: UIViewController {
         if calculator.addDecimal() {
             playSound(soundEffectName: "buttonSound")
         } else {
-            signalError()
+            signalError("number already contains decimal")
         }
+        
+        mainReadout.text = calculator.primaryReadoutValue
     }
     
     @IBAction func functionButtonPressed(_ sender: Any) {
@@ -334,8 +336,8 @@ class iPhoneMainVC: UIViewController {
         performSegue(withIdentifier: "showSettings", sender: nil)
     }
     
-    func signalError(){
-        secondaryReadout.text = "Invalid operation"
+    func signalError(_ errorMessage: String = "Invalid operation"){
+        secondaryReadout.text = errorMessage
         playSound(soundEffectName: "errorSound")
     }
     
