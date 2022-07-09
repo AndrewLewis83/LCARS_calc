@@ -18,6 +18,7 @@ class iPadMainVC: UIViewController {
     @IBOutlet weak var mainPanelBackground: UIView!
     @IBOutlet weak var mainPanelBlackBackground: UIView!
   
+    @IBOutlet weak var controlPanelStackView: UIStackView!
     @IBOutlet weak var starfleetEmblem: UIImageView!
     @IBOutlet weak var starfleetLabel: UILabel!
     @IBOutlet weak var unitedFederationOfPlanetsLabel: UILabel!
@@ -57,6 +58,18 @@ class iPadMainVC: UIViewController {
     
     private var soundEffect: AVAudioPlayer?
     private var calculator: SimpleCalc!
+    
+    private var iPadMini: Bool {
+        return UIDevice.modelName == "iPad mini" || UIDevice.modelName == "iPad mini 2" || UIDevice.modelName == "iPad mini 3" || UIDevice.modelName == "iPad mini 4" || UIDevice.modelName == "iPad mini (5th generation)" || UIDevice.modelName == "iPad mini (6th generation)"
+    }
+    
+    private var iPadMini6: Bool {
+        return UIDevice.modelName == "iPad mini (6th generation)" || UIDevice.modelName == "Simulator iPad mini (6th generation)"
+    }
+    
+    private var iPhone: Bool {
+        return UIDevice.current.userInterfaceIdiom == .phone
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,14 +81,14 @@ class iPadMainVC: UIViewController {
         loadHistoryView()
         
         if UIDevice.current.orientation.isLandscape {
-
+            
             starfleetEmblem.isHidden = true
             starfleetLabel.isHidden = true
             unitedFederationOfPlanetsLabel.isHidden = true
             spacerView.isHidden = true
             
         } else {
-   
+            
             starfleetEmblem.isHidden = false
             starfleetLabel.isHidden = false
             unitedFederationOfPlanetsLabel.isHidden = false

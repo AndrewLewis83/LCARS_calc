@@ -569,6 +569,7 @@
                         <outlet property="additionButton" destination="7MU-ND-lww" id="5i0-Wf-B5W"/>
                         <outlet property="backspaceButton" destination="PI4-3X-Doi" id="PBp-Lh-DJs"/>
                         <outlet property="clear_button" destination="dve-Or-YsI" id="m9U-FI-wJW"/>
+                        <outlet property="controlPanelStackView" destination="7bM-xV-Hnj" id="Ff8-Ti-Ix2"/>
                         <outlet property="copyButton" destination="u1T-Nb-soP" id="DYY-Uz-adg"/>
                         <outlet property="decimal_point_button" destination="PNr-zo-5ww" id="Ngt-hU-2VR"/>
                         <outlet property="division_button" destination="gNX-bG-64x" id="IaP-wk-r6I"/>
