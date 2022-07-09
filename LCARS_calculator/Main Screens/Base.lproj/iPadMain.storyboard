@@ -124,423 +124,485 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIF-FI-HO4">
                                         <rect key="frame" x="60" y="10" width="774" height="914"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uA3-Ya-0pF" customClass="OperationHistory" customModule="LCARS_calculator" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="20" width="424" height="844"/>
-                                            </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7bM-xV-Hnj">
-                                                <rect key="frame" x="464" y="20" width="300" height="874"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SfB-RK-WIO">
+                                                <rect key="frame" x="20" y="20" width="734" height="874"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YEP-Ax-LBk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="297"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0sd-OH-UaV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="734" height="874"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starfleet_command_yellow" translatesAutoresizingMaskIntoConstraints="NO" id="pCt-eA-tz5">
-                                                                <rect key="frame" x="39" y="0.0" width="222" height="212"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="pCt-eA-tz5" secondAttribute="height" multiplier="300:287" id="7rd-sP-wQS"/>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="EOp-yx-RzG"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STARFLEET COMMAND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oVs-Jm-ILD">
-                                                                <rect key="frame" x="23.5" y="220" width="253" height="25.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="25.5" id="Bk3-xd-V3d"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="FederationStarfleetHull23rd" family="United Federation of Planets." pointSize="25"/>
-                                                                <color key="textColor" red="0.88758862019999996" green="0.58848351239999996" blue="0.28618747" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNITED FEDERATION OF PLANETS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rnc-a7-IGD">
-                                                                <rect key="frame" x="0.0" y="253.5" width="300" height="25.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="25.5" id="BXf-5R-BeE"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="FederationStarfleetHull23rd" family="United Federation of Planets." pointSize="25"/>
-                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-gm-PNj">
-                                                                <rect key="frame" x="30" y="287" width="240" height="10"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="r5k-rk-FJf"/>
-                                                                </constraints>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uA3-Ya-0pF" customClass="OperationHistory" customModule="LCARS_calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="434" height="874"/>
                                                             </view>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qzj-6b-1LS" userLabel="buttons stack view">
-                                                        <rect key="frame" x="0.0" y="305" width="300" height="373"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="fpi-Ge-UDM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="68"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7bM-xV-Hnj">
+                                                                <rect key="frame" x="454" y="0.0" width="280" height="874"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCY-iN-nzP">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YEP-Ax-LBk">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="333.5"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starfleet_command_yellow" translatesAutoresizingMaskIntoConstraints="NO" id="pCt-eA-tz5">
+                                                                                <rect key="frame" x="10" y="0.0" width="260" height="248.5"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="pCt-eA-tz5" secondAttribute="height" multiplier="300:287" id="7rd-sP-wQS"/>
+                                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="EOp-yx-RzG"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STARFLEET COMMAND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oVs-Jm-ILD">
+                                                                                <rect key="frame" x="13.5" y="256.5" width="253" height="25.5"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="25.5" id="Bk3-xd-V3d"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="FederationStarfleetHull23rd" family="United Federation of Planets." pointSize="25"/>
+                                                                                <color key="textColor" red="0.88758862019999996" green="0.58848351239999996" blue="0.28618747" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNITED FEDERATION OF PLANETS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rnc-a7-IGD">
+                                                                                <rect key="frame" x="0.0" y="290" width="280" height="25.5"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="25.5" id="BXf-5R-BeE"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="FederationStarfleetHull23rd" family="United Federation of Planets." pointSize="25"/>
+                                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-gm-PNj">
+                                                                                <rect key="frame" x="20" y="323.5" width="240" height="10"/>
+                                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="r5k-rk-FJf"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qzj-6b-1LS" userLabel="buttons stack view">
+                                                                        <rect key="frame" x="0.0" y="341.5" width="280" height="348"/>
+                                                                        <subviews>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="fpi-Ge-UDM">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="63"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCY-iN-nzP">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="NCY-iN-nzP" secondAttribute="height" multiplier="1:1" id="C5z-te-lnt"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="1">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCr-Z0-hrl"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zE3-Jz-p0X">
+                                                                                        <rect key="frame" x="72.5" y="0.0" width="63" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="zE3-Jz-p0X" secondAttribute="height" multiplier="1:1" id="Whc-LT-KoY"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="2">
+                                                                                            <color key="titleColor" systemColor="darkTextColor"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zaq-jn-dOC"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-Oh-TuI">
+                                                                                        <rect key="frame" x="144.5" y="0.0" width="63.5" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="Ua8-Oh-TuI" secondAttribute="height" multiplier="1:1" id="Q2f-07-GTq"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="3">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BoG-oV-FoC"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="11" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNX-bG-64x">
+                                                                                        <rect key="frame" x="217" y="0.0" width="63" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="gNX-bG-64x" secondAttribute="height" multiplier="1:1" id="Ind-2D-WnK"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="/">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jcn-7Y-nvz"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PLY-zx-9GK">
+                                                                                <rect key="frame" x="0.0" y="71" width="280" height="63"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx4-Fe-n90">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="wx4-Fe-n90" secondAttribute="height" multiplier="1:1" id="72M-4s-URq"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="4">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="waK-qB-W8w"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXC-UO-QdO">
+                                                                                        <rect key="frame" x="72" y="0.0" width="64" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="aXC-UO-QdO" secondAttribute="height" multiplier="1:1" id="nS6-RZ-im9"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="5">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gs4-bp-cO9"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZP-e1-BW7">
+                                                                                        <rect key="frame" x="144" y="0.0" width="64" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="GZP-e1-BW7" secondAttribute="height" multiplier="1:1" id="2zR-0M-mpA"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="6">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XqT-h4-Thf"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e0-BC-4jm">
+                                                                                        <rect key="frame" x="216" y="0.0" width="64" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="6e0-BC-4jm" secondAttribute="height" multiplier="1:1" id="lQh-GY-ReG"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="x">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nqv-jl-FvW"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1QI-No-cKs">
+                                                                                <rect key="frame" x="0.0" y="142" width="280" height="63.5"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXj-x7-geE">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="63.5"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="TXj-x7-geE" secondAttribute="height" multiplier="1:1" id="SIW-98-uT6"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="7">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKH-AE-vB3"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udf-KT-9Wh">
+                                                                                        <rect key="frame" x="72" y="0.0" width="64" height="63.5"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="udf-KT-9Wh" secondAttribute="height" multiplier="1:1" id="ceW-8L-2uQ"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="8">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lah-dD-VPR"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMR-dZ-Xvg">
+                                                                                        <rect key="frame" x="144" y="0.0" width="64" height="63.5"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="KMR-dZ-Xvg" secondAttribute="height" multiplier="1:1" id="EEq-GN-RGf"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="9">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ceh-9p-KPg"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="13" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TG-6b-2vi">
+                                                                                        <rect key="frame" x="216" y="0.0" width="64" height="63.5"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="6TG-6b-2vi" secondAttribute="height" multiplier="1:1" id="wu4-cO-ehO"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="-" backgroundImage=" ">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uff-yS-TMf"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WvR-kB-Af4">
+                                                                                <rect key="frame" x="0.0" y="213.5" width="280" height="63"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dve-Or-YsI">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="dve-Or-YsI" secondAttribute="height" multiplier="1:1" id="Nwf-57-i2e"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <state key="normal" title="Clr">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rdv-km-vSN"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLm-WG-bkY">
+                                                                                        <rect key="frame" x="72" y="0.0" width="64" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="uLm-WG-bkY" secondAttribute="height" multiplier="1:1" id="Xvu-y3-ifU"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="0">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgW-cY-fpN"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNr-zo-5ww">
+                                                                                        <rect key="frame" x="144" y="0.0" width="64" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="PNr-zo-5ww" secondAttribute="height" multiplier="1:1" id="Ovf-EO-ZH0"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title=".">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="decimalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="guQ-C0-3Dm"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="14" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MU-ND-lww">
+                                                                                        <rect key="frame" x="216" y="0.0" width="64" height="63"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="7MU-ND-lww" secondAttribute="height" multiplier="1:1" id="iwM-yo-ieb"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="+">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LnA-6y-nZN"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6St-Od-W4k" userLabel="bottom buttons stack view">
+                                                                                <rect key="frame" x="0.0" y="284.5" width="280" height="63.5"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PI4-3X-Doi">
+                                                                                        <rect key="frame" x="0.0" y="11.5" width="64" height="41"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="PI4-3X-Doi" secondAttribute="height" multiplier="1:1" id="hAz-3J-D2r"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <state key="normal" image="delete.left.fill" catalog="system">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CnN-uW-W2V"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWs-DZ-E0d">
+                                                                                        <rect key="frame" x="72" y="5.5" width="64" height="53"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="aWs-DZ-E0d" secondAttribute="height" multiplier="1:1" id="Jgb-8g-icK"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="=">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exv-PL-bQH"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccv-8A-Q9c">
+                                                                                        <rect key="frame" x="144" y="5.5" width="64" height="53"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="Ccv-8A-Q9c" secondAttribute="height" multiplier="1:1" id="PTF-V2-izL"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="+/-">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugh-Ac-28U"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1T-RZ-Gbp">
+                                                                                        <rect key="frame" x="216" y="5.5" width="64" height="53"/>
+                                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="Y1T-RZ-Gbp" secondAttribute="height" multiplier="1:1" id="TFU-Mr-P6d"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                        <state key="normal" title="20%">
+                                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOd-qE-7cS"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="NCY-iN-nzP" secondAttribute="height" multiplier="1:1" id="C5z-te-lnt"/>
+                                                                            <constraint firstAttribute="width" secondItem="Qzj-6b-1LS" secondAttribute="height" multiplier="300:373" id="OeZ-vg-Z3P"/>
+                                                                            <constraint firstAttribute="width" constant="280" id="vqk-RT-qT1"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="1">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCr-Z0-hrl"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zE3-Jz-p0X">
-                                                                        <rect key="frame" x="77.5" y="0.0" width="68" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="zE3-Jz-p0X" secondAttribute="height" multiplier="1:1" id="Whc-LT-KoY"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="2">
-                                                                            <color key="titleColor" systemColor="darkTextColor"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zaq-jn-dOC"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-Oh-TuI">
-                                                                        <rect key="frame" x="154.5" y="0.0" width="68.5" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="Ua8-Oh-TuI" secondAttribute="height" multiplier="1:1" id="Q2f-07-GTq"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="3">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BoG-oV-FoC"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="11" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNX-bG-64x">
-                                                                        <rect key="frame" x="232" y="0.0" width="68" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="gNX-bG-64x" secondAttribute="height" multiplier="1:1" id="Ind-2D-WnK"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="/">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jcn-7Y-nvz"/>
-                                                                        </connections>
-                                                                    </button>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bqU-4X-4RP" userLabel="extra buttons stack view">
+                                                                        <rect key="frame" x="0.0" y="697.5" width="280" height="176.5"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1T-Nb-soP">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="53.5"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="u1T-Nb-soP" secondAttribute="height" multiplier="68:13" id="OF4-Zw-ezb"/>
+                                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="fmj-mQ-uwT"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
+                                                                                <state key="normal" backgroundImage="LCARS_copy_button">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7TT-AW-5lS"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDF-mr-oyg" userLabel="info button">
+                                                                                <rect key="frame" x="0.0" y="61.5" width="280" height="53.5"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Ttc-cG-g61"/>
+                                                                                    <constraint firstAttribute="width" secondItem="JDF-mr-oyg" secondAttribute="height" multiplier="68:13" id="hdm-Im-OIu"/>
+                                                                                </constraints>
+                                                                                <state key="normal" backgroundImage="LCARS_info_button"/>
+                                                                                <connections>
+                                                                                    <action selector="infoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fO-6t-5FC"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73B-De-2Oc" userLabel="info button">
+                                                                                <rect key="frame" x="0.0" y="123" width="280" height="53.5"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="S1R-pP-N1U"/>
+                                                                                    <constraint firstAttribute="width" secondItem="73B-De-2Oc" secondAttribute="height" multiplier="68:13" id="haW-9I-FlA"/>
+                                                                                </constraints>
+                                                                                <state key="normal" backgroundImage="LCARS_settings_button"/>
+                                                                                <connections>
+                                                                                    <action selector="settingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G7Z-Qo-Y0o"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                 </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PLY-zx-9GK">
-                                                                <rect key="frame" x="0.0" y="76" width="300" height="68.5"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx4-Fe-n90">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="68.5"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="wx4-Fe-n90" secondAttribute="height" multiplier="1:1" id="72M-4s-URq"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="4">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="waK-qB-W8w"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXC-UO-QdO">
-                                                                        <rect key="frame" x="77" y="0.0" width="69" height="68.5"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="aXC-UO-QdO" secondAttribute="height" multiplier="1:1" id="nS6-RZ-im9"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="5">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gs4-bp-cO9"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZP-e1-BW7">
-                                                                        <rect key="frame" x="154" y="0.0" width="69" height="68.5"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="GZP-e1-BW7" secondAttribute="height" multiplier="1:1" id="2zR-0M-mpA"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="6">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XqT-h4-Thf"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e0-BC-4jm">
-                                                                        <rect key="frame" x="231" y="0.0" width="69" height="68.5"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="6e0-BC-4jm" secondAttribute="height" multiplier="1:1" id="lQh-GY-ReG"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="x">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nqv-jl-FvW"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1QI-No-cKs">
-                                                                <rect key="frame" x="0.0" y="152.5" width="300" height="68"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXj-x7-geE">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="TXj-x7-geE" secondAttribute="height" multiplier="1:1" id="SIW-98-uT6"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="7">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKH-AE-vB3"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udf-KT-9Wh">
-                                                                        <rect key="frame" x="77" y="0.0" width="69" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="udf-KT-9Wh" secondAttribute="height" multiplier="1:1" id="ceW-8L-2uQ"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="8">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lah-dD-VPR"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMR-dZ-Xvg">
-                                                                        <rect key="frame" x="154" y="0.0" width="69" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="KMR-dZ-Xvg" secondAttribute="height" multiplier="1:1" id="EEq-GN-RGf"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="9">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ceh-9p-KPg"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="13" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TG-6b-2vi">
-                                                                        <rect key="frame" x="231" y="0.0" width="69" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="6TG-6b-2vi" secondAttribute="height" multiplier="1:1" id="wu4-cO-ehO"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="-" backgroundImage=" ">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uff-yS-TMf"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WvR-kB-Af4">
-                                                                <rect key="frame" x="0.0" y="228.5" width="300" height="68"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dve-Or-YsI">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="dve-Or-YsI" secondAttribute="height" multiplier="1:1" id="Nwf-57-i2e"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <state key="normal" title="Clr">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rdv-km-vSN"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLm-WG-bkY">
-                                                                        <rect key="frame" x="77" y="0.0" width="69" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="uLm-WG-bkY" secondAttribute="height" multiplier="1:1" id="Xvu-y3-ifU"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="0">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgW-cY-fpN"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNr-zo-5ww">
-                                                                        <rect key="frame" x="154" y="0.0" width="69" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="PNr-zo-5ww" secondAttribute="height" multiplier="1:1" id="Ovf-EO-ZH0"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title=".">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="decimalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="guQ-C0-3Dm"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="14" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MU-ND-lww">
-                                                                        <rect key="frame" x="231" y="0.0" width="69" height="68"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="7MU-ND-lww" secondAttribute="height" multiplier="1:1" id="iwM-yo-ieb"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="+">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LnA-6y-nZN"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6St-Od-W4k" userLabel="bottom buttons stack view">
-                                                                <rect key="frame" x="0.0" y="304.5" width="300" height="68.5"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PI4-3X-Doi">
-                                                                        <rect key="frame" x="0.0" y="14" width="69" height="41"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="PI4-3X-Doi" secondAttribute="height" multiplier="1:1" id="hAz-3J-D2r"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <state key="normal" image="delete.left.fill" catalog="system">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CnN-uW-W2V"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWs-DZ-E0d">
-                                                                        <rect key="frame" x="77" y="8" width="69" height="53"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="aWs-DZ-E0d" secondAttribute="height" multiplier="1:1" id="Jgb-8g-icK"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="=">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exv-PL-bQH"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccv-8A-Q9c">
-                                                                        <rect key="frame" x="154" y="8" width="69" height="53"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="Ccv-8A-Q9c" secondAttribute="height" multiplier="1:1" id="PTF-V2-izL"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="+/-">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugh-Ac-28U"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1T-RZ-Gbp">
-                                                                        <rect key="frame" x="231" y="8" width="69" height="53"/>
-                                                                        <color key="backgroundColor" red="1" green="0.022732125530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="Y1T-RZ-Gbp" secondAttribute="height" multiplier="1:1" id="TFU-Mr-P6d"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
-                                                                        <state key="normal" title="20%">
-                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOd-qE-7cS"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="Qzj-6b-1LS" secondAttribute="trailing" id="KzN-5B-gP9"/>
+                                                                    <constraint firstItem="bqU-4X-4RP" firstAttribute="top" secondItem="Qzj-6b-1LS" secondAttribute="bottom" constant="20" id="ed9-0w-3AC"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Qzj-6b-1LS" secondAttribute="height" multiplier="300:373" id="OeZ-vg-Z3P"/>
-                                                            <constraint firstAttribute="width" constant="300" id="vqk-RT-qT1"/>
+                                                            <constraint firstAttribute="trailing" secondItem="7bM-xV-Hnj" secondAttribute="trailing" id="1Nf-vw-0Lb"/>
+                                                            <constraint firstAttribute="bottom" secondItem="uA3-Ya-0pF" secondAttribute="bottom" id="DsQ-Nk-grG"/>
+                                                            <constraint firstItem="uA3-Ya-0pF" firstAttribute="top" secondItem="0sd-OH-UaV" secondAttribute="top" id="FTM-1R-K7m"/>
+                                                            <constraint firstItem="uA3-Ya-0pF" firstAttribute="leading" secondItem="0sd-OH-UaV" secondAttribute="leading" id="Jk8-L4-jbq"/>
+                                                            <constraint firstItem="uA3-Ya-0pF" firstAttribute="leading" secondItem="0sd-OH-UaV" secondAttribute="leading" id="t9J-OU-mi4"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bqU-4X-4RP" userLabel="extra buttons stack view">
-                                                        <rect key="frame" x="0.0" y="686" width="300" height="188"/>
+                                                    <stackView hidden="YES" opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ykl-KR-eHl" userLabel="extra buttons stack view">
+                                                        <rect key="frame" x="0.0" y="824" width="734" height="50"/>
                                                         <subviews>
-                                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1T-Nb-soP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="57.5"/>
+                                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUI-Xj-pfl">
+                                                                <rect key="frame" x="0.0" y="3.5" width="224.5" height="43"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="u1T-Nb-soP" secondAttribute="height" multiplier="68:13" id="OF4-Zw-ezb"/>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="fmj-mQ-uwT"/>
+                                                                    <constraint firstAttribute="width" secondItem="xUI-Xj-pfl" secondAttribute="height" multiplier="68:13" id="AZA-cO-2Sp"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="jfO-cb-98P"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Okuda" family="Okuda" pointSize="38"/>
                                                                 <state key="normal" backgroundImage="LCARS_copy_button">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7TT-AW-5lS"/>
+                                                                    <action selector="functionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIJ-MI-pfv"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDF-mr-oyg" userLabel="info button">
-                                                                <rect key="frame" x="0.0" y="65.5" width="300" height="57"/>
+                                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhf-d8-wn6" userLabel="info button">
+                                                                <rect key="frame" x="254.5" y="3.5" width="225" height="43"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Ttc-cG-g61"/>
-                                                                    <constraint firstAttribute="width" secondItem="JDF-mr-oyg" secondAttribute="height" multiplier="68:13" id="hdm-Im-OIu"/>
+                                                                    <constraint firstAttribute="width" secondItem="Dhf-d8-wn6" secondAttribute="height" multiplier="68:13" id="m3G-NR-euu"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="sFW-YG-iNM"/>
                                                                 </constraints>
                                                                 <state key="normal" backgroundImage="LCARS_info_button"/>
                                                                 <connections>
-                                                                    <action selector="infoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fO-6t-5FC"/>
+                                                                    <action selector="infoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hv-Pl-Fe0"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73B-De-2Oc" userLabel="info button">
-                                                                <rect key="frame" x="0.0" y="130.5" width="300" height="57.5"/>
+                                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OS-84-eZG" userLabel="info button">
+                                                                <rect key="frame" x="509.5" y="3.5" width="224.5" height="43"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="S1R-pP-N1U"/>
-                                                                    <constraint firstAttribute="width" secondItem="73B-De-2Oc" secondAttribute="height" multiplier="68:13" id="haW-9I-FlA"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="5mf-Cq-TMt"/>
+                                                                    <constraint firstAttribute="width" secondItem="1OS-84-eZG" secondAttribute="height" multiplier="68:13" id="dDP-no-ysS"/>
                                                                 </constraints>
                                                                 <state key="normal" backgroundImage="LCARS_settings_button"/>
                                                                 <connections>
-                                                                    <action selector="settingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G7Z-Qo-Y0o"/>
+                                                                    <action selector="settingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ud4-OG-75K"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="yvg-ko-pzM"/>
+                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="Qzj-6b-1LS" secondAttribute="trailing" id="KzN-5B-gP9"/>
-                                                    <constraint firstItem="bqU-4X-4RP" firstAttribute="top" secondItem="Qzj-6b-1LS" secondAttribute="bottom" constant="20" id="ed9-0w-3AC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ykl-KR-eHl" secondAttribute="trailing" id="9AU-41-sVT"/>
+                                                    <constraint firstItem="ykl-KR-eHl" firstAttribute="leading" secondItem="SfB-RK-WIO" secondAttribute="leading" id="G0v-Vi-dJf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ykl-KR-eHl" secondAttribute="bottom" id="WjC-sk-X1O"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="7bM-xV-Hnj" secondAttribute="bottom" constant="20" id="04o-jM-XNY"/>
-                                            <constraint firstItem="7bM-xV-Hnj" firstAttribute="top" secondItem="BIF-FI-HO4" secondAttribute="top" constant="20" id="GGv-RF-cw0"/>
-                                            <constraint firstItem="7bM-xV-Hnj" firstAttribute="leading" secondItem="BIF-FI-HO4" secondAttribute="leading" priority="999" constant="10" id="bOp-Cn-fUY"/>
-                                            <constraint firstItem="7bM-xV-Hnj" firstAttribute="leading" secondItem="uA3-Ya-0pF" secondAttribute="trailing" constant="20" id="eUW-SF-v56"/>
-                                            <constraint firstAttribute="bottom" secondItem="uA3-Ya-0pF" secondAttribute="bottom" constant="50" id="hm7-S2-Fkf"/>
-                                            <constraint firstAttribute="trailing" secondItem="7bM-xV-Hnj" secondAttribute="trailing" constant="10" id="iNr-L0-4T5"/>
-                                            <constraint firstItem="uA3-Ya-0pF" firstAttribute="leading" secondItem="BIF-FI-HO4" secondAttribute="leading" constant="20" id="pZV-Hb-wXJ"/>
-                                            <constraint firstItem="uA3-Ya-0pF" firstAttribute="top" secondItem="BIF-FI-HO4" secondAttribute="top" constant="20" id="ugX-WI-eGv"/>
+                                            <constraint firstItem="SfB-RK-WIO" firstAttribute="top" secondItem="BIF-FI-HO4" secondAttribute="top" constant="20" id="55t-q3-0KQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="SfB-RK-WIO" secondAttribute="trailing" constant="20" id="OHJ-d0-YWv"/>
+                                            <constraint firstItem="SfB-RK-WIO" firstAttribute="leading" secondItem="BIF-FI-HO4" secondAttribute="leading" constant="20" id="mEi-zU-84b"/>
+                                            <constraint firstAttribute="bottom" secondItem="SfB-RK-WIO" secondAttribute="bottom" constant="20" id="rNH-dN-t2J"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -569,12 +631,14 @@
                         <outlet property="additionButton" destination="7MU-ND-lww" id="5i0-Wf-B5W"/>
                         <outlet property="backspaceButton" destination="PI4-3X-Doi" id="PBp-Lh-DJs"/>
                         <outlet property="clear_button" destination="dve-Or-YsI" id="m9U-FI-wJW"/>
+                        <outlet property="controlButtonsStackView" destination="bqU-4X-4RP" id="Wsx-EQ-Wyq"/>
                         <outlet property="controlPanelStackView" destination="7bM-xV-Hnj" id="Ff8-Ti-Ix2"/>
                         <outlet property="copyButton" destination="u1T-Nb-soP" id="DYY-Uz-adg"/>
                         <outlet property="decimal_point_button" destination="PNr-zo-5ww" id="Ngt-hU-2VR"/>
                         <outlet property="division_button" destination="gNX-bG-64x" id="IaP-wk-r6I"/>
                         <outlet property="eight_button" destination="udf-KT-9Wh" id="SiI-Cy-esy"/>
                         <outlet property="equalsButton" destination="aWs-DZ-E0d" id="Gck-xo-bll"/>
+                        <outlet property="extraButtonsStackView" destination="ykl-KR-eHl" id="tHO-m1-3sM"/>
                         <outlet property="five_button" destination="aXC-UO-QdO" id="gVc-ah-X8b"/>
                         <outlet property="four_button" destination="wx4-Fe-n90" id="GLU-1O-n9e"/>
                         <outlet property="historyView" destination="uA3-Ya-0pF" id="qI4-uB-Vv1"/>

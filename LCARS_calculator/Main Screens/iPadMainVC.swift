@@ -18,6 +18,10 @@ class iPadMainVC: UIViewController {
     @IBOutlet weak var mainPanelBackground: UIView!
     @IBOutlet weak var mainPanelBlackBackground: UIView!
   
+    
+    @IBOutlet weak var controlButtonsStackView: UIStackView!
+    @IBOutlet weak var extraButtonsStackView: UIStackView!
+    
     @IBOutlet weak var controlPanelStackView: UIStackView!
     @IBOutlet weak var starfleetEmblem: UIImageView!
     @IBOutlet weak var starfleetLabel: UILabel!
@@ -79,22 +83,7 @@ class iPadMainVC: UIViewController {
         secondaryReadout.text = calculator.secondaryReadoutValue
         configureUI()
         loadHistoryView()
-        
-        if UIDevice.current.orientation.isLandscape {
-            
-            starfleetEmblem.isHidden = true
-            starfleetLabel.isHidden = true
-            unitedFederationOfPlanetsLabel.isHidden = true
-            spacerView.isHidden = true
-            
-        } else {
-            
-            starfleetEmblem.isHidden = false
-            starfleetLabel.isHidden = false
-            unitedFederationOfPlanetsLabel.isHidden = false
-            spacerView.isHidden = false
-        }
-    
+        adaptForOrientation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -105,28 +94,39 @@ class iPadMainVC: UIViewController {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         
-        
         adaptForCurrentSizeClass()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
+        adaptForOrientation()
+        adaptForCurrentSizeClass()
+    }
+    
+    func adaptForOrientation() {
         if UIDevice.current.orientation.isLandscape {
             
-            print("Landscape")
+        
+            if iPadMini6 {
+                extraButtonsStackView.isHidden = false
+                controlButtonsStackView.isHidden = true
+            }
             starfleetEmblem.isHidden = true
             starfleetLabel.isHidden = true
             unitedFederationOfPlanetsLabel.isHidden = true
             spacerView.isHidden = true
+            
         } else {
-            print("Portrait")
+            
+            if iPadMini6 {
+                extraButtonsStackView.isHidden = true
+                controlButtonsStackView.isHidden = false
+            }
             starfleetEmblem.isHidden = false
             starfleetLabel.isHidden = false
             unitedFederationOfPlanetsLabel.isHidden = false
             spacerView.isHidden = false
         }
-        
-        adaptForCurrentSizeClass()
     }
     
     func configureUI(){
@@ -322,7 +322,6 @@ class iPadMainVC: UIViewController {
         default:
             break
         }
-        
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
@@ -330,7 +329,6 @@ class iPadMainVC: UIViewController {
         playSound(soundEffectName: "buttonSound")
         performSegue(withIdentifier: "showSettings", sender: nil)
     }
-    
     
     func playSound(soundEffectName: String){
         
