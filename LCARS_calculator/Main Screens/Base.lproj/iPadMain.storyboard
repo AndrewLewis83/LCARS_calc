@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guO-S2-B3M">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="216"/>
+                                <rect key="frame" x="0.0" y="24" width="834" height="216"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29E-az-hoC">
                                         <rect key="frame" x="0.0" y="150" width="840" height="5"/>
@@ -122,26 +122,26 @@
                                 <rect key="frame" x="0.0" y="204" width="834" height="970"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIF-FI-HO4">
-                                        <rect key="frame" x="60" y="10" width="774" height="938"/>
+                                        <rect key="frame" x="60" y="10" width="774" height="914"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uA3-Ya-0pF" customClass="OperationHistory" customModule="LCARS_calculator" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="20" width="424" height="868"/>
+                                                <rect key="frame" x="20" y="20" width="424" height="844"/>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7bM-xV-Hnj">
-                                                <rect key="frame" x="464" y="20" width="300" height="898"/>
+                                                <rect key="frame" x="464" y="20" width="300" height="874"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YEP-Ax-LBk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="321"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="297"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starfleet_command_yellow" translatesAutoresizingMaskIntoConstraints="NO" id="pCt-eA-tz5">
-                                                                <rect key="frame" x="26.5" y="0.0" width="247" height="236"/>
+                                                                <rect key="frame" x="39" y="0.0" width="222" height="212"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="pCt-eA-tz5" secondAttribute="height" multiplier="300:287" id="7rd-sP-wQS"/>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="EOp-yx-RzG"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STARFLEET COMMAND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oVs-Jm-ILD">
-                                                                <rect key="frame" x="23.5" y="244" width="253" height="25.5"/>
+                                                                <rect key="frame" x="23.5" y="220" width="253" height="25.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25.5" id="Bk3-xd-V3d"/>
                                                                 </constraints>
@@ -150,7 +150,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNITED FEDERATION OF PLANETS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rnc-a7-IGD">
-                                                                <rect key="frame" x="0.0" y="277.5" width="300" height="25.5"/>
+                                                                <rect key="frame" x="0.0" y="253.5" width="300" height="25.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25.5" id="BXf-5R-BeE"/>
                                                                 </constraints>
@@ -159,7 +159,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-gm-PNj">
-                                                                <rect key="frame" x="30" y="311" width="240" height="10"/>
+                                                                <rect key="frame" x="30" y="287" width="240" height="10"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="r5k-rk-FJf"/>
@@ -168,7 +168,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qzj-6b-1LS" userLabel="buttons stack view">
-                                                        <rect key="frame" x="0.0" y="329" width="300" height="373"/>
+                                                        <rect key="frame" x="0.0" y="305" width="300" height="373"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="fpi-Ge-UDM">
                                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="68"/>
@@ -396,7 +396,7 @@
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ob-nE-Vae"/>
+                                                                            <action selector="decimalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="guQ-C0-3Dm"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="14" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MU-ND-lww">
@@ -484,7 +484,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bqU-4X-4RP" userLabel="extra buttons stack view">
-                                                        <rect key="frame" x="0.0" y="710" width="300" height="188"/>
+                                                        <rect key="frame" x="0.0" y="686" width="300" height="188"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1T-Nb-soP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="57.5"/>
@@ -566,7 +566,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="_historyView" destination="uA3-Ya-0pF" id="qI4-uB-Vv1"/>
                         <outlet property="additionButton" destination="7MU-ND-lww" id="5i0-Wf-B5W"/>
                         <outlet property="backspaceButton" destination="PI4-3X-Doi" id="PBp-Lh-DJs"/>
                         <outlet property="clear_button" destination="dve-Or-YsI" id="m9U-FI-wJW"/>
@@ -577,6 +576,7 @@
                         <outlet property="equalsButton" destination="aWs-DZ-E0d" id="Gck-xo-bll"/>
                         <outlet property="five_button" destination="aXC-UO-QdO" id="gVc-ah-X8b"/>
                         <outlet property="four_button" destination="wx4-Fe-n90" id="GLU-1O-n9e"/>
+                        <outlet property="historyView" destination="uA3-Ya-0pF" id="qI4-uB-Vv1"/>
                         <outlet property="infoButton" destination="JDF-mr-oyg" id="1u0-XB-4Y6"/>
                         <outlet property="mainPanelBackground" destination="Rsh-pI-3rp" id="BBg-5q-gcu"/>
                         <outlet property="mainPanelBlackBackground" destination="BIF-FI-HO4" id="726-96-9LS"/>

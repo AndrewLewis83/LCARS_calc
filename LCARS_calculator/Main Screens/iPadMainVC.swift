@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SimpleCalcFramework
 
 class iPadMainVC: UIViewController {
     
@@ -52,55 +53,29 @@ class iPadMainVC: UIViewController {
     @IBOutlet weak var mainReadout: UILabel!
     @IBOutlet weak var secondaryReadout: UILabel!
     
-    @IBOutlet weak var _historyView: OperationHistory!
+    @IBOutlet weak var historyView: OperationHistory!
     
-    //sound effects
     private var soundEffect: AVAudioPlayer?
-    private let errorSoundPath = Bundle.main.path(forResource: "consolewarning.mp3", ofType:nil)!
-    private let buttonSoundPath = Bundle.main.path(forResource: "computerbeep_5.mp3", ofType:nil)!
-    private let alertSoundPath = Bundle.main.path(forResource: "computerbeep_13.mp3", ofType:nil)!
+    private var calculator: SimpleCalc!
 
-    //variables
-    private var _hasDecimal = false
-    private var _mainValue: Double = 0
-    private var _secondaryValue: Double = 0
-    private var _currentOperation = CurrentOperation.addition
-    private var _typingInProgress = false
-    private enum CurrentOperation {
-        
-        case addition, subtraction, multiplication, division
-        
-        func simpleDescription() -> String {
-            switch self {
-            case .addition:
-                return "addition"
-            case .subtraction:
-                return "discrete"
-            case .multiplication:
-                return "multiplication"
-            case .division:
-                return "division"
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainReadout.text = "0.0"
-        secondaryReadout.text = "Enter value"
+        calculator = SimpleCalc(recordHistory: true)
+        mainReadout.text = calculator.primaryReadoutValue
+        secondaryReadout.text = calculator.secondaryReadoutValue
         configureUI()
         loadHistoryView()
         
         if UIDevice.current.orientation.isLandscape {
-            
-            print("Landscape")
+
             starfleetEmblem.isHidden = true
             starfleetLabel.isHidden = true
             unitedFederationOfPlanetsLabel.isHidden = true
             spacerView.isHidden = true
+            
         } else {
-            print("Portrait")
+   
             starfleetEmblem.isHidden = false
             starfleetLabel.isHidden = false
             unitedFederationOfPlanetsLabel.isHidden = false
@@ -187,19 +162,17 @@ class iPadMainVC: UIViewController {
         
         mainPanelBackground.backgroundColor = backgroundColorThree
 
-        
     }
     
     func adaptForCurrentSizeClass(){
         
         if traitCollection.horizontalSizeClass == .compact {
             // load slim view
-            _historyView?.isHidden = true
+            historyView?.isHidden = true
         } else if traitCollection.horizontalSizeClass == .regular {
             // load wide view
-            _historyView?.isHidden = false
+            historyView?.isHidden = false
         }
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -212,237 +185,134 @@ class iPadMainVC: UIViewController {
     
     func loadHistoryView(){
         
-        _historyView?.historyDelegate = self
+        historyView?.historyDelegate = self
         
     }
     
-    @IBAction func numberButtonPressed(_ sender: Any) {
+    @IBAction func decimalButtonPressed(_ sender: Any) {
         
-        if _typingInProgress == false {
-            mainReadout.text = ""
-            secondaryReadout.text = ""
-            _typingInProgress = true
+        if calculator.addDecimal() {
+            playSound(soundEffectName: "buttonSound")
+        } else {
+            signalError("number already contains decimal")
         }
         
-        if (sender as AnyObject).tag >= 0 && (sender as AnyObject).tag < 10 {
-            if mainReadout.text! == "0" && (sender as AnyObject).tag == 0 {
-                mainReadout.text! = "0"
-            }else{
-                if mainReadout.text! == "0"{
-                    mainReadout.text = String((sender as AnyObject).tag)
-                }else{
-                    mainReadout.text = mainReadout.text! + String((sender as AnyObject).tag)
-
-                }
-            }
-            
-            if mainReadout.text != nil {
-                _mainValue = Double(mainReadout.text!)!
-            }
-        }
-        
-        if (sender as AnyObject).tag == 10 {
-            
-            if _hasDecimal == false {
-                mainReadout.text = mainReadout.text! + "."
-                _hasDecimal = true
-            }else{
-                secondaryReadout.text = "Invalid operation"
-                playSound(soundEffectName: "errorSound")
-            }
-        }
-        
-        playSound(soundEffectName: "buttonSound")
+        mainReadout.text = calculator.primaryReadoutValue
     }
     
+    @IBAction func numberButtonPressed(_ sender: UIButton) {
+        
+        if calculator.addNewDigit(digit: sender.tag) {
+            playSound(soundEffectName: "buttonSound")
+            mainReadout.text = calculator.primaryReadoutValue
+        } else {
+            signalError()
+        }
+    }
+    
+    // TODO: each one of these called a function that would update the history
     @IBAction func functionButtonPressed(_ sender: Any) {
         
         switch ((sender as AnyObject).tag) {
             
         case 11: //division
-            playSound(soundEffectName: "buttonSound")
-            _currentOperation = CurrentOperation.division
-            checkProgress()
-        case 12://multiplication
-            playSound(soundEffectName: "buttonSound")
-            _currentOperation = CurrentOperation.multiplication
-            checkProgress()
-        case 13://subtraction
-            playSound(soundEffectName: "buttonSound")
-            _currentOperation = CurrentOperation.subtraction
-            checkProgress()
-        case 14://addition
-            playSound(soundEffectName: "buttonSound")
-            _currentOperation = CurrentOperation.addition
-            checkProgress()
-        case 15: //%20
-            if _mainValue == 0.0 && _secondaryValue == 0{
-                // play error sound and display error message.
-                secondaryReadout.text = "Invalid operation"
-                playSound(soundEffectName: "errorSound")
-            } else if _secondaryValue == 0.0 {
-                _secondaryValue = _mainValue
+            if calculator.divide() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
             }
             
-            if _secondaryValue != 0 {
-                var historyText = ""
-                let tip = _secondaryValue * (Double(Settings.tipSetting) * 0.01)
-                mainReadout.text = " Tip = $" + String(format: "%.2f", tip)
-                secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
-                historyText = "\(secondaryReadout.text ?? "")"
-                if historyText != "Value copied to clipboard"{
-                    _historyView?.operationHistory.append(historyText)
-                }
-                _historyView?.tableView.reloadData()
-                _secondaryValue = tip
+
+        case 12://multiplication
+            if calculator.times() {
                 playSound(soundEffectName: "buttonSound")
-    
+            } else {
+                signalError()
             }
-            _hasDecimal = false
+        case 13://subtraction
+            if calculator.minus() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
+            }
+        case 14://addition
+            if calculator.plus() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
+            }
+    
+        case 15: //%20
+            let convertedTip = Double(Settings.tipSetting)/100
+            
+            if calculator.calculateTip(convertedTip) {
+                // play error sound and display error message.
+                mainReadout.text = calculator.primaryReadoutValue
+                secondaryReadout.text = calculator.secondaryReadoutValue
+                playSound(soundEffectName: "buttonSound")
+                
+                //TODO: update with history
+                
+            } else {
+                signalError()
+            }
+            
         case 16: //equals
             
-            performOperation()
-            playSound(soundEffectName: "buttonSound")
-            _hasDecimal = false
+            if calculator.equals() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
+            }
+            
+            mainReadout.text = calculator.primaryReadoutValue
+            secondaryReadout.text = calculator.secondaryReadoutValue
             
         case 17://copies secondaryValue to clipboard
             
             playSound(soundEffectName: "alertSound")
-            
-            if _secondaryValue == 0 {
-                UIPasteboard.general.string = String(_mainValue)
-            } else {
-                UIPasteboard.general.string = String(_secondaryValue)
-            }
-            
+            UIPasteboard.general.string = calculator.primaryReadoutValue
             secondaryReadout.text = "Value copied to clipboard"
-            _hasDecimal = false
             
         case 18: // Clear
             
-            playSound(soundEffectName: "buttonSound")
-            mainReadout.text = "0.0"
-            secondaryReadout.text = "Enter value"
-            _hasDecimal = false
-            _mainValue = 0
-            _secondaryValue = 0
+            if calculator.clear() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
+            }
+
+            mainReadout.text = calculator.primaryReadoutValue
+            secondaryReadout.text = calculator.secondaryReadoutValue
+            
         case 19: // Negative/positive
             
-            var historyText: String = ""
-            playSound(soundEffectName: "buttonSound")
-            if _mainValue != 0 {
-                _mainValue = _mainValue * -1
-                 mainReadout.text = String(_mainValue)
-            }else{
-                _secondaryValue = _secondaryValue * -1
-                mainReadout.text = String(_secondaryValue)
-                historyText = historyText + "\(mainReadout.text ?? "")"
-                _historyView?.operationHistory.append(historyText)
-                _historyView?.tableView.reloadData()
+            if calculator.negative() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
             }
+
+            mainReadout.text = calculator.primaryReadoutValue
+            secondaryReadout.text = calculator.secondaryReadoutValue
+            
+            // TODO: this was updated in history
             
         case 20: //backspace
-            playSound(soundEffectName: "buttonSound")
-            print("backspace button pressed")
             
-            var mainReadoutString: String = mainReadout.text ?? ""
-            _mainValue = Double(mainReadoutString) ?? 0.0
-            
-            if mainReadoutString.contains("Tip") == true {
-                
-                mainReadoutString = String(format: "%.2f", _secondaryValue)
-                mainReadout.text = mainReadoutString
-                _mainValue = Double(mainReadoutString) ?? 0.0
-                _secondaryValue = 0.0
-                mainReadout.text = String(_mainValue)
-                mainReadoutString = mainReadout.text ?? ""
-                secondaryReadout.text = ""
-                
+            if calculator.backSpace() {
+                playSound(soundEffectName: "buttonSound")
+            } else {
+                signalError()
             }
             
-            if _mainValue != 0 {
-                
-                mainReadoutString.removeLast()
-                _mainValue = Double(mainReadoutString) ?? 0.0
-                mainReadout.text = mainReadoutString
-                if mainReadout.text == "" || mainReadout.text == "-" {
-                    _mainValue = 0.0
-                    mainReadout.text = "0.0"
-                }
-                
-                secondaryReadout.text = ""
-            }else{
-                
-                playSound(soundEffectName: "errorSound")
-                secondaryReadout.text = "Invalid operation"
-            }
+            mainReadout.text = calculator.primaryReadoutValue
+            secondaryReadout.text = calculator.secondaryReadoutValue
 
         default:
             break
         }
         
-        _typingInProgress = false
-    }
-    
-    func checkProgress(){
-        
-        _hasDecimal = false
-        if _secondaryValue == 0 {
-            _secondaryValue = _mainValue
-        } else if _mainValue != 0 {
-            performOperation()
-        }
-    }
-    
-    func performOperation(){
-        
-        var finalValue:Double = 0
-        var operationSymbol = ""
-        
-        switch(_currentOperation){
-            
-        case CurrentOperation.division:
-            if _mainValue == 0 {
-                playSound(soundEffectName: "errorSound")
-                secondaryReadout.text = "Invalid operation: cannot divide by zero."
-            }else{
-                finalValue = _secondaryValue/_mainValue
-                operationSymbol = "/"
-            }
-            
-        case CurrentOperation.multiplication:
-            finalValue = _mainValue*_secondaryValue
-            operationSymbol = "X"
-        case CurrentOperation.subtraction:
-            finalValue = _secondaryValue-_mainValue
-            operationSymbol = "-"
-        case CurrentOperation.addition:
-            finalValue = _mainValue+_secondaryValue
-            operationSymbol = "+"
-        }
-        
-        mainReadout.text = String(format: "%.3f", finalValue)
-        if _mainValue != 0{
-            var historyText: String = ""
-            secondaryReadout.text = "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue))"
-            historyText = historyText + "\(String(format: "%.3f", _secondaryValue)) \(operationSymbol) \(String(format: "%.3f", _mainValue)) = \(String(format: "%.3f", finalValue))"
-            
-            if historyText != "Value copied to clipboard"{
-                _historyView?.operationHistory.append(historyText)
-            }
-            
-            _historyView?.tableView.reloadData()
-        }
-        _secondaryValue = finalValue
-        _mainValue = 0
-        _typingInProgress = false
-
-    }
-    
-    @IBAction func infoButtonPressed(_ sender: Any) {
-        playSound(soundEffectName: "buttonSound")
-        performSegue(withIdentifier: "showInfoScreen", sender: nil)
-
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
@@ -478,6 +348,11 @@ class iPadMainVC: UIViewController {
             }
         }
     }
+    
+    func signalError(_ errorMessage: String = "Invalid operation"){
+        secondaryReadout.text = errorMessage
+        playSound(soundEffectName: "errorSound")
+    }
 
 }
 
@@ -485,16 +360,15 @@ extension iPadMainVC: HistoryDelegate {
     
     func didTapCell(value: String) {
         
-        mainReadout.text = value
-        if let copiedValue = Double(mainReadout.text ?? ""){
-            _mainValue = copiedValue
-            secondaryReadout.text = "Value copied."
-            _secondaryValue = 0
-            playSound(soundEffectName: "alertSound")
-        }else{
-            secondaryReadout.text = "Could not copy value."
-            playSound(soundEffectName: "errorSound")
-        }
+        //TODO: this takes a calculated answer from the history and enters it as the current value, ready for use. Using SimpleCalc, I should merely do the following: calculator.primaryReadoutValue = value. Then I set the readouts from calculator.
+        
+//        mainReadout.text = value
+//        if let copiedValue =
+//
+//        } else {
+//            secondaryReadout.text = "Could not copy value."
+//            playSound(soundEffectName: "errorSound")
+//        }
         
         
     }
