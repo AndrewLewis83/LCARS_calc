@@ -90,7 +90,6 @@ class iPadMainVC: UIViewController {
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
         configureUI()
-        loadUserDefaults()
         loadHistoryView()
         
         if UIDevice.current.orientation.isLandscape {
@@ -112,7 +111,7 @@ class iPadMainVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
+        tipButton.setTitle(String(Settings.tipSetting) + "%", for: .normal)
         
     }
     
@@ -211,12 +210,6 @@ class iPadMainVC: UIViewController {
         navigationController?.viewControllers.remove(at: index)
     }
     
-    func loadUserDefaults(){
-        
-        Settings.setMuteSetting(newSetting: UserDefaults.standard.bool(forKey: "muteSetting"))
-        Settings.setPercentTip(newTip: UserDefaults.standard.integer(forKey: "tipSetting"))
-    }
-    
     func loadHistoryView(){
         
         _historyView?.historyDelegate = self
@@ -293,7 +286,7 @@ class iPadMainVC: UIViewController {
             
             if _secondaryValue != 0 {
                 var historyText = ""
-                let tip = _secondaryValue * (Double(Settings.getPercentTip()) * 0.01)
+                let tip = _secondaryValue * (Double(Settings.tipSetting) * 0.01)
                 mainReadout.text = " Tip = $" + String(format: "%.2f", tip)
                 secondaryReadout.text = "$" + String(format: "%.2f", _secondaryValue) + " + $" + String(format: "%.2f", tip) + " = $" + String(format: "%.2f", _secondaryValue+tip)
                 historyText = "\(secondaryReadout.text ?? "")"
@@ -461,7 +454,7 @@ class iPadMainVC: UIViewController {
     
     func playSound(soundEffectName: String){
         
-        if Settings.getMuteSetting() == false {
+        if Settings.muteSetting == false {
         
             var url = URL(fileURLWithPath: errorSoundPath)
             

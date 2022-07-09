@@ -25,10 +25,10 @@ class iPodTouchSettings: UIViewController {
         infoButton.layer.cornerRadius = infoButton.frame.height/2
         infoButton.backgroundColor = buttonColorTwo
         
-        if (Settings.getMuteSetting() == false){
+        if Settings.muteSetting == false {
             muteButton.backgroundColor = buttonColorFive
             muteButton.setTitle(NSLocalizedString("mute audio", comment: ""), for: UIControl.State.normal)
-        }else{
+        } else {
             muteButton.backgroundColor = UIColor.red
             muteButton.setTitle(NSLocalizedString("unmute audio", comment: ""), for: UIControl.State.normal)
         }
@@ -38,17 +38,15 @@ class iPodTouchSettings: UIViewController {
         
         playSound()
         
-        if (Settings.getMuteSetting() == false){
-            Settings.setMuteSetting(newSetting: true)
+        if Settings.muteSetting == false {
+            Settings.muteSetting = true
             muteButton.backgroundColor = UIColor.red
             muteButton.setTitle(NSLocalizedString("unmute audio", comment: ""), for: UIControl.State.normal)
-        }else{
-            Settings.setMuteSetting(newSetting: false)
+        } else {
+            Settings.muteSetting = false
             muteButton.backgroundColor = buttonColorFive
             muteButton.setTitle(NSLocalizedString("mute audio", comment: ""), for: UIControl.State.normal)
         }
-        
-        saveSettings() // if you call when the return button is pressed, it won't save in time. It probably needs a completion handler or something. Not a big deal here, though.
     }
     
     @IBAction func infoButtonPressed(_ sender: Any) {
@@ -71,7 +69,7 @@ class iPodTouchSettings: UIViewController {
     
     func playSound() {
         
-        if Settings.getMuteSetting() == false {
+        if Settings.muteSetting == false {
             
             let buttonSoundPath = Bundle.main.path(forResource: "computerbeep_5.mp3", ofType:nil)!
             let url = URL(fileURLWithPath: buttonSoundPath)
@@ -84,9 +82,5 @@ class iPodTouchSettings: UIViewController {
                 print("Couldn't load sound file in playSound()")
             }
         }
-    }
-    
-    func saveSettings(){
-        UserDefaults.standard.set(Settings.getMuteSetting(), forKey: "muteSetting")
     }
 }

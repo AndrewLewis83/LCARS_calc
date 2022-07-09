@@ -14,7 +14,6 @@ class iPhoneMainVC: UIViewController {
     
     @IBOutlet weak var readoutBackgroundView: UIView!
     @IBOutlet weak var readoutBlackBackgroundPanel: UIView!
-    
     @IBOutlet weak var mainPanelBackground: UIView!
     @IBOutlet weak var mainPanelBlackBackground: UIView!
   
@@ -76,8 +75,7 @@ class iPhoneMainVC: UIViewController {
         calculator = SimpleCalc()
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
-        loadUserDefaults()
-        tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
+        tipButton.setTitle(String(Settings.tipSetting) + "%", for: .normal)
         setModelConstraints(modelName: UIDevice.modelName)
         configureUI()
     }
@@ -85,7 +83,7 @@ class iPhoneMainVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         if iPodTouch == false {
-            tipButton.setTitle(String(Settings.getPercentTip()) + "%", for: .normal)
+            tipButton.setTitle(String(Settings.tipSetting) + "%", for: .normal)
         }
     }
     
@@ -110,7 +108,7 @@ class iPhoneMainVC: UIViewController {
             settingsButton.frame.size.height = 45
             mainStackViewBottomConstraint.constant = spacing
             
-        } else if modelName == "iPod touch (5th generation)" || modelName == "iPod touch (6th generation)" || modelName == "iPod touch (7th generation)" {
+        } else if iPodTouch {
             
             cornerRadius = 30
             spacing = 4
@@ -187,12 +185,6 @@ class iPhoneMainVC: UIViewController {
         navigationController?.viewControllers.remove(at: index)
     }
     
-    func loadUserDefaults(){
-        
-        Settings.setMuteSetting(newSetting: UserDefaults.standard.bool(forKey: "muteSetting"))
-        Settings.setPercentTip(newTip: UserDefaults.standard.integer(forKey: "tipSetting"))
-    }
-    
     @IBAction func numberButtonPressed(_ sender: UIButton) {
         
         if calculator.addNewDigit(digit: sender.tag) {
@@ -252,8 +244,10 @@ class iPhoneMainVC: UIViewController {
                 performSegue(withIdentifier: "showiPodSettings", sender: nil)
                 
             } else {
+            
+                let convertedTip = Double(Settings.tipSetting)/100
                 
-                if calculator.calculateTip(Settings.getPercentTip()) {
+                if calculator.calculateTip(convertedTip) {
                     // play error sound and display error message.
                     mainReadout.text = calculator.primaryReadoutValue
                     secondaryReadout.text = calculator.secondaryReadoutValue
@@ -338,7 +332,7 @@ class iPhoneMainVC: UIViewController {
     
     func playSound(soundEffectName: String){
         
-        if Settings.getMuteSetting() == false {
+        if Settings.muteSetting == false {
         
             var url = URL(fileURLWithPath: errorSoundPath)
             

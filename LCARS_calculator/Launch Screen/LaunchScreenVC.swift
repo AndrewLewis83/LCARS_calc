@@ -16,6 +16,8 @@ class LaunchScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("First launch: \(Settings.initialLaunch)")
+        
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
                         
             self.federationLogo.alpha = 1

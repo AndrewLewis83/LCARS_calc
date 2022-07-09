@@ -99,7 +99,7 @@ class InfoScreenVC: UIViewController {
     
     @IBAction func returnButtonPressed(_ sender: Any) {
         
-        if Settings.getMuteSetting() == false {
+        if Settings.muteSetting == false {
             
             let buttonSoundPath = Bundle.main.path(forResource: "computerbeep_5.mp3", ofType:nil)!
             let url = URL(fileURLWithPath: buttonSoundPath)

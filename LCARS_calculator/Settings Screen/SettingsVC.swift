@@ -46,15 +46,15 @@ class SettingsVC: UIViewController {
         sliderBackgroundView.layer.cornerRadius = 20
         
         tipSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
-        tipLabel.text = String(Settings.getPercentTip()) + "% tip"
-        tipSlider.setValue(Float(Settings.getPercentTip()), animated: false)
+        tipLabel.text = String(Settings.tipSetting) + "% tip"
+        tipSlider.setValue(Float(Settings.tipSetting), animated: false)
         
         muteButton.layer.cornerRadius = muteButton.frame.height/2
         
-        if (Settings.getMuteSetting() == false){
+        if Settings.muteSetting == false {
             muteButton.backgroundColor = buttonColorFive
             muteButton.setTitle(NSLocalizedString("mute audio", comment: ""), for: UIControl.State.normal)
-        }else{
+        } else {
             muteButton.backgroundColor = UIColor.red
             muteButton.setTitle(NSLocalizedString("unmute audio", comment: ""), for: UIControl.State.normal)
         }
@@ -90,17 +90,16 @@ class SettingsVC: UIViewController {
         
         playSound()
         
-        if (Settings.getMuteSetting() == false){
-            Settings.setMuteSetting(newSetting: true)
+        if Settings.muteSetting == false {
+            Settings.muteSetting = true
             muteButton.backgroundColor = UIColor.red
             muteButton.setTitle(NSLocalizedString("unmute audio", comment: ""), for: UIControl.State.normal)
-        }else{
-            Settings.setMuteSetting(newSetting: false)
+        } else {
+            Settings.muteSetting = false
             muteButton.backgroundColor = buttonColorFive
             muteButton.setTitle(NSLocalizedString("mute audio", comment: ""), for: UIControl.State.normal)
         }
         
-        saveSettings() // if you call when the return button is pressed, it won't save in time. It probably needs a completion handler or something. Not a big deal here, though. 
     }
     
     @IBAction func returnButtonPressed(_ sender: Any) {
@@ -114,7 +113,7 @@ class SettingsVC: UIViewController {
     
     func playSound() {
         
-        if Settings.getMuteSetting() == false {
+        if Settings.muteSetting == false {
             
             let buttonSoundPath = Bundle.main.path(forResource: "computerbeep_5.mp3", ofType:nil)!
             let url = URL(fileURLWithPath: buttonSoundPath)
@@ -156,15 +155,9 @@ class SettingsVC: UIViewController {
     
     @IBAction func sliderMoved(_ sender: UISlider) {
         tipLabel.text = String(Int(sender.value)) + "% tip"
-        Settings.setPercentTip(newTip: Int(sender.value))
-        saveSettings()
+        Settings.tipSetting = Int(sender.value)
     }
     
-    
-    func saveSettings(){
-        UserDefaults.standard.set(Settings.getMuteSetting(), forKey: "muteSetting")
-        UserDefaults.standard.set(Settings.getPercentTip(), forKey: "tipSetting")
-    }
     
     func configureWarpCore(){
         

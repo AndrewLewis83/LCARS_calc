@@ -8,25 +8,42 @@
 
 import Foundation
 
-class Settings {
+struct Settings {
     
-    private static var muted = false
-    private static var percentTip: Double = 20
-    
-    static func getMuteSetting() -> Bool {
-        return muted
+    static var initialLaunch: Bool {
+        get {
+            
+            let firstLaunch = UserDefaults.standard.bool(forKey: "initialLaunch")
+            
+            if firstLaunch {
+                tipSetting = 20
+                UserDefaults.standard.set(false, forKey: "initialLaunch")
+            }
+            
+            return firstLaunch
+        }
     }
     
-    static func setMuteSetting(newSetting: Bool) {
-        muted = newSetting
+    static var muteSetting: Bool {
+        
+        get {
+            return UserDefaults.standard.bool(forKey: "muteSetting")
+        }
+        
+        set(setting) {
+            UserDefaults.standard.set(setting, forKey: "muteSetting")
+        }
+        
     }
     
-    static func getPercentTip() -> Double {
-        return percentTip/100
-    }
-    
-    static func setPercentTip(newTip: Int) {
-        percentTip = Double(newTip)
+    static var tipSetting: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "tipSetting")
+        }
+        
+        set(setting) {
+            UserDefaults.standard.set(setting, forKey: "tipSetting")
+        }
     }
     
 }
