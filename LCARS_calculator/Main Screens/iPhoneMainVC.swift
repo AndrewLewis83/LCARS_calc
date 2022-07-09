@@ -68,6 +68,18 @@ class iPhoneMainVC: UIViewController {
     private var iPodTouch: Bool {
         return UIDevice.modelName == "iPod touch (5th generation)" || UIDevice.modelName == "iPod touch (6th generation)" || UIDevice.modelName == "iPod touch (7th generation)"
     }
+    
+    private var iPhoneWithHomeButton: Bool {
+        return UIDevice.modelName == "iPhone SE (2nd generation)" || UIDevice.modelName == "iPhone 7" || UIDevice.modelName == "iPhone 8"
+    }
+    
+    private var proMaxIPhone: Bool {
+        return UIDevice.modelName == "iPhone 12 Pro Max" || UIDevice.modelName == "iPhone 13 Pro Max"
+    }
+    
+    private var iPhoneMini: Bool {
+        return UIDevice.modelName == "iPhone 12 mini" || UIDevice.modelName == "iPhone 13 mini"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +88,7 @@ class iPhoneMainVC: UIViewController {
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
         tipButton.setTitle(String(Settings.tipSetting) + "%", for: .normal)
-        setModelConstraints(modelName: UIDevice.modelName)
+        setModelConstraints()
         configureUI()
     }
     
@@ -87,19 +99,19 @@ class iPhoneMainVC: UIViewController {
         }
     }
     
-    func setModelConstraints(modelName: String){
+    func setModelConstraints(){
 
-        if modelName == "iPhone 12 Pro Max" {
+        if proMaxIPhone {
         
             cornerRadius = 40
             spacing = 8
             
-        } else if modelName == "iPhone 12 mini" {
+        } else if iPhoneMini {
 
             cornerRadius = 35
             spacing = 4
             
-        } else if modelName == "iPhone SE (2nd generation)" || modelName == "iPhone 7" || modelName == "iPhone 8" {
+        } else if iPhoneWithHomeButton {
             
             cornerRadius = 30
             spacing = 4
@@ -115,9 +127,7 @@ class iPhoneMainVC: UIViewController {
             infoButton.isHidden = true
             copyButton.isHidden = true
             settingsButton.isHidden = true
-            if #available(iOS 13.0, *) {
-                tipButton.setImage(UIImage(systemName: "gearshape.fill"), for: .normal)
-            }
+            tipButton.setImage(UIImage(systemName: "gearshape.fill"), for: .normal)
             tipButton.setTitle("", for: .normal)
             mainStackViewBottomConstraint.constant = spacing
             
@@ -194,7 +204,6 @@ class iPhoneMainVC: UIViewController {
             signalError()
         }
     }
-    
     
     @IBAction func decimalButtonPressed(_ sender: Any) {
         
