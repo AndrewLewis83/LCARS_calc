@@ -61,7 +61,7 @@ class iPadMainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        calculator = SimpleCalc(recordHistory: true)
+        calculator = SimpleCalc(recordHistory: false) // set to false because OperationHistory.swift isn't adapted to use it. Yet. Maybe.
         mainReadout.text = calculator.primaryReadoutValue
         secondaryReadout.text = calculator.secondaryReadoutValue
         configureUI()
@@ -222,7 +222,6 @@ class iPadMainVC: UIViewController {
                 signalError()
             }
             
-
         case 12://multiplication
             if calculator.times() {
                 playSound(soundEffectName: "buttonSound")
@@ -250,8 +249,7 @@ class iPadMainVC: UIViewController {
                 mainReadout.text = calculator.primaryReadoutValue
                 secondaryReadout.text = calculator.secondaryReadoutValue
                 playSound(soundEffectName: "buttonSound")
-                
-                //TODO: update with history
+                historyView.addValue(value: calculator.secondaryReadoutValue)
                 
             } else {
                 signalError()
@@ -267,6 +265,7 @@ class iPadMainVC: UIViewController {
             
             mainReadout.text = calculator.primaryReadoutValue
             secondaryReadout.text = calculator.secondaryReadoutValue
+            historyView.addValue(value: calculator.secondaryReadoutValue)
             
         case 17://copies secondaryValue to clipboard
             
@@ -295,8 +294,6 @@ class iPadMainVC: UIViewController {
 
             mainReadout.text = calculator.primaryReadoutValue
             secondaryReadout.text = calculator.secondaryReadoutValue
-            
-            // TODO: this was updated in history
             
         case 20: //backspace
             
@@ -359,21 +356,13 @@ class iPadMainVC: UIViewController {
 extension iPadMainVC: HistoryDelegate {
     
     func didTapCell(value: String) {
-        
-        //TODO: this takes a calculated answer from the history and enters it as the current value, ready for use. Using SimpleCalc, I should merely do the following: calculator.primaryReadoutValue = value. Then I set the readouts from calculator.
-        
-//        mainReadout.text = value
-//        if let copiedValue =
-//
-//        } else {
-//            secondaryReadout.text = "Could not copy value."
-//            playSound(soundEffectName: "errorSound")
-//        }
-        
-        
+    
+        calculator.clear()
+        calculator.primaryReadoutValue = value
+        mainReadout.text = calculator.primaryReadoutValue
+        secondaryReadout.text = calculator.secondaryReadoutValue
+
     }
-    
-    
 }
 
 extension UIView {

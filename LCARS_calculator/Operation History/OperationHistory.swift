@@ -60,6 +60,11 @@ class OperationHistory: UIView {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200.0
     }
+    
+    func addValue(value: String){
+        operationHistory.insert(value, at: 0)
+        tableView.reloadData()
+    }
 
 }
 
@@ -89,7 +94,7 @@ extension OperationHistory: UITableViewDelegate, UITableViewDataSource {
         let historyValue = operationHistory[indexPath.row]
         
         let index = historyValue.firstIndex(of: "=")
-        let modifiedIndex = historyValue.index(index!, offsetBy: 2)
+        let modifiedIndex = historyValue.index(index!, offsetBy: 3)
         
         historyDelegate.didTapCell(value: String(historyValue[modifiedIndex..<historyValue.endIndex]))
         
