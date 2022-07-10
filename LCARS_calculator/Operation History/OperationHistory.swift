@@ -94,9 +94,19 @@ extension OperationHistory: UITableViewDelegate, UITableViewDataSource {
         let historyValue = operationHistory[indexPath.row]
         
         let index = historyValue.firstIndex(of: "=")
-        let modifiedIndex = historyValue.index(index!, offsetBy: 3)
         
-        historyDelegate.didTapCell(value: String(historyValue[modifiedIndex..<historyValue.endIndex]))
+        if historyValue.contains("$"){
+            let modifiedIndex = historyValue.index(index!, offsetBy: 3)
+            
+            historyDelegate.didTapCell(value: String(historyValue[modifiedIndex..<historyValue.endIndex]))
+            
+        } else {
+            
+            let modifiedIndex = historyValue.index(index!, offsetBy: 2)
+            
+            historyDelegate.didTapCell(value: String(historyValue[modifiedIndex..<historyValue.endIndex]))
+        }
+        
         
     }
 
