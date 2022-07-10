@@ -514,7 +514,7 @@
                                                                                 </constraints>
                                                                                 <state key="normal" backgroundImage="LCARS_info_button"/>
                                                                                 <connections>
-                                                                                    <action selector="infoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fO-6t-5FC"/>
+                                                                                    <action selector="infoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2DN-ao-FaU"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73B-De-2Oc" userLabel="info button">
@@ -574,7 +574,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OS-84-eZG" userLabel="info button">
-                                                                <rect key="frame" x="509.5" y="3.5" width="224.5" height="43"/>
+                                                                <rect key="frame" x="509.5" y="0.0" width="224.5" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="5mf-Cq-TMt"/>
                                                                     <constraint firstAttribute="width" secondItem="1OS-84-eZG" secondAttribute="height" multiplier="68:13" id="dDP-no-ysS"/>

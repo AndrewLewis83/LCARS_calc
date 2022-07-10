@@ -324,6 +324,11 @@ class iPadMainVC: UIViewController {
         }
     }
     
+    @IBAction func infoButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "showInfoScreen", sender: nil)
+    }
+    
+    
     @IBAction func settingsButtonPressed(_ sender: Any) {
         //placeholder for possible future functionality
         playSound(soundEffectName: "buttonSound")
