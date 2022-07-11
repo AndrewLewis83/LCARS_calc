@@ -79,8 +79,8 @@ class iPadMainVC: UIViewController {
         super.viewDidLoad()
         
         calculator = SimpleCalc(recordHistory: false) // set to false because OperationHistory.swift isn't adapted to use it. Yet. Maybe.
-        mainReadout.text = calculator.primaryReadoutValue
-        secondaryReadout.text = calculator.secondaryReadoutValue
+        mainReadout.text = calculator.primaryReadout
+        secondaryReadout.text = calculator.secondaryReadout
         configureUI()
         loadHistoryView()
         adaptForOrientation()
@@ -210,14 +210,14 @@ class iPadMainVC: UIViewController {
             signalError("number already contains decimal")
         }
         
-        mainReadout.text = calculator.primaryReadoutValue
+        mainReadout.text = calculator.primaryReadout
     }
     
     @IBAction func numberButtonPressed(_ sender: UIButton) {
         
         if calculator.addNewDigit(digit: sender.tag) {
             playSound(soundEffectName: "buttonSound")
-            mainReadout.text = calculator.primaryReadoutValue
+            mainReadout.text = calculator.primaryReadout
         } else {
             signalError()
         }
@@ -259,10 +259,10 @@ class iPadMainVC: UIViewController {
             
             if calculator.calculateTip(convertedTip) {
                 // play error sound and display error message.
-                mainReadout.text = calculator.primaryReadoutValue
-                secondaryReadout.text = calculator.secondaryReadoutValue
+                mainReadout.text = calculator.primaryReadout
+                secondaryReadout.text = calculator.secondaryReadout
                 playSound(soundEffectName: "buttonSound")
-                historyView.addValue(value: calculator.secondaryReadoutValue)
+                historyView.addValue(value: calculator.secondaryReadout)
                 
             } else {
                 signalError()
@@ -276,14 +276,14 @@ class iPadMainVC: UIViewController {
                 signalError()
             }
             
-            mainReadout.text = calculator.primaryReadoutValue
-            secondaryReadout.text = calculator.secondaryReadoutValue
-            historyView.addValue(value: calculator.secondaryReadoutValue)
+            mainReadout.text = calculator.primaryReadout
+            secondaryReadout.text = calculator.secondaryReadout
+            historyView.addValue(value: calculator.secondaryReadout)
             
         case 17://copies secondaryValue to clipboard
             
             playSound(soundEffectName: "alertSound")
-            UIPasteboard.general.string = calculator.primaryReadoutValue
+            UIPasteboard.general.string = calculator.primaryReadout
             secondaryReadout.text = "Value copied to clipboard"
             
         case 18: // Clear
@@ -294,8 +294,8 @@ class iPadMainVC: UIViewController {
                 signalError()
             }
 
-            mainReadout.text = calculator.primaryReadoutValue
-            secondaryReadout.text = calculator.secondaryReadoutValue
+            mainReadout.text = calculator.primaryReadout
+            secondaryReadout.text = calculator.secondaryReadout
             
         case 19: // Negative/positive
             
@@ -305,8 +305,8 @@ class iPadMainVC: UIViewController {
                 signalError()
             }
 
-            mainReadout.text = calculator.primaryReadoutValue
-            secondaryReadout.text = calculator.secondaryReadoutValue
+            mainReadout.text = calculator.primaryReadout
+            secondaryReadout.text = calculator.secondaryReadout
             
         case 20: //backspace
             
@@ -316,8 +316,8 @@ class iPadMainVC: UIViewController {
                 signalError()
             }
             
-            mainReadout.text = calculator.primaryReadoutValue
-            secondaryReadout.text = calculator.secondaryReadoutValue
+            mainReadout.text = calculator.primaryReadout
+            secondaryReadout.text = calculator.secondaryReadout
 
         default:
             break
@@ -374,9 +374,9 @@ extension iPadMainVC: HistoryDelegate {
     func didTapCell(value: String) {
     
         calculator.clear()
-        calculator.primaryReadoutValue = value
-        mainReadout.text = calculator.primaryReadoutValue
-        secondaryReadout.text = calculator.secondaryReadoutValue
+        calculator.primaryReadout = Double(value) ?? 0.0
+        mainReadout.text = calculator.primaryReadout
+        secondaryReadout.text = calculator.secondaryReadout
 
     }
 }
