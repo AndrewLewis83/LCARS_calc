@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../iOSDevTools/SimpleCalc/SimpleCalcFramework.xcodeproj">
+      location = "group:../../iOSDevTools/AnotherCalc/AnotherCalc.xcodeproj">
    </FileRef>
    <FileRef
       location = "container:LCARS_calculator.xcodeproj">

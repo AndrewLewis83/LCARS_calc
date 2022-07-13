@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,12 +42,14 @@
 		F46B036A27697B5E0058FFDC /* LCARS_watchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B036927697B5E0058FFDC /* LCARS_watchTests.swift */; };
 		F46B037427697B5E0058FFDC /* LCARS_watchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B037327697B5E0058FFDC /* LCARS_watchUITests.swift */; };
 		F46B037627697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B037527697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift */; };
-		F46B037927697B5E0058FFDC /* LCARS watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F46B034327697B5B0058FFDC /* LCARS watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F46B037927697B5E0058FFDC /* LCARS watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F46B034327697B5B0058FFDC /* LCARS watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F46B038D2769AC700058FFDC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDED9A24B7EA6C00A0F475 /* Constants.swift */; };
 		F46B038E2769ACC40058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1C7C311228F694F00BD0FC5 /* Okuda.otf */; };
 		F46B03902769ADAA0058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46B038F2769ADAA0058FFDC /* Okuda.otf */; };
 		F46B03912769ADAA0058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46B038F2769ADAA0058FFDC /* Okuda.otf */; };
 		F46B03932769AFF50058FFDC /* PriceEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B03922769AFF50058FFDC /* PriceEntryView.swift */; };
+		F497B104287EFC3F00CCB068 /* AnotherCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F497B103287EFC3F00CCB068 /* AnotherCalc.framework */; };
+		F497B105287EFC3F00CCB068 /* AnotherCalc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F497B103287EFC3F00CCB068 /* AnotherCalc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4A8E08324CBA5F4007CAED1 /* OperationHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */; };
 		F4B2CF9624C4EA1500BAD628 /* OperationHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */; };
 		F4BEBE5B258A8E4C0025D085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BEBE5A258A8E4C0025D085 /* Main.storyboard */; };
@@ -56,8 +58,6 @@
 		F4C1DE2A2590F7E6003DC05E /* iPodTouchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1DE292590F7E6003DC05E /* iPodTouchSettings.swift */; };
 		F4CE29FA24C5116A0004D1D0 /* alert16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29F924C5116A0004D1D0 /* alert16.mp3 */; };
 		F4CE29FC24C512870004D1D0 /* computerbeep_13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */; };
-		F4DE10E42879000C007D5FCF /* SimpleCalcFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DE10E32879000C007D5FCF /* SimpleCalcFramework.framework */; };
-		F4DE10E52879000C007D5FCF /* SimpleCalcFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4DE10E32879000C007D5FCF /* SimpleCalcFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */; };
 		F4FAAD75276B92D5005A88AB /* TipSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FAAD74276B92D5005A88AB /* TipSettingsView.swift */; };
 		F4FDED9B24B7EA6C00A0F475 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDED9A24B7EA6C00A0F475 /* Constants.swift */; };
@@ -131,13 +131,13 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4DE10D02878F287007D5FCF /* Embed Frameworks */ = {
+		F497B106287EFC3F00CCB068 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F4DE10E52879000C007D5FCF /* SimpleCalcFramework.framework in Embed Frameworks */,
+				F497B105287EFC3F00CCB068 /* AnotherCalc.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +193,7 @@
 		F46B037527697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_watchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F46B038F2769ADAA0058FFDC /* Okuda.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Okuda.otf; path = LCARS_calculator/okuda/Okuda.otf; sourceTree = SOURCE_ROOT; };
 		F46B03922769AFF50058FFDC /* PriceEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceEntryView.swift; sourceTree = "<group>"; };
+		F497B103287EFC3F00CCB068 /* AnotherCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AnotherCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationHistoryCell.xib; sourceTree = "<group>"; };
 		F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationHistoryCell.swift; sourceTree = "<group>"; };
 		F4BEBE5A258A8E4C0025D085 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 		F4C1DE292590F7E6003DC05E /* iPodTouchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodTouchSettings.swift; sourceTree = "<group>"; };
 		F4CE29F924C5116A0004D1D0 /* alert16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert16.mp3; sourceTree = "<group>"; };
 		F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = computerbeep_13.mp3; sourceTree = "<group>"; };
+		F4D2611D287C69C700607293 /* LCARS_calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LCARS_calculator.entitlements; sourceTree = "<group>"; };
 		F4DE10E32879000C007D5FCF /* SimpleCalcFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleCalcFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "United Federation of Planets Regular.ttf"; sourceTree = "<group>"; };
 		F4FAAD74276B92D5005A88AB /* TipSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipSettingsView.swift; sourceTree = "<group>"; };
@@ -212,7 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4DE10E42879000C007D5FCF /* SimpleCalcFramework.framework in Frameworks */,
+				F497B104287EFC3F00CCB068 /* AnotherCalc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +288,7 @@
 		A1C547832221B1CB007505AA /* LCARS_calculator */ = {
 			isa = PBXGroup;
 			children = (
+				F4D2611D287C69C700607293 /* LCARS_calculator.entitlements */,
 				F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */,
 				A1C547842221B1CB007505AA /* AppDelegate.swift */,
 				F45A8315258BF23A00430CBC /* Launch Screen */,
@@ -450,6 +453,7 @@
 		F4DE10CD2878F286007D5FCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F497B103287EFC3F00CCB068 /* AnotherCalc.framework */,
 				F4DE10E32879000C007D5FCF /* SimpleCalcFramework.framework */,
 			);
 			name = Frameworks;
@@ -475,7 +479,7 @@
 				A1C5477E2221B1CB007505AA /* Frameworks */,
 				A1C5477F2221B1CB007505AA /* Resources */,
 				F46B038127697B5E0058FFDC /* Embed Watch Content */,
-				F4DE10D02878F287007D5FCF /* Embed Frameworks */,
+				F497B106287EFC3F00CCB068 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -829,6 +833,7 @@
 		};
 		F46B037827697B5E0058FFDC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = F46B034227697B5B0058FFDC /* LCARS_watch */;
 			targetProxy = F46B037727697B5E0058FFDC /* PBXContainerItemProxy */;
 		};
@@ -967,6 +972,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = LCARS_calculator/LCARS_calculator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PHXE6VS94;
 				INFOPLIST_FILE = LCARS_calculator/Info.plist;
@@ -977,6 +983,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -987,6 +994,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = LCARS_calculator/LCARS_calculator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PHXE6VS94;
 				INFOPLIST_FILE = LCARS_calculator/Info.plist;
@@ -997,6 +1005,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ajlapps.timer.LCARS-calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

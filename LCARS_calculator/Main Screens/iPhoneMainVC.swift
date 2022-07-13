@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import SimpleCalcFramework
+import AnotherCalc
 
 class iPhoneMainVC: UIViewController {
     
@@ -64,7 +64,7 @@ class iPhoneMainVC: UIViewController {
     private var soundEffect: AVAudioPlayer?
 
     //variables
-    private var calculator: SimpleCalc!
+    private var calculator: AnotherCalc!
     private var iPodTouch: Bool {
         return UIDevice.modelName == "iPod touch (5th generation)" || UIDevice.modelName == "iPod touch (6th generation)" || UIDevice.modelName == "iPod touch (7th generation)"
     }
@@ -84,7 +84,7 @@ class iPhoneMainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        calculator = SimpleCalc(recordHistory: false)
+        calculator = AnotherCalc(recordHistory: false)
         mainReadout.text = "0.0"
         secondaryReadout.text = "Enter value"
         tipButton.setTitle(String(Settings.tipSetting) + "%", for: .normal)
@@ -199,7 +199,7 @@ class iPhoneMainVC: UIViewController {
         
         if calculator.addNewDigit(digit: sender.tag) {
             playSound(soundEffectName: "buttonSound")
-            mainReadout.text = calculator.primaryReadoutValue
+            mainReadout.text = calculator.primaryReadout
         } else {
             signalError()
         }
@@ -213,7 +213,7 @@ class iPhoneMainVC: UIViewController {
             signalError("number already contains decimal")
         }
         
-        mainReadout.text = calculator.primaryReadoutValue
+        mainReadout.text = calculator.primaryReadout
     }
     
     @IBAction func functionButtonPressed(_ sender: Any) {
@@ -260,8 +260,8 @@ class iPhoneMainVC: UIViewController {
                 
                 if calculator.calculateTip(convertedTip) {
                     // play error sound and display error message.
-                    mainReadout.text = calculator.primaryReadoutValue
-                    secondaryReadout.text = calculator.secondaryReadoutValue
+                    mainReadout.text = calculator.primaryReadout
+                    secondaryReadout.text = calculator.secondaryReadout
                     playSound(soundEffectName: "buttonSound")
                     
                 } else {
@@ -277,13 +277,13 @@ class iPhoneMainVC: UIViewController {
                 signalError()
             }
             
-            mainReadout.text = calculator.primaryReadoutValue
-            secondaryReadout.text = calculator.secondaryReadoutValue
+            mainReadout.text = calculator.primaryReadout
+            secondaryReadout.text = calculator.secondaryReadout
             
         case 17://copies secondaryValue to clipboard
             
             playSound(soundEffectName: "alertSound")
-            UIPasteboard.general.string = calculator.primaryReadoutValue
+            UIPasteboard.general.string = calculator.primaryReadout
             secondaryReadout.text = "Value copied to clipboard"
 
         case 18: // Clear
@@ -294,8 +294,8 @@ class iPhoneMainVC: UIViewController {
                 signalError()
             }
 
-            mainReadout.text = calculator.primaryReadoutValue
-            secondaryReadout.text = calculator.secondaryReadoutValue
+            mainReadout.text = calculator.primaryReadout
+            secondaryReadout.text = calculator.secondaryReadout
 
         case 19: // Negative/positive
             
@@ -305,8 +305,8 @@ class iPhoneMainVC: UIViewController {
                 signalError()
             }
 
-            mainReadout.text = calculator.primaryReadoutValue
-            secondaryReadout.text = calculator.secondaryReadoutValue
+            mainReadout.text = calculator.primaryReadout
+            secondaryReadout.text = calculator.secondaryReadout
             
         case 20: //backspace
             
@@ -316,8 +316,8 @@ class iPhoneMainVC: UIViewController {
                 signalError()
             }
             
-            mainReadout.text = calculator.primaryReadoutValue
-            secondaryReadout.text = calculator.secondaryReadoutValue
+            mainReadout.text = calculator.primaryReadout
+            secondaryReadout.text = calculator.secondaryReadout
             
         default:
             break

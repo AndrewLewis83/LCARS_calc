@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import SimpleCalcFramework
+import AnotherCalc
 
 class iPadMainVC: UIViewController {
     
@@ -61,7 +61,7 @@ class iPadMainVC: UIViewController {
     @IBOutlet weak var historyView: OperationHistory!
     
     private var soundEffect: AVAudioPlayer?
-    private var calculator: SimpleCalc!
+    private var calculator: AnotherCalc!
     
     private var iPadMini: Bool {
         return UIDevice.modelName == "iPad mini" || UIDevice.modelName == "iPad mini 2" || UIDevice.modelName == "iPad mini 3" || UIDevice.modelName == "iPad mini 4" || UIDevice.modelName == "iPad mini (5th generation)" || UIDevice.modelName == "iPad mini (6th generation)"
@@ -78,7 +78,7 @@ class iPadMainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        calculator = SimpleCalc(recordHistory: false) // set to false because OperationHistory.swift isn't adapted to use it. Yet. Maybe.
+        calculator = AnotherCalc(recordHistory: false) // set to false because OperationHistory.swift isn't adapted to use it. Yet. Maybe.
         mainReadout.text = calculator.primaryReadout
         secondaryReadout.text = calculator.secondaryReadout
         configureUI()
@@ -374,7 +374,7 @@ extension iPadMainVC: HistoryDelegate {
     func didTapCell(value: String) {
     
         calculator.clear()
-        calculator.primaryReadout = Double(value) ?? 0.0
+        calculator.primaryReadout = value
         mainReadout.text = calculator.primaryReadout
         secondaryReadout.text = calculator.secondaryReadout
 
