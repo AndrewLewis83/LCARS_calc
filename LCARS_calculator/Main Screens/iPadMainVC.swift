@@ -50,9 +50,9 @@ class iPadMainVC: UIViewController {
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     
+    // Readouts and history
     @IBOutlet weak var mainReadout: UILabel!
     @IBOutlet weak var secondaryReadout: UILabel!
-    
     @IBOutlet weak var historyView: OperationHistory!
     
     private var soundEffect: AVAudioPlayer?
