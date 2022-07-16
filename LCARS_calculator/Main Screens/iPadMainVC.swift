@@ -13,14 +13,10 @@ class iPadMainVC: UIViewController {
     
     @IBOutlet weak var readoutBackgroundView: UIView!
     @IBOutlet weak var readoutBlackBackgroundPanel: UIView!
-    
     @IBOutlet weak var mainPanelBackground: UIView!
     @IBOutlet weak var mainPanelBlackBackground: UIView!
-  
-    
     @IBOutlet weak var controlButtonsStackView: UIStackView!
     @IBOutlet weak var extraButtonsStackView: UIStackView!
-    
     @IBOutlet weak var controlPanelStackView: UIStackView!
     @IBOutlet weak var starfleetEmblem: UIImageView!
     @IBOutlet weak var starfleetLabel: UILabel!
