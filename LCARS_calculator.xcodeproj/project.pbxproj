@@ -50,6 +50,7 @@
 		F46B03932769AFF50058FFDC /* PriceEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B03922769AFF50058FFDC /* PriceEntryView.swift */; };
 		F497B104287EFC3F00CCB068 /* AnotherCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F497B103287EFC3F00CCB068 /* AnotherCalc.framework */; };
 		F497B105287EFC3F00CCB068 /* AnotherCalc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F497B103287EFC3F00CCB068 /* AnotherCalc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F49E504E28823BB200807378 /* AnotherCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E504D28823BB200807378 /* AnotherCalc.swift */; };
 		F4A8E08324CBA5F4007CAED1 /* OperationHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */; };
 		F4B2CF9624C4EA1500BAD628 /* OperationHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */; };
 		F4BEBE5B258A8E4C0025D085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BEBE5A258A8E4C0025D085 /* Main.storyboard */; };
@@ -194,6 +195,7 @@
 		F46B038F2769ADAA0058FFDC /* Okuda.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Okuda.otf; path = LCARS_calculator/okuda/Okuda.otf; sourceTree = SOURCE_ROOT; };
 		F46B03922769AFF50058FFDC /* PriceEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceEntryView.swift; sourceTree = "<group>"; };
 		F497B103287EFC3F00CCB068 /* AnotherCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AnotherCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49E504D28823BB200807378 /* AnotherCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherCalc.swift; sourceTree = "<group>"; };
 		F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationHistoryCell.xib; sourceTree = "<group>"; };
 		F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationHistoryCell.swift; sourceTree = "<group>"; };
 		F4BEBE5A258A8E4C0025D085 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				A12F3715229B5DEE009C44B0 /* Settings.swift */,
 				F4FDED9A24B7EA6C00A0F475 /* Constants.swift */,
 				F46B0340276978A00058FFDC /* Extensions */,
+				F49E504D28823BB200807378 /* AnotherCalc.swift */,
 			);
 			path = LCARS_calculator;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				A12F3716229B5DEE009C44B0 /* Settings.swift in Sources */,
 				F45EABCA23B2CE7B000D692B /* LaunchScreenVC.swift in Sources */,
 				F4BEBE63258A905F0025D085 /* iPadMainVC.swift in Sources */,
+				F49E504E28823BB200807378 /* AnotherCalc.swift in Sources */,
 				F46B033F2769787F0058FFDC /* UIDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
