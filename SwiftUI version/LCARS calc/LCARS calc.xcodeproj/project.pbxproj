@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4715C842899F9D6008C84B7 /* LCARS_calcApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715C832899F9D6008C84B7 /* LCARS_calcApp.swift */; };
+		F4715C862899F9D6008C84B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715C852899F9D6008C84B7 /* ContentView.swift */; };
+		F4715C882899F9D6008C84B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4715C872899F9D6008C84B7 /* Assets.xcassets */; };
+		F4715C8B2899F9D6008C84B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4715C8A2899F9D6008C84B7 /* Preview Assets.xcassets */; };
+		F4715C8D2899F9D6008C84B7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715C8C2899F9D6008C84B7 /* Persistence.swift */; };
+		F4715C902899F9D6008C84B7 /* LCARS_calc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4715C8E2899F9D6008C84B7 /* LCARS_calc.xcdatamodeld */; };
+		F4715C9A2899F9D6008C84B7 /* LCARS_calcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715C992899F9D6008C84B7 /* LCARS_calcTests.swift */; };
+		F4715CA42899F9D6008C84B7 /* LCARS_calcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CA32899F9D6008C84B7 /* LCARS_calcUITests.swift */; };
+		F4715CA62899F9D6008C84B7 /* LCARS_calcUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CA52899F9D6008C84B7 /* LCARS_calcUITestsLaunchTests.swift */; };
+		F4715CB32899FA7C008C84B7 /* AnotherCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CB22899FA7C008C84B7 /* AnotherCalc.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4715C962899F9D6008C84B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4715C782899F9D6008C84B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4715C7F2899F9D6008C84B7;
+			remoteInfo = "LCARS calc";
+		};
+		F4715CA02899F9D6008C84B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4715C782899F9D6008C84B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4715C7F2899F9D6008C84B7;
+			remoteInfo = "LCARS calc";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4715C802899F9D6008C84B7 /* LCARS calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LCARS calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4715C832899F9D6008C84B7 /* LCARS_calcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_calcApp.swift; sourceTree = "<group>"; };
+		F4715C852899F9D6008C84B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4715C872899F9D6008C84B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4715C8A2899F9D6008C84B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4715C8C2899F9D6008C84B7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F4715C8F2899F9D6008C84B7 /* LCARS_calc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LCARS_calc.xcdatamodel; sourceTree = "<group>"; };
+		F4715C952899F9D6008C84B7 /* LCARS calcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LCARS calcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4715C992899F9D6008C84B7 /* LCARS_calcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_calcTests.swift; sourceTree = "<group>"; };
+		F4715C9F2899F9D6008C84B7 /* LCARS calcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LCARS calcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4715CA32899F9D6008C84B7 /* LCARS_calcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_calcUITests.swift; sourceTree = "<group>"; };
+		F4715CA52899F9D6008C84B7 /* LCARS_calcUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_calcUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4715CB22899FA7C008C84B7 /* AnotherCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnotherCalc.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4715C7D2899F9D6008C84B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4715C922899F9D6008C84B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4715C9C2899F9D6008C84B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4715C772899F9D6008C84B7 = {
+			isa = PBXGroup;
+			children = (
+				F4715C822899F9D6008C84B7 /* LCARS calc */,
+				F4715C982899F9D6008C84B7 /* LCARS calcTests */,
+				F4715CA22899F9D6008C84B7 /* LCARS calcUITests */,
+				F4715C812899F9D6008C84B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4715C812899F9D6008C84B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4715C802899F9D6008C84B7 /* LCARS calc.app */,
+				F4715C952899F9D6008C84B7 /* LCARS calcTests.xctest */,
+				F4715C9F2899F9D6008C84B7 /* LCARS calcUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4715C822899F9D6008C84B7 /* LCARS calc */ = {
+			isa = PBXGroup;
+			children = (
+				F4715C832899F9D6008C84B7 /* LCARS_calcApp.swift */,
+				F4715C852899F9D6008C84B7 /* ContentView.swift */,
+				F4715CB22899FA7C008C84B7 /* AnotherCalc.swift */,
+				F4715C872899F9D6008C84B7 /* Assets.xcassets */,
+				F4715C8C2899F9D6008C84B7 /* Persistence.swift */,
+				F4715C8E2899F9D6008C84B7 /* LCARS_calc.xcdatamodeld */,
+				F4715C892899F9D6008C84B7 /* Preview Content */,
+			);
+			path = "LCARS calc";
+			sourceTree = "<group>";
+		};
+		F4715C892899F9D6008C84B7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F4715C8A2899F9D6008C84B7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4715C982899F9D6008C84B7 /* LCARS calcTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4715C992899F9D6008C84B7 /* LCARS_calcTests.swift */,
+			);
+			path = "LCARS calcTests";
+			sourceTree = "<group>";
+		};
+		F4715CA22899F9D6008C84B7 /* LCARS calcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F4715CA32899F9D6008C84B7 /* LCARS_calcUITests.swift */,
+				F4715CA52899F9D6008C84B7 /* LCARS_calcUITestsLaunchTests.swift */,
+			);
+			path = "LCARS calcUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4715C7F2899F9D6008C84B7 /* LCARS calc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4715CA92899F9D6008C84B7 /* Build configuration list for PBXNativeTarget "LCARS calc" */;
+			buildPhases = (
+				F4715C7C2899F9D6008C84B7 /* Sources */,
+				F4715C7D2899F9D6008C84B7 /* Frameworks */,
+				F4715C7E2899F9D6008C84B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LCARS calc";
+			productName = "LCARS calc";
+			productReference = F4715C802899F9D6008C84B7 /* LCARS calc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4715C942899F9D6008C84B7 /* LCARS calcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4715CAC2899F9D6008C84B7 /* Build configuration list for PBXNativeTarget "LCARS calcTests" */;
+			buildPhases = (
+				F4715C912899F9D6008C84B7 /* Sources */,
+				F4715C922899F9D6008C84B7 /* Frameworks */,
+				F4715C932899F9D6008C84B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4715C972899F9D6008C84B7 /* PBXTargetDependency */,
+			);
+			name = "LCARS calcTests";
+			productName = "LCARS calcTests";
+			productReference = F4715C952899F9D6008C84B7 /* LCARS calcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4715C9E2899F9D6008C84B7 /* LCARS calcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4715CAF2899F9D6008C84B7 /* Build configuration list for PBXNativeTarget "LCARS calcUITests" */;
+			buildPhases = (
+				F4715C9B2899F9D6008C84B7 /* Sources */,
+				F4715C9C2899F9D6008C84B7 /* Frameworks */,
+				F4715C9D2899F9D6008C84B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4715CA12899F9D6008C84B7 /* PBXTargetDependency */,
+			);
+			name = "LCARS calcUITests";
+			productName = "LCARS calcUITests";
+			productReference = F4715C9F2899F9D6008C84B7 /* LCARS calcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4715C782899F9D6008C84B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					F4715C7F2899F9D6008C84B7 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					F4715C942899F9D6008C84B7 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = F4715C7F2899F9D6008C84B7;
+					};
+					F4715C9E2899F9D6008C84B7 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = F4715C7F2899F9D6008C84B7;
+					};
+				};
+			};
+			buildConfigurationList = F4715C7B2899F9D6008C84B7 /* Build configuration list for PBXProject "LCARS calc" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4715C772899F9D6008C84B7;
+			productRefGroup = F4715C812899F9D6008C84B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4715C7F2899F9D6008C84B7 /* LCARS calc */,
+				F4715C942899F9D6008C84B7 /* LCARS calcTests */,
+				F4715C9E2899F9D6008C84B7 /* LCARS calcUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4715C7E2899F9D6008C84B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4715C8B2899F9D6008C84B7 /* Preview Assets.xcassets in Resources */,
+				F4715C882899F9D6008C84B7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4715C932899F9D6008C84B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4715C9D2899F9D6008C84B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4715C7C2899F9D6008C84B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4715C8D2899F9D6008C84B7 /* Persistence.swift in Sources */,
+				F4715C862899F9D6008C84B7 /* ContentView.swift in Sources */,
+				F4715C902899F9D6008C84B7 /* LCARS_calc.xcdatamodeld in Sources */,
+				F4715CB32899FA7C008C84B7 /* AnotherCalc.swift in Sources */,
+				F4715C842899F9D6008C84B7 /* LCARS_calcApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4715C912899F9D6008C84B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4715C9A2899F9D6008C84B7 /* LCARS_calcTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4715C9B2899F9D6008C84B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4715CA42899F9D6008C84B7 /* LCARS_calcUITests.swift in Sources */,
+				F4715CA62899F9D6008C84B7 /* LCARS_calcUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4715C972899F9D6008C84B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4715C7F2899F9D6008C84B7 /* LCARS calc */;
+			targetProxy = F4715C962899F9D6008C84B7 /* PBXContainerItemProxy */;
+		};
+		F4715CA12899F9D6008C84B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4715C7F2899F9D6008C84B7 /* LCARS calc */;
+			targetProxy = F4715CA02899F9D6008C84B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F4715CA72899F9D6008C84B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4715CA82899F9D6008C84B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4715CAA2899F9D6008C84B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LCARS calc/Preview Content\"";
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ajlewis.LCARS-calc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4715CAB2899F9D6008C84B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LCARS calc/Preview Content\"";
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ajlewis.LCARS-calc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F4715CAD2899F9D6008C84B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ajlewis.LCARS-calcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LCARS calc.app/LCARS calc";
+			};
+			name = Debug;
+		};
+		F4715CAE2899F9D6008C84B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ajlewis.LCARS-calcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LCARS calc.app/LCARS calc";
+			};
+			name = Release;
+		};
+		F4715CB02899F9D6008C84B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ajlewis.LCARS-calcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LCARS calc";
+			};
+			name = Debug;
+		};
+		F4715CB12899F9D6008C84B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9PHXE6VS94;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ajlewis.LCARS-calcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LCARS calc";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4715C7B2899F9D6008C84B7 /* Build configuration list for PBXProject "LCARS calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4715CA72899F9D6008C84B7 /* Debug */,
+				F4715CA82899F9D6008C84B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4715CA92899F9D6008C84B7 /* Build configuration list for PBXNativeTarget "LCARS calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4715CAA2899F9D6008C84B7 /* Debug */,
+				F4715CAB2899F9D6008C84B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4715CAC2899F9D6008C84B7 /* Build configuration list for PBXNativeTarget "LCARS calcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4715CAD2899F9D6008C84B7 /* Debug */,
+				F4715CAE2899F9D6008C84B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4715CAF2899F9D6008C84B7 /* Build configuration list for PBXNativeTarget "LCARS calcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4715CB02899F9D6008C84B7 /* Debug */,
+				F4715CB12899F9D6008C84B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F4715C8E2899F9D6008C84B7 /* LCARS_calc.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F4715C8F2899F9D6008C84B7 /* LCARS_calc.xcdatamodel */,
+			);
+			currentVersion = F4715C8F2899F9D6008C84B7 /* LCARS_calc.xcdatamodel */;
+			path = LCARS_calc.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F4715C782899F9D6008C84B7 /* Project object */;
+}
