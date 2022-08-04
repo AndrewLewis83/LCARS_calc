@@ -14,7 +14,6 @@
 		A1C5478C2221B1CD007505AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C5478B2221B1CD007505AA /* Assets.xcassets */; };
 		A1C5479A2221B1CD007505AA /* LCARS_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C547992221B1CD007505AA /* LCARS_calculatorTests.swift */; };
 		A1C547A52221B1CD007505AA /* LCARS_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C547A42221B1CD007505AA /* LCARS_calculatorUITests.swift */; };
-		A1C7C312228F694F00BD0FC5 /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1C7C311228F694F00BD0FC5 /* Okuda.otf */; };
 		A1C7C31B228F6AAC00BD0FC5 /* unabletocomply1_ep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1C7C313228F6AAA00BD0FC5 /* unabletocomply1_ep.mp3 */; };
 		A1C7C31E228F6AAC00BD0FC5 /* computerbeep_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1C7C316228F6AAB00BD0FC5 /* computerbeep_5.mp3 */; };
 		A1C7C31F228F6AAC00BD0FC5 /* consolewarning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1C7C317228F6AAB00BD0FC5 /* consolewarning.mp3 */; };
@@ -44,10 +43,15 @@
 		F46B037627697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B037527697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift */; };
 		F46B037927697B5E0058FFDC /* LCARS watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F46B034327697B5B0058FFDC /* LCARS watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F46B038D2769AC700058FFDC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDED9A24B7EA6C00A0F475 /* Constants.swift */; };
-		F46B038E2769ACC40058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1C7C311228F694F00BD0FC5 /* Okuda.otf */; };
 		F46B03902769ADAA0058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46B038F2769ADAA0058FFDC /* Okuda.otf */; };
 		F46B03912769ADAA0058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46B038F2769ADAA0058FFDC /* Okuda.otf */; };
 		F46B03932769AFF50058FFDC /* PriceEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B03922769AFF50058FFDC /* PriceEntryView.swift */; };
+		F4715CD9289B5FD1008C84B7 /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4715CD7289B5FD1008C84B7 /* Okuda.otf */; };
+		F4715CDA289B5FD1008C84B7 /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4715CD7289B5FD1008C84B7 /* Okuda.otf */; };
+		F4715CDB289B5FD1008C84B7 /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4715CD7289B5FD1008C84B7 /* Okuda.otf */; };
+		F4715CDC289B5FD1008C84B7 /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4715CD8289B5FD1008C84B7 /* United Federation of Planets Regular.ttf */; };
+		F4715CDD289B5FD1008C84B7 /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4715CD8289B5FD1008C84B7 /* United Federation of Planets Regular.ttf */; };
+		F4715CDE289B5FD1008C84B7 /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4715CD8289B5FD1008C84B7 /* United Federation of Planets Regular.ttf */; };
 		F497B104287EFC3F00CCB068 /* AnotherCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F497B103287EFC3F00CCB068 /* AnotherCalc.framework */; };
 		F497B105287EFC3F00CCB068 /* AnotherCalc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F497B103287EFC3F00CCB068 /* AnotherCalc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F49E504E28823BB200807378 /* AnotherCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E504D28823BB200807378 /* AnotherCalc.swift */; };
@@ -59,7 +63,6 @@
 		F4C1DE2A2590F7E6003DC05E /* iPodTouchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1DE292590F7E6003DC05E /* iPodTouchSettings.swift */; };
 		F4CE29FA24C5116A0004D1D0 /* alert16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29F924C5116A0004D1D0 /* alert16.mp3 */; };
 		F4CE29FC24C512870004D1D0 /* computerbeep_13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */; };
-		F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */; };
 		F4FAAD75276B92D5005A88AB /* TipSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FAAD74276B92D5005A88AB /* TipSettingsView.swift */; };
 		F4FDED9B24B7EA6C00A0F475 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FDED9A24B7EA6C00A0F475 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -159,7 +162,6 @@
 		A1C547A02221B1CD007505AA /* LCARS_calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCARS_calculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C547A42221B1CD007505AA /* LCARS_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_calculatorUITests.swift; sourceTree = "<group>"; };
 		A1C547A62221B1CD007505AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1C7C311228F694F00BD0FC5 /* Okuda.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Okuda.otf; path = okuda/Okuda.otf; sourceTree = "<group>"; };
 		A1C7C313228F6AAA00BD0FC5 /* unabletocomply1_ep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = unabletocomply1_ep.mp3; sourceTree = "<group>"; };
 		A1C7C316228F6AAB00BD0FC5 /* computerbeep_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = computerbeep_5.mp3; sourceTree = "<group>"; };
 		A1C7C317228F6AAB00BD0FC5 /* consolewarning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = consolewarning.mp3; sourceTree = "<group>"; };
@@ -194,6 +196,8 @@
 		F46B037527697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_watchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F46B038F2769ADAA0058FFDC /* Okuda.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Okuda.otf; path = LCARS_calculator/okuda/Okuda.otf; sourceTree = SOURCE_ROOT; };
 		F46B03922769AFF50058FFDC /* PriceEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceEntryView.swift; sourceTree = "<group>"; };
+		F4715CD7289B5FD1008C84B7 /* Okuda.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Okuda.otf; sourceTree = "<group>"; };
+		F4715CD8289B5FD1008C84B7 /* United Federation of Planets Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "United Federation of Planets Regular.ttf"; sourceTree = "<group>"; };
 		F497B103287EFC3F00CCB068 /* AnotherCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AnotherCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49E504D28823BB200807378 /* AnotherCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherCalc.swift; sourceTree = "<group>"; };
 		F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationHistoryCell.xib; sourceTree = "<group>"; };
@@ -206,7 +210,6 @@
 		F4CE29FB24C512860004D1D0 /* computerbeep_13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = computerbeep_13.mp3; sourceTree = "<group>"; };
 		F4D2611D287C69C700607293 /* LCARS_calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LCARS_calculator.entitlements; sourceTree = "<group>"; };
 		F4DE10E32879000C007D5FCF /* SimpleCalcFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleCalcFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "United Federation of Planets Regular.ttf"; sourceTree = "<group>"; };
 		F4FAAD74276B92D5005A88AB /* TipSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipSettingsView.swift; sourceTree = "<group>"; };
 		F4FDED9A24B7EA6C00A0F475 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -291,15 +294,14 @@
 			isa = PBXGroup;
 			children = (
 				F4D2611D287C69C700607293 /* LCARS_calculator.entitlements */,
-				F4F7277123B29540006624CB /* United Federation of Planets Regular.ttf */,
 				A1C547842221B1CB007505AA /* AppDelegate.swift */,
+				F4715CDF289B5FD9008C84B7 /* fonts */,
 				F45A8315258BF23A00430CBC /* Launch Screen */,
 				F45A608924CA214700CF5E56 /* Warp Core */,
 				F45A608C24CA218900CF5E56 /* Operation History */,
 				F45A8314258BF20200430CBC /* Main Screens */,
 				F4F7277323B2C7AB006624CB /* Info Screen */,
 				F45A8321258BF2BC00430CBC /* Settings Screen */,
-				A1C7C311228F694F00BD0FC5 /* Okuda.otf */,
 				A1C5478B2221B1CD007505AA /* Assets.xcassets */,
 				A1C7C323228F6ABC00BD0FC5 /* sound_effects */,
 				A1C547902221B1CD007505AA /* Info.plist */,
@@ -451,6 +453,15 @@
 				F46B037527697B5E0058FFDC /* LCARS_watchUITestsLaunchTests.swift */,
 			);
 			path = LCARS_watchUITests;
+			sourceTree = "<group>";
+		};
+		F4715CDF289B5FD9008C84B7 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F4715CD7289B5FD1008C84B7 /* Okuda.otf */,
+				F4715CD8289B5FD1008C84B7 /* United Federation of Planets Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		F4DE10CD2878F286007D5FCF /* Frameworks */ = {
@@ -669,19 +680,19 @@
 			files = (
 				F45A8304258BF01000430CBC /* iPhoneMain.storyboard in Resources */,
 				F4CE29FA24C5116A0004D1D0 /* alert16.mp3 in Resources */,
-				A1C7C312228F694F00BD0FC5 /* Okuda.otf in Resources */,
 				F45568F724C66F700026317E /* WarpCore.xib in Resources */,
 				F4CE29FC24C512870004D1D0 /* computerbeep_13.mp3 in Resources */,
+				F4715CD9289B5FD1008C84B7 /* Okuda.otf in Resources */,
 				A1C5478C2221B1CD007505AA /* Assets.xcassets in Resources */,
 				A1C5478A2221B1CB007505AA /* iPadMain.storyboard in Resources */,
 				A1C7C31B228F6AAC00BD0FC5 /* unabletocomply1_ep.mp3 in Resources */,
 				A1C7C31F228F6AAC00BD0FC5 /* consolewarning.mp3 in Resources */,
+				F4715CDC289B5FD1008C84B7 /* United Federation of Planets Regular.ttf in Resources */,
 				F4A8E08324CBA5F4007CAED1 /* OperationHistoryCell.xib in Resources */,
 				F4BEBE5B258A8E4C0025D085 /* Main.storyboard in Resources */,
 				F45A8323258BF2DD00430CBC /* Settings.storyboard in Resources */,
 				F4C1DE252590F7C9003DC05E /* iPodTouchSettings.storyboard in Resources */,
 				A1C7C31E228F6AAC00BD0FC5 /* computerbeep_5.mp3 in Resources */,
-				F4F7277223B29540006624CB /* United Federation of Planets Regular.ttf in Resources */,
 				F45A831D258BF27800430CBC /* InfoScreen.storyboard in Resources */,
 				F45A608824CA1FB500CF5E56 /* OperationHistory.xib in Resources */,
 			);
@@ -705,8 +716,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4715CDD289B5FD1008C84B7 /* United Federation of Planets Regular.ttf in Resources */,
 				F46B03902769ADAA0058FFDC /* Okuda.otf in Resources */,
 				F46B034627697B5D0058FFDC /* Assets.xcassets in Resources */,
+				F4715CDA289B5FD1008C84B7 /* Okuda.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,10 +727,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4715CDB289B5FD1008C84B7 /* Okuda.otf in Resources */,
+				F4715CDE289B5FD1008C84B7 /* United Federation of Planets Regular.ttf in Resources */,
 				F46B03912769ADAA0058FFDC /* Okuda.otf in Resources */,
 				F46B035E27697B5E0058FFDC /* Preview Assets.xcassets in Resources */,
 				F46B035B27697B5E0058FFDC /* Assets.xcassets in Resources */,
-				F46B038E2769ACC40058FFDC /* Okuda.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

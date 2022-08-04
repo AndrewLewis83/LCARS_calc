@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 public struct Operation {
     
@@ -25,7 +26,7 @@ public enum Operations {
     case none
 }
 
-public class AnotherCalc {
+public class AnotherCalc: NSObject, ObservableObject {
     
     public init (recordHistory: Bool){
         self.recordHistory = recordHistory

@@ -17,6 +17,19 @@
 		F4715CA42899F9D6008C84B7 /* LCARS_calcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CA32899F9D6008C84B7 /* LCARS_calcUITests.swift */; };
 		F4715CA62899F9D6008C84B7 /* LCARS_calcUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CA52899F9D6008C84B7 /* LCARS_calcUITestsLaunchTests.swift */; };
 		F4715CB32899FA7C008C84B7 /* AnotherCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CB22899FA7C008C84B7 /* AnotherCalc.swift */; };
+		F4715CB52899FB2C008C84B7 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CB42899FB2C008C84B7 /* NumberPadView.swift */; };
+		F4715CB82899FC9B008C84B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CB72899FC9B008C84B7 /* Constants.swift */; };
+		F4715CC4289AB1BE008C84B7 /* alert16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4715CBF289AB1BE008C84B7 /* alert16.mp3 */; };
+		F4715CC5289AB1BE008C84B7 /* consolewarning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4715CC0289AB1BE008C84B7 /* consolewarning.mp3 */; };
+		F4715CC6289AB1BE008C84B7 /* unabletocomply1_ep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4715CC1289AB1BE008C84B7 /* unabletocomply1_ep.mp3 */; };
+		F4715CC7289AB1BE008C84B7 /* computerbeep_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4715CC2289AB1BE008C84B7 /* computerbeep_5.mp3 */; };
+		F4715CC8289AB1BE008C84B7 /* computerbeep_13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4715CC3289AB1BE008C84B7 /* computerbeep_13.mp3 */; };
+		F4715CCB289AB1E2008C84B7 /* United Federation of Planets Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4715CCA289AB1E2008C84B7 /* United Federation of Planets Regular.ttf */; };
+		F4715CCF289AB695008C84B7 /* MathOperationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CCE289AB695008C84B7 /* MathOperationButtons.swift */; };
+		F4715CD3289ABDFE008C84B7 /* CalculatorButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CD2289ABDFE008C84B7 /* CalculatorButtonsView.swift */; };
+		F4715CD5289B5C39008C84B7 /* ReadoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CD4289B5C39008C84B7 /* ReadoutView.swift */; };
+		F4715CE1289B600B008C84B7 /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4715CE0289B600B008C84B7 /* Okuda.otf */; };
+		F4715CE3289B635F008C84B7 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4715CE2289B635F008C84B7 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +63,20 @@
 		F4715CA32899F9D6008C84B7 /* LCARS_calcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_calcUITests.swift; sourceTree = "<group>"; };
 		F4715CA52899F9D6008C84B7 /* LCARS_calcUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCARS_calcUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4715CB22899FA7C008C84B7 /* AnotherCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnotherCalc.swift; sourceTree = "<group>"; };
+		F4715CB42899FB2C008C84B7 /* NumberPadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
+		F4715CB72899FC9B008C84B7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F4715CBF289AB1BE008C84B7 /* alert16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert16.mp3; sourceTree = "<group>"; };
+		F4715CC0289AB1BE008C84B7 /* consolewarning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = consolewarning.mp3; sourceTree = "<group>"; };
+		F4715CC1289AB1BE008C84B7 /* unabletocomply1_ep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = unabletocomply1_ep.mp3; sourceTree = "<group>"; };
+		F4715CC2289AB1BE008C84B7 /* computerbeep_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = computerbeep_5.mp3; sourceTree = "<group>"; };
+		F4715CC3289AB1BE008C84B7 /* computerbeep_13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = computerbeep_13.mp3; sourceTree = "<group>"; };
+		F4715CCA289AB1E2008C84B7 /* United Federation of Planets Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "United Federation of Planets Regular.ttf"; sourceTree = "<group>"; };
+		F4715CCD289AB466008C84B7 /* LCARS-calc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LCARS-calc-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F4715CCE289AB695008C84B7 /* MathOperationButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathOperationButtons.swift; sourceTree = "<group>"; };
+		F4715CD2289ABDFE008C84B7 /* CalculatorButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonsView.swift; sourceTree = "<group>"; };
+		F4715CD4289B5C39008C84B7 /* ReadoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadoutView.swift; sourceTree = "<group>"; };
+		F4715CE0289B600B008C84B7 /* Okuda.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Okuda.otf; sourceTree = "<group>"; };
+		F4715CE2289B635F008C84B7 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +127,18 @@
 		F4715C822899F9D6008C84B7 /* LCARS calc */ = {
 			isa = PBXGroup;
 			children = (
+				F4715CCD289AB466008C84B7 /* LCARS-calc-Info.plist */,
 				F4715C832899F9D6008C84B7 /* LCARS_calcApp.swift */,
 				F4715C852899F9D6008C84B7 /* ContentView.swift */,
 				F4715CB22899FA7C008C84B7 /* AnotherCalc.swift */,
-				F4715C872899F9D6008C84B7 /* Assets.xcassets */,
+				F4715CB72899FC9B008C84B7 /* Constants.swift */,
 				F4715C8C2899F9D6008C84B7 /* Persistence.swift */,
+				F4715CB62899FB3D008C84B7 /* LCARS views */,
+				F4715CE4289B6424008C84B7 /* Extensions */,
+				F4715C872899F9D6008C84B7 /* Assets.xcassets */,
 				F4715C8E2899F9D6008C84B7 /* LCARS_calc.xcdatamodeld */,
+				F4715CC9289AB1C5008C84B7 /* sounds */,
+				F4715CCC289AB1ED008C84B7 /* fonts */,
 				F4715C892899F9D6008C84B7 /* Preview Content */,
 			);
 			path = "LCARS calc";
@@ -134,6 +167,54 @@
 				F4715CA52899F9D6008C84B7 /* LCARS_calcUITestsLaunchTests.swift */,
 			);
 			path = "LCARS calcUITests";
+			sourceTree = "<group>";
+		};
+		F4715CB62899FB3D008C84B7 /* LCARS views */ = {
+			isa = PBXGroup;
+			children = (
+				F4715CD4289B5C39008C84B7 /* ReadoutView.swift */,
+				F4715CD6289B5F5F008C84B7 /* controls */,
+			);
+			path = "LCARS views";
+			sourceTree = "<group>";
+		};
+		F4715CC9289AB1C5008C84B7 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F4715CBF289AB1BE008C84B7 /* alert16.mp3 */,
+				F4715CC2289AB1BE008C84B7 /* computerbeep_5.mp3 */,
+				F4715CC3289AB1BE008C84B7 /* computerbeep_13.mp3 */,
+				F4715CC0289AB1BE008C84B7 /* consolewarning.mp3 */,
+				F4715CC1289AB1BE008C84B7 /* unabletocomply1_ep.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		F4715CCC289AB1ED008C84B7 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F4715CE0289B600B008C84B7 /* Okuda.otf */,
+				F4715CCA289AB1E2008C84B7 /* United Federation of Planets Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		F4715CD6289B5F5F008C84B7 /* controls */ = {
+			isa = PBXGroup;
+			children = (
+				F4715CD2289ABDFE008C84B7 /* CalculatorButtonsView.swift */,
+				F4715CB42899FB2C008C84B7 /* NumberPadView.swift */,
+				F4715CCE289AB695008C84B7 /* MathOperationButtons.swift */,
+			);
+			path = controls;
+			sourceTree = "<group>";
+		};
+		F4715CE4289B6424008C84B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F4715CE2289B635F008C84B7 /* View.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +321,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4715CC5289AB1BE008C84B7 /* consolewarning.mp3 in Resources */,
+				F4715CC8289AB1BE008C84B7 /* computerbeep_13.mp3 in Resources */,
+				F4715CC4289AB1BE008C84B7 /* alert16.mp3 in Resources */,
 				F4715C8B2899F9D6008C84B7 /* Preview Assets.xcassets in Resources */,
 				F4715C882899F9D6008C84B7 /* Assets.xcassets in Resources */,
+				F4715CE1289B600B008C84B7 /* Okuda.otf in Resources */,
+				F4715CCB289AB1E2008C84B7 /* United Federation of Planets Regular.ttf in Resources */,
+				F4715CC6289AB1BE008C84B7 /* unabletocomply1_ep.mp3 in Resources */,
+				F4715CC7289AB1BE008C84B7 /* computerbeep_5.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,10 +355,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4715C8D2899F9D6008C84B7 /* Persistence.swift in Sources */,
+				F4715CB52899FB2C008C84B7 /* NumberPadView.swift in Sources */,
 				F4715C862899F9D6008C84B7 /* ContentView.swift in Sources */,
+				F4715CD5289B5C39008C84B7 /* ReadoutView.swift in Sources */,
+				F4715CD3289ABDFE008C84B7 /* CalculatorButtonsView.swift in Sources */,
 				F4715C902899F9D6008C84B7 /* LCARS_calc.xcdatamodeld in Sources */,
+				F4715CB82899FC9B008C84B7 /* Constants.swift in Sources */,
 				F4715CB32899FA7C008C84B7 /* AnotherCalc.swift in Sources */,
 				F4715C842899F9D6008C84B7 /* LCARS_calcApp.swift in Sources */,
+				F4715CE3289B635F008C84B7 /* View.swift in Sources */,
+				F4715CCF289AB695008C84B7 /* MathOperationButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +526,7 @@
 				DEVELOPMENT_TEAM = 9PHXE6VS94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LCARS-calc-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -461,6 +556,7 @@
 				DEVELOPMENT_TEAM = 9PHXE6VS94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LCARS-calc-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
