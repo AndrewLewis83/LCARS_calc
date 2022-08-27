@@ -81,6 +81,7 @@ public class AnotherCalc {
         guard let value = Double(primaryReadoutValue) else { return false }
         secondaryValue = value
         primaryReadoutValue = "0.0"
+        decimalAdded = false
         return true
     }
     
