@@ -25,9 +25,36 @@ struct PriceEntryView: View {
             
             VStack(spacing: 1){
                 Spacer(minLength: 10)
-                Text(price)
-                    .font(.custom("Okuda", size: 25))
-                    .foregroundColor(Color(textColorOne))
+                
+                HStack {
+                    
+                    Spacer()
+                    Text(price)
+                        .font(.custom("Okuda", size: 25))
+                        .foregroundColor(Color(textColorOne))
+                        .padding()
+                    
+                    if price != "$0.00" {
+                        Button(action: {
+                            
+                            if price != "$0.00" {
+                                price.removeLast()
+                                
+                            }
+                            
+                            if price == "$"{
+                                price = "$0.00"
+                            }
+                        }){
+                            Image(systemName: "delete.backward.fill")
+                        }.frame(width: buttonHeight,height: buttonHeight)
+                        .foregroundColor(Color(UIColor.red))
+                        .background(.clear)
+                        .cornerRadius(customRadius)
+                        .padding()
+                    }
+                }
+                
                 
                 HStack(spacing: 1) {
                     Button(action: {
@@ -39,7 +66,7 @@ struct PriceEntryView: View {
                     }){
                         Text("1")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(buttonColorOne))
                     .cornerRadius(customRadius, corners: [.topLeft, .bottomLeft])
@@ -54,7 +81,7 @@ struct PriceEntryView: View {
                     }){
                         Text("2")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(buttonColorTwo))
                     
@@ -67,7 +94,7 @@ struct PriceEntryView: View {
                     }){
                         Text("3")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(buttonColorThree))
                     .cornerRadius(customRadius, corners: [.topRight, .bottomRight])
@@ -86,7 +113,7 @@ struct PriceEntryView: View {
                     }){
                         Text("4")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(buttonColorFour))
                     .cornerRadius(customRadius, corners: [.topLeft, .bottomLeft])
@@ -101,7 +128,7 @@ struct PriceEntryView: View {
                     }){
                         Text("5")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(buttonColorOne))
                     
@@ -114,7 +141,7 @@ struct PriceEntryView: View {
                     }){
                         Text("6")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(buttonColorTwo))
                     .cornerRadius(customRadius, corners: [.topRight, .bottomRight])
@@ -133,7 +160,7 @@ struct PriceEntryView: View {
                     }){
                         Text("7")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(buttonColorThree))
                     .cornerRadius(customRadius, corners: [.topLeft, .bottomLeft])
@@ -147,7 +174,7 @@ struct PriceEntryView: View {
                     }){
                         Text("8")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(buttonColorFour))
 
@@ -160,7 +187,7 @@ struct PriceEntryView: View {
                     }){
                         Text("9")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height:buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(buttonColorOne))
                     .cornerRadius(customRadius, corners: [.topRight, .bottomRight])
@@ -178,10 +205,10 @@ struct PriceEntryView: View {
                         }
                     }){
                         Text(".")
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(UIColor.red))
-                    .cornerRadius(customRadius, corners: [.topLeft])
+                    .cornerRadius(customRadius, corners: [.topLeft, ])
                     
                     Button(action: {
                         if price != "$0.00" {
@@ -192,56 +219,26 @@ struct PriceEntryView: View {
                     }){
                         Text("0")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(buttonColorOne))
-                    
-                    Button(action: {
-                        
-                        if price != "$0.00" {
-                            price.removeLast()
-                            
-                        }
-                        
-                        if price == "$"{
-                            price = "$0.00"
-                        }
-                    }){
-                        Image(systemName: "delete.backward.fill")
-                    }.frame(maxHeight: buttonHeight)
-                    .foregroundColor(.black)
-                    .background(Color(UIColor.red))
-                    .cornerRadius(customRadius, corners: [.topRight])
-                    
-                    
-                }.padding(.leading)
-                .padding(.trailing)
-                
-                HStack(spacing: 1) {
-                    Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }){
-                        Image(systemName: "house.fill")
-                    }.frame(height: buttonHeight)
-                    .foregroundColor(.black)
-                    .background(Color(UIColor.red))
-                    .cornerRadius(customRadius, corners: [.bottomLeft])
                     
                     Button(action: {
                         showResult.toggle()
                     }){
                         Text("tip")
                             .font(.custom("Okuda", size: buttonFontSize))
-                    }.frame(height: buttonHeight)
+                    }
                     .foregroundColor(.black)
                     .background(Color(UIColor.red))
-                    .cornerRadius(customRadius, corners: [.bottomRight])
+                    .cornerRadius(customRadius, corners: [.topRight, .bottomRight])
+                    
                     
                 }.padding(.leading)
                 .padding(.trailing)
                 
             }
-        }else{
+        } else {
             
             if let convertedPrice = Double(String(price.dropFirst())){
                 VStack {
