@@ -48,8 +48,6 @@
 		F46B03902769ADAA0058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46B038F2769ADAA0058FFDC /* Okuda.otf */; };
 		F46B03912769ADAA0058FFDC /* Okuda.otf in Resources */ = {isa = PBXBuildFile; fileRef = F46B038F2769ADAA0058FFDC /* Okuda.otf */; };
 		F46B03932769AFF50058FFDC /* PriceEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B03922769AFF50058FFDC /* PriceEntryView.swift */; };
-		F497B104287EFC3F00CCB068 /* AnotherCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F497B103287EFC3F00CCB068 /* AnotherCalc.framework */; };
-		F497B105287EFC3F00CCB068 /* AnotherCalc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F497B103287EFC3F00CCB068 /* AnotherCalc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F49E504E28823BB200807378 /* AnotherCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E504D28823BB200807378 /* AnotherCalc.swift */; };
 		F4A8E08324CBA5F4007CAED1 /* OperationHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A8E08224CBA5F4007CAED1 /* OperationHistoryCell.xib */; };
 		F4B2CF9624C4EA1500BAD628 /* OperationHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2CF9524C4EA1500BAD628 /* OperationHistoryCell.swift */; };
@@ -132,17 +130,6 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F497B106287EFC3F00CCB068 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F497B105287EFC3F00CCB068 /* AnotherCalc.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -216,7 +203,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F497B104287EFC3F00CCB068 /* AnotherCalc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +468,6 @@
 				A1C5477E2221B1CB007505AA /* Frameworks */,
 				A1C5477F2221B1CB007505AA /* Resources */,
 				F46B038127697B5E0058FFDC /* Embed Watch Content */,
-				F497B106287EFC3F00CCB068 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
