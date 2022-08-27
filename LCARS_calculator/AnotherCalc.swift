@@ -40,6 +40,8 @@ public class AnotherCalc {
     fileprivate var primaryValue: Double = 0
     fileprivate var secondaryValue: Double = 0
     
+    fileprivate var decimalAdded: Bool = false
+    
     public var validOperation: Bool {
         
         if operation == .division && secondaryValue == 0 {
@@ -197,6 +199,13 @@ public class AnotherCalc {
             
             primaryReadoutValue = "\(primaryReadoutValue)" + "\(digit)"
             
+        } else if primaryReadoutValue == "0.0" {
+            
+            if decimalAdded {
+                primaryReadoutValue = "\(primaryReadoutValue)" + "\(digit)"
+            }
+            
+            return true
         } else {
             return false
         }
@@ -224,10 +233,16 @@ public class AnotherCalc {
     @discardableResult
     public func addDecimal() -> Bool {
         
-        if primaryReadoutValue.contains(".") {
+        if decimalAdded {
             return false
         } else {
-            primaryReadoutValue = primaryReadoutValue + "."
+            if primaryReadoutValue == "0.0" {
+                primaryReadoutValue = "0."
+            } else {
+                primaryReadoutValue = primaryReadoutValue + "."
+            }
+            
+            decimalAdded = true
             return true
         }
     }
@@ -265,6 +280,7 @@ public class AnotherCalc {
             primaryValue = 0
             secondaryValue = 0
             operation = .none
+            decimalAdded = false
             
             return true
         }
@@ -305,5 +321,4 @@ public class AnotherCalc {
     public func removeOperation(index: Int){
         self.history.remove(at: index)
     }
-
 }
